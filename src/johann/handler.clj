@@ -54,10 +54,10 @@
 
 
 (defroutes app-routes
-  (GET "/" [] (nashie  (str {:route {:view nil
-                                  :context []
+  (GET "/" [] (views/dream-page  {:route {:view nil
+                                                :context []
 
-                                  } :routes {:blog notes/topic-sort}})))
+                                                } :routes {:blog notes/topic-sort}}))
   (GET "/on/:topic/:title" [topic title] (views/dream-page  {:route {:view "blog"
                                                                      :context [topic (title->idx title) ]
 
