@@ -71,7 +71,7 @@
    app-routes
    assign-uuid
    handler/site
-   reload/wrap-reload
+    reload/wrap-reload
    wrap-edn-params
    ))
 
