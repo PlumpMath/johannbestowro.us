@@ -12,11 +12,11 @@
    [clj-time.format :as format]
    [hiccup-bridge.core :as hicv]))
 
-
+;
 (def credentials
   (if (System/getenv "PORT")
-    {:dev-token (System/getenv "DEV-AC")
-     :notebook (System/getenv "EV-NOTE")
+    {:dev-token (System/getenv "DEVAC")
+     :notebook (System/getenv "EVNOTE")
      }
     (clojure.core/read-string (slurp "resources/credentials.edn"))
     ))
