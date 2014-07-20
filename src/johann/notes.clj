@@ -14,7 +14,7 @@
 
 
 (def credentials
-  (if (System/getenv "DEV-AC")
+  (if (System/getenv "PORT")
     {:dev-token (System/getenv "DEV-AC")
      :notebook (System/getenv "EV-NOTE")
      }
