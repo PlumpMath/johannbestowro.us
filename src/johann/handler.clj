@@ -42,12 +42,12 @@
   (let [post (first (filter #(= (% :title) title) (notes/note-cache-prod)))]
     (:idx post "not found")))
 
-(defn assign-uuid [app]
+#_(defn assign-uuid [app]
   (fn [{session :session :as req}]
     
     (if-not (session :uuid)
       (do
-        (println "this is the case, johann")
+        (println req)
         (app (assoc req :session {:uuid (uuid)})))
       (app req))))
 
@@ -69,11 +69,9 @@
 (def app
   (->
    app-routes
-   assign-uuid
+   ;;assign-uuid
    handler/site
-    reload/wrap-reload
-   wrap-edn-params
-   ))
+   reload/wrap-reload))
 
 (defn -main
   ([port]

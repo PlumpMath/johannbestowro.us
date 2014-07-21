@@ -7,7 +7,7 @@
              [dream.ani :as ani]
              [hiccups.runtime :as hiccupsrt]
              [om.core :as om :include-macros true]
-             [cljs.core.async :as async :refer [>! <! put! chan sliding-buffer pub sub]]))
+             [cljs.core.async :as async :refer [>! <! put! chan sliding-buffer pub sub close! timeout]]))
 
 
 
@@ -46,7 +46,7 @@
                                        :style {:width "90%"
                                                :height "100%"
 
-                                               :background "pink"}
+                                               :background "#DDD6E8"}
                                        }
                                       (let  [padding {:padding "3%"}
                                              padify #(assoc % :style padding)]
@@ -107,20 +107,38 @@
                          )))
 
 
+;; ok i need some sort of process that gets fed a sequence of numbers
+;; and sets the state of a component for every put. so the number seq
+;; exists outside the go-block, putting values on the go-block, and
 
 
+(defn random-thing [chan]
+  (loop [num 0]
+    (print num)
+    (if (> num 100)
+        num
+        (recur (do
+                 (put! chan num)
+                 (inc num))))))
 
 
+(defn rand-process [chan owner]
+  (let [valfn #(om/set-state! owner :opacity %)]
+    (go-loop [value (<! chan)]
+             (<! (timeout 16))
+             (valfn value)
+             (recur (<! chan)))))
 
+;word
 
 
 (defcomponent blog [data owner {:keys [clear-route]}]
   (init-state [_]
               (let [[top posts] (first (seq ((data :routes) :blog)))  ]
-                  {:c (chan)
-                   :topidx 0
-                   :idx [top -1 ]
-                   })      
+                {:c (chan)
+                 :topidx 0
+                 :idx [top -1 ]
+                 })      
               )  
   (will-mount [_]
               (let [c (om/get-state owner :c)
@@ -131,7 +149,9 @@
                       (om/set-state! :flip true))
                   (print "Well then")
                   )
-
+                (let [rand-chan (chan)]
+                  (rand-process rand-chan owner)
+                  (random-thing rand-chan))
                 
                 (go-loop [ [token val] (<! c)]
                          (case token
@@ -146,13 +166,14 @@
                          (recur (<! c)))))
 
 
-  (render-state [_ {:keys [idx c flip topidx]}]
+  (render-state [_ {:keys [idx c flip topidx opacity]}]
                 (let [blog ((data :routes)  :blog)
                       blogseq (seq  ((data :routes) :blog))
                       blogcount (count blogseq)]
-                  
+                  (print "render" opacity)
                   (dom/section {:class "full neutral"
-                                :style {:transform-style "preserve-3d"}}
+                                :style {:transform-style "preserve-3d"
+                                        :opacity (/ opacity 100)}}
                    
                                (dom/div {:id "card"
                                          :class (if flip "full trans flipped" "full trans")
@@ -163,14 +184,12 @@
                                                   (if (> blogcount 1) (dom/button {:on-click #(om/update-state! owner :topidx (fn [pc]  (mod (inc  pc) blogcount)))}))
                                       
                                                   (om/build topic (nth blogseq topidx)
-                                                            #_(if topidx 
-                                                              ((into [] blogseq) topidx)
-                                                              (first blogseq))
+                                                           
                                                             {:init-state {:c c}})))
                                 
                                   
                                         (om/build essay (when-let [[key ess] idx]   (nth (reverse (blog key)) ess {:content ""}))
-                                                                                                    {:init-state {:c c} })
+                                                  {:init-state {:c c} })
                                         )))))
 
 
