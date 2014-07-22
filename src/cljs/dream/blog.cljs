@@ -1,5 +1,5 @@
 (ns dream.blog
-  (:require-macros [cljs.core.async.macros :refer [go go-loop]]
+  (:require-macros [cljs.core.async.macros :refer [go go-loop alt!]]
                    [hiccups.core :refer [html]])
   (:require  [om-tools.core :refer-macros [defcomponent]]
              [om-tools.dom :as dom :include-macros true]
@@ -27,19 +27,16 @@
                (let [oprops (om/get-props owner)]
                  (when (not= nprops oprops)
                    (ani/group [{:node (om/get-node owner "title") :props [
-                                                                          {:transform "translate3d(0, -100%, 0)"}
-                                                                          {:transform "translate3d(0, 0, 0)"}]
+                                                                          {:transform "translate3d(0, -100%, 0)"
+                                                                           ;:background "rgb(0, 0, 255)"
+                                                                           }
+                                                                          {:transform "translate3d(0, 0, 0)"  ;:background "rgb(255, 255, 255)"
+                                                                           }]
                                 :time 500}
 
                                {:node (om/get-node owner "content") :props [{:opacity 0}
                                                                              {:opacity 1}] :time 1000}])
-                   ))
-               
-               #_(if tophov
-                 (ani/create-animation (om/get-node owner) [{:transform "translate3d(0, 0, -500px)" :opacity .5 :background-color "black"}] 250 )
-                 (ani/create-animation (om/get-node owner) [{:transform "translate3d(0, 0, 0px)" :opacity 1 :background-color "pink"}] 250 )
-                 )
-               )
+                   )))
   (render-state [_ {:keys [c]}]
                (dom/div {:ref "modal"
                                        :class "figure flex column back"
@@ -50,7 +47,8 @@
                                        }
                                       (let  [padding {:padding "3%"}
                                              padify #(assoc % :style padding)]
-                                        (dom/div {:style {
+                                        (dom/div {:ref "title"
+                                                  :style {
                                                           :width "90%"
                                                           :background-color "white"
                                                           :font-size "8.0vh"}
@@ -59,9 +57,12 @@
 
 
                                                 
-                                                 (dom/div {:ref "title"
-                                                           :style {:font-sze "5vh"}} (data :title))
-                                                 (dom/div  (padify {:class "fa fa-long-arrow-right" :on-click #(put! c [:flip])}))))
+                                                 (dom/div {
+                                                           :style {:font-sze "5vh"
+                                                                   :width "75%"}} (data :title))
+                                                 (dom/div  (padify {:class "fa fa-long-arrow-right"
+                                                                    :style {:width "25%"}
+                                                                    :on-click #(put! c [:flip])}))))
                                       (dom/div {:style {:height "70%"
                                                         :overflowY "scroll"
                                                         :width "80%"
@@ -73,16 +74,33 @@
 
 
 
+(defn hue-process [owner]
+  (let [huec (chan)]
+      (go-loop [val (<! huec)]
+               (<! (timeout 4))
+               (om/set-state! owner :hue (mod val 255))
+               (om/set-state! owner :width (mod val 100))
+               
+               (recur (<! huec)))
+      huec))
 
+(defn degreeput [huec]
+  (doseq [number (range 255)]
+    (put! huec number)))
 
 
 (defcomponent esselement [data owner]
-  (render-state [_ {:keys [c]}]
-                
-                
-                (dom/div {:class "hover"
-                          :style {:margin-left "5.5%"}
-                          :on-click #(put! c [:idxflip [(data :topic) (data :idx)]])} (str  (data :title)))))
+    (render-state [_ {:keys [c hue width]}]
+                  (let [huec (hue-process owner)]
+                    (print "rerender" hue)
+                    (dom/div {:style {:margin-left "5.5%"
+                                      :width (str width "%")
+                                      :background-color (str "rgb(" (or hue 255) "," (or hue 255) ", 255)"  )}
+                              :on-mouse-enter #(degreeput huec)
+                              :on-mouse-leave #(om/set-state! owner :hue nil)
+                              :on-click #(put! c [:idxflip [(data :topic) (data :idx)]])} (str  (data :title))))))
+
+
 
 (defcomponent topic [[topic posts] owner]
   (did-update [_ props state]
@@ -91,14 +109,7 @@
   (will-update [_ nprops nstate]
                (let [oprops (om/get-props owner)]
                  (when (not= oprops nprops)
-                   (ani/create-animation (om/get-node owner) [{:opacity 1} {:opacity 0}] 25)
-
-                   ))
-
-               
-
-               
-               )
+                   (ani/create-animation (om/get-node owner) [{:opacity 1} {:opacity 0}] 25))))
   (render-state [_ {:keys [c]}]
                 (dom/div {:style {:font-size "5vh"}}
                          (dom/span {
@@ -114,7 +125,7 @@
 
 (defn random-thing [chan]
   (loop [num 0]
-    (print num)
+    
     (if (> num 100)
         num
         (recur (do
@@ -123,10 +134,11 @@
 
 
 (defn rand-process [chan owner]
-  (let [valfn #(om/set-state! owner :opacity %)]
+  (let [valfn #(om/set-state! owner :opacity %)
+        precision #(.toPrecision (js/Math.sin (/ % 100)) 2)]
     (go-loop [value (<! chan)]
              (<! (timeout 16))
-             (valfn value)
+             (valfn (precision value))
              (recur (<! chan)))))
 
 ;word
@@ -170,10 +182,10 @@
                 (let [blog ((data :routes)  :blog)
                       blogseq (seq  ((data :routes) :blog))
                       blogcount (count blogseq)]
-                  (print "render" opacity)
+
                   (dom/section {:class "full neutral"
                                 :style {:transform-style "preserve-3d"
-                                        :opacity (/ opacity 100)}}
+                                        :opacity (or opacity 0)}}
                    
                                (dom/div {:id "card"
                                          :class (if flip "full trans flipped" "full trans")
