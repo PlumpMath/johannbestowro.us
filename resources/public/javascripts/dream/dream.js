@@ -67785,73 +67785,73 @@ dream.default$.make_cell = function make_cell(owner, ref, x, y) {
     return function() {
       var f__10471__auto__ = function() {
         var switch__10455__auto__ = function(c__10470__auto__, node, ctx) {
-          return function(state_14565) {
-            var state_val_14566 = state_14565[1];
-            if (state_val_14566 === 7) {
-              var inst_14557 = state_14565[2];
-              var state_14565__$1 = function() {
-                var statearr_14567 = state_14565;
-                statearr_14567[7] = inst_14557;
-                return statearr_14567;
+          return function(state_20543) {
+            var state_val_20544 = state_20543[1];
+            if (state_val_20544 === 7) {
+              var inst_20535 = state_20543[2];
+              var state_20543__$1 = function() {
+                var statearr_20545 = state_20543;
+                statearr_20545[7] = inst_20535;
+                return statearr_20545;
               }();
-              var statearr_14568_14582 = state_14565__$1;
-              statearr_14568_14582[2] = null;
-              statearr_14568_14582[1] = 2;
+              var statearr_20546_20560 = state_20543__$1;
+              statearr_20546_20560[2] = null;
+              statearr_20546_20560[1] = 2;
               return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
             } else {
-              if (state_val_14566 === 6) {
-                var inst_14561 = state_14565[2];
-                var state_14565__$1 = state_14565;
-                var statearr_14569_14583 = state_14565__$1;
-                statearr_14569_14583[2] = inst_14561;
-                statearr_14569_14583[1] = 3;
+              if (state_val_20544 === 6) {
+                var inst_20539 = state_20543[2];
+                var state_20543__$1 = state_20543;
+                var statearr_20547_20561 = state_20543__$1;
+                statearr_20547_20561[2] = inst_20539;
+                statearr_20547_20561[1] = 3;
                 return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
               } else {
-                if (state_val_14566 === 5) {
-                  var state_14565__$1 = state_14565;
-                  var statearr_14570_14584 = state_14565__$1;
-                  statearr_14570_14584[2] = null;
-                  statearr_14570_14584[1] = 6;
+                if (state_val_20544 === 5) {
+                  var state_20543__$1 = state_20543;
+                  var statearr_20548_20562 = state_20543__$1;
+                  statearr_20548_20562[2] = null;
+                  statearr_20548_20562[1] = 6;
                   return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                 } else {
-                  if (state_val_14566 === 4) {
-                    var inst_14548 = cljs.core.rand_int.call(null, 255);
-                    var inst_14549 = cljs.core.rand_int.call(null, 255);
-                    var inst_14550 = cljs.core.rand_int.call(null, 255);
-                    var inst_14551 = "rgb(" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_14548) + "," + cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_14549) + "," + cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_14550) + ")";
-                    var inst_14552 = ctx.fillStyle = inst_14551;
-                    var inst_14553 = ctx.fillRect(x, y, 10, 10);
-                    var inst_14554 = cljs.core.rand_int.call(null, 1E3);
-                    var inst_14555 = cljs.core.async.timeout.call(null, inst_14554);
-                    var state_14565__$1 = function() {
-                      var statearr_14571 = state_14565;
-                      statearr_14571[8] = inst_14552;
-                      statearr_14571[9] = inst_14553;
-                      return statearr_14571;
+                  if (state_val_20544 === 4) {
+                    var inst_20526 = cljs.core.rand_int.call(null, 255);
+                    var inst_20527 = cljs.core.rand_int.call(null, 255);
+                    var inst_20528 = cljs.core.rand_int.call(null, 255);
+                    var inst_20529 = "rgb(" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_20526) + "," + cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_20527) + "," + cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_20528) + ")";
+                    var inst_20530 = ctx.fillStyle = inst_20529;
+                    var inst_20531 = ctx.fillRect(x, y, 10, 10);
+                    var inst_20532 = cljs.core.rand_int.call(null, 1E3);
+                    var inst_20533 = cljs.core.async.timeout.call(null, inst_20532);
+                    var state_20543__$1 = function() {
+                      var statearr_20549 = state_20543;
+                      statearr_20549[8] = inst_20530;
+                      statearr_20549[9] = inst_20531;
+                      return statearr_20549;
                     }();
-                    return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_14565__$1, 7, inst_14555);
+                    return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_20543__$1, 7, inst_20533);
                   } else {
-                    if (state_val_14566 === 3) {
-                      var inst_14563 = state_14565[2];
-                      var state_14565__$1 = state_14565;
-                      return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_14565__$1, inst_14563);
+                    if (state_val_20544 === 3) {
+                      var inst_20541 = state_20543[2];
+                      var state_20543__$1 = state_20543;
+                      return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_20543__$1, inst_20541);
                     } else {
-                      if (state_val_14566 === 2) {
-                        var state_14565__$1 = state_14565;
+                      if (state_val_20544 === 2) {
+                        var state_20543__$1 = state_20543;
                         if (true) {
-                          var statearr_14572_14585 = state_14565__$1;
-                          statearr_14572_14585[1] = 4;
+                          var statearr_20550_20563 = state_20543__$1;
+                          statearr_20550_20563[1] = 4;
                         } else {
-                          var statearr_14573_14586 = state_14565__$1;
-                          statearr_14573_14586[1] = 5;
+                          var statearr_20551_20564 = state_20543__$1;
+                          statearr_20551_20564[1] = 5;
                         }
                         return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                       } else {
-                        if (state_val_14566 === 1) {
-                          var state_14565__$1 = state_14565;
-                          var statearr_14574_14587 = state_14565__$1;
-                          statearr_14574_14587[2] = null;
-                          statearr_14574_14587[1] = 2;
+                        if (state_val_20544 === 1) {
+                          var state_20543__$1 = state_20543;
+                          var statearr_20552_20565 = state_20543__$1;
+                          statearr_20552_20565[2] = null;
+                          statearr_20552_20565[1] = 2;
                           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                         } else {
                           return null;
@@ -67868,17 +67868,17 @@ dream.default$.make_cell = function make_cell(owner, ref, x, y) {
           return function() {
             var state_machine__10456__auto__ = null;
             var state_machine__10456__auto____0 = function() {
-              var statearr_14578 = [null, null, null, null, null, null, null, null, null, null];
-              statearr_14578[0] = state_machine__10456__auto__;
-              statearr_14578[1] = 1;
-              return statearr_14578;
+              var statearr_20556 = [null, null, null, null, null, null, null, null, null, null];
+              statearr_20556[0] = state_machine__10456__auto__;
+              statearr_20556[1] = 1;
+              return statearr_20556;
             };
-            var state_machine__10456__auto____1 = function(state_14565) {
+            var state_machine__10456__auto____1 = function(state_20543) {
               while (true) {
                 var ret_value__10457__auto__ = function() {
                   try {
                     while (true) {
-                      var result__10458__auto__ = switch__10455__auto__.call(null, state_14565);
+                      var result__10458__auto__ = switch__10455__auto__.call(null, state_20543);
                       if (cljs.core.keyword_identical_QMARK_.call(null, result__10458__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
                         continue;
                       } else {
@@ -67886,16 +67886,16 @@ dream.default$.make_cell = function make_cell(owner, ref, x, y) {
                       }
                       break;
                     }
-                  } catch (e14579) {
-                    if (e14579 instanceof Object) {
-                      var ex__10459__auto__ = e14579;
-                      var statearr_14580_14588 = state_14565;
-                      statearr_14580_14588[5] = ex__10459__auto__;
-                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_14565);
+                  } catch (e20557) {
+                    if (e20557 instanceof Object) {
+                      var ex__10459__auto__ = e20557;
+                      var statearr_20558_20566 = state_20543;
+                      statearr_20558_20566[5] = ex__10459__auto__;
+                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_20543);
                       return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                     } else {
                       if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-                        throw e14579;
+                        throw e20557;
                       } else {
                         return null;
                       }
@@ -67903,8 +67903,8 @@ dream.default$.make_cell = function make_cell(owner, ref, x, y) {
                   }
                 }();
                 if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__10457__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
-                  var G__14589 = state_14565;
-                  state_14565 = G__14589;
+                  var G__20567 = state_20543;
+                  state_20543 = G__20567;
                   continue;
                 } else {
                   return ret_value__10457__auto__;
@@ -67912,12 +67912,12 @@ dream.default$.make_cell = function make_cell(owner, ref, x, y) {
                 break;
               }
             };
-            state_machine__10456__auto__ = function(state_14565) {
+            state_machine__10456__auto__ = function(state_20543) {
               switch(arguments.length) {
                 case 0:
                   return state_machine__10456__auto____0.call(this);
                 case 1:
-                  return state_machine__10456__auto____1.call(this, state_14565);
+                  return state_machine__10456__auto____1.call(this, state_20543);
               }
               throw new Error("Invalid arity: " + arguments.length);
             };
@@ -67928,9 +67928,9 @@ dream.default$.make_cell = function make_cell(owner, ref, x, y) {
         }(switch__10455__auto__, c__10470__auto__, node, ctx);
       }();
       var state__10472__auto__ = function() {
-        var statearr_14581 = f__10471__auto__.call(null);
-        statearr_14581[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__10470__auto__;
-        return statearr_14581;
+        var statearr_20559 = f__10471__auto__.call(null);
+        statearr_20559[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__10470__auto__;
+        return statearr_20559;
       }();
       return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__10472__auto__);
     };
@@ -67942,20 +67942,20 @@ dream.default$.make_scene = function make_scene(owner, rows, cols, ref) {
   var x = 0;
   while (true) {
     if (x < n__4397__auto__) {
-      var n__4397__auto___14590__$1 = rows;
-      var y_14591 = 0;
+      var n__4397__auto___20568__$1 = rows;
+      var y_20569 = 0;
       while (true) {
-        if (y_14591 < n__4397__auto___14590__$1) {
-          dream.default$.make_cell.call(null, owner, ref, 10 * x, 10 * y_14591);
-          var G__14592 = y_14591 + 1;
-          y_14591 = G__14592;
+        if (y_20569 < n__4397__auto___20568__$1) {
+          dream.default$.make_cell.call(null, owner, ref, 10 * x, 10 * y_20569);
+          var G__20570 = y_20569 + 1;
+          y_20569 = G__20570;
           continue;
         } else {
         }
         break;
       }
-      var G__14593 = x + 1;
-      x = G__14593;
+      var G__20571 = x + 1;
+      x = G__20571;
       continue;
     } else {
       return null;
@@ -67963,120 +67963,119 @@ dream.default$.make_scene = function make_scene(owner, rows, cols, ref) {
     break;
   }
 };
-var ufv___14612 = schema.utils.use_fn_validation;
-var output_schema14595_14613 = schema.core.Any;
-var input_schema14596_14614 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "data", "data", -1637455517, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "owner", "owner", -1534366612, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "opts", "opts", -1637113383, null))], null);
-var input_checker14597_14615 = schema.core.checker.call(null, input_schema14596_14614);
-var output_checker14598_14616 = schema.core.checker.call(null, output_schema14595_14613);
-dream.default$.default$ = function(ufv___14612, output_schema14595_14613, input_schema14596_14614, input_checker14597_14615, output_checker14598_14616) {
-  return function default$(G__14599, G__14600, G__14601) {
-    var validate__7247__auto__ = ufv___14612.get_cell();
+var ufv___20590 = schema.utils.use_fn_validation;
+var output_schema20573_20591 = schema.core.Any;
+var input_schema20574_20592 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "data", "data", -1637455517, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "owner", "owner", -1534366612, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "opts", "opts", -1637113383, null))], null);
+var input_checker20575_20593 = schema.core.checker.call(null, input_schema20574_20592);
+var output_checker20576_20594 = schema.core.checker.call(null, output_schema20573_20591);
+dream.default$.default$ = function(ufv___20590, output_schema20573_20591, input_schema20574_20592, input_checker20575_20593, output_checker20576_20594) {
+  return function default$(G__20577, G__20578, G__20579) {
+    var validate__7247__auto__ = ufv___20590.get_cell();
     if (cljs.core.truth_(validate__7247__auto__)) {
-      var args__7248__auto___14617 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__14599, G__14600, G__14601], null);
-      var temp__4092__auto___14618 = input_checker14597_14615.call(null, args__7248__auto___14617);
-      if (cljs.core.truth_(temp__4092__auto___14618)) {
-        var error__7249__auto___14619 = temp__4092__auto___14618;
-        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Input to %s does not match schema: %s", new cljs.core.Symbol(null, "default", "default", -95727622, null), cljs.core.pr_str.call(null, error__7249__auto___14619)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___14619, new cljs.core.Keyword(null, "schema", "schema", 4400883987), input_schema14596_14614, new cljs.core.Keyword(null, "value", "value", 
-        1125876963), args__7248__auto___14617], null));
+      var args__7248__auto___20595 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__20577, G__20578, G__20579], null);
+      var temp__4092__auto___20596 = input_checker20575_20593.call(null, args__7248__auto___20595);
+      if (cljs.core.truth_(temp__4092__auto___20596)) {
+        var error__7249__auto___20597 = temp__4092__auto___20596;
+        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Input to %s does not match schema: %s", new cljs.core.Symbol(null, "default", "default", -95727622, null), cljs.core.pr_str.call(null, error__7249__auto___20597)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___20597, new cljs.core.Keyword(null, "schema", "schema", 4400883987), input_schema20574_20592, new cljs.core.Keyword(null, "value", "value", 
+        1125876963), args__7248__auto___20595], null));
       } else {
       }
     } else {
     }
     var o__7250__auto__ = function() {
-      var data = G__14599;
-      var owner = G__14600;
-      var opts = G__14601;
+      var data = G__20577;
+      var owner = G__20578;
+      var opts = G__20579;
       while (true) {
-        if (typeof dream.default$.t14607 !== "undefined") {
+        if (typeof dream.default$.t20585 !== "undefined") {
         } else {
-          dream.default$.t14607 = function(opts, output_checker14598, ufv__, output_schema14595, default$, G__14600, data, G__14601, validate__7247__auto__, G__14599, input_schema14596, owner, input_checker14597, meta14608) {
+          dream.default$.t20585 = function(opts, ufv__, default$, data, validate__7247__auto__, output_checker20576, input_checker20575, owner, G__20578, output_schema20573, G__20577, input_schema20574, G__20579, meta20586) {
             this.opts = opts;
-            this.output_checker14598 = output_checker14598;
             this.ufv__ = ufv__;
-            this.output_schema14595 = output_schema14595;
             this.default$ = default$;
-            this.G__14600 = G__14600;
             this.data = data;
-            this.G__14601 = G__14601;
             this.validate__7247__auto__ = validate__7247__auto__;
-            this.G__14599 = G__14599;
-            this.input_schema14596 = input_schema14596;
+            this.output_checker20576 = output_checker20576;
+            this.input_checker20575 = input_checker20575;
             this.owner = owner;
-            this.input_checker14597 = input_checker14597;
-            this.meta14608 = meta14608;
+            this.G__20578 = G__20578;
+            this.output_schema20573 = output_schema20573;
+            this.G__20577 = G__20577;
+            this.input_schema20574 = input_schema20574;
+            this.G__20579 = G__20579;
+            this.meta20586 = meta20586;
             this.cljs$lang$protocol_mask$partition1$ = 0;
             this.cljs$lang$protocol_mask$partition0$ = 393216;
           };
-          dream.default$.t14607.cljs$lang$type = true;
-          dream.default$.t14607.cljs$lang$ctorStr = "dream.default/t14607";
-          dream.default$.t14607.cljs$lang$ctorPrWriter = function(validate__7247__auto__, ufv___14612, output_schema14595_14613, input_schema14596_14614, input_checker14597_14615, output_checker14598_14616) {
+          dream.default$.t20585.cljs$lang$type = true;
+          dream.default$.t20585.cljs$lang$ctorStr = "dream.default/t20585";
+          dream.default$.t20585.cljs$lang$ctorPrWriter = function(validate__7247__auto__, ufv___20590, output_schema20573_20591, input_schema20574_20592, input_checker20575_20593, output_checker20576_20594) {
             return function(this__4108__auto__, writer__4109__auto__, opt__4110__auto__) {
-              return cljs.core._write.call(null, writer__4109__auto__, "dream.default/t14607");
+              return cljs.core._write.call(null, writer__4109__auto__, "dream.default/t20585");
             };
-          }(validate__7247__auto__, ufv___14612, output_schema14595_14613, input_schema14596_14614, input_checker14597_14615, output_checker14598_14616);
-          dream.default$.t14607.prototype.om$core$IRenderState$ = true;
-          dream.default$.t14607.prototype.om$core$IRenderState$render_state$arity$2 = function(validate__7247__auto__, ufv___14612, output_schema14595_14613, input_schema14596_14614, input_checker14597_14615, output_checker14598_14616) {
-            return function(_, p__14610) {
+          }(validate__7247__auto__, ufv___20590, output_schema20573_20591, input_schema20574_20592, input_checker20575_20593, output_checker20576_20594);
+          dream.default$.t20585.prototype.om$core$IRenderState$ = true;
+          dream.default$.t20585.prototype.om$core$IRenderState$render_state$arity$2 = function(validate__7247__auto__, ufv___20590, output_schema20573_20591, input_schema20574_20592, input_checker20575_20593, output_checker20576_20594) {
+            return function(_, p__20588) {
               var self__ = this;
-              var map__14611 = p__14610;
-              var map__14611__$1 = cljs.core.seq_QMARK_.call(null, map__14611) ? cljs.core.apply.call(null, cljs.core.hash_map, map__14611) : map__14611;
-              var canvchan = cljs.core.get.call(null, map__14611__$1, new cljs.core.Keyword(null, "canvchan", "canvchan", 908213866));
-              var mouse_pos = cljs.core.get.call(null, map__14611__$1, new cljs.core.Keyword(null, "mouse-pos", "mouse-pos", 1599110302));
+              var map__20589 = p__20588;
+              var map__20589__$1 = cljs.core.seq_QMARK_.call(null, map__20589) ? cljs.core.apply.call(null, cljs.core.hash_map, map__20589) : map__20589;
+              var canvchan = cljs.core.get.call(null, map__20589__$1, new cljs.core.Keyword(null, "canvchan", "canvchan", 908213866));
+              var mouse_pos = cljs.core.get.call(null, map__20589__$1, new cljs.core.Keyword(null, "mouse-pos", "mouse-pos", 1599110302));
               var ___$1 = this;
               var x = cljs.core.mod.call(null, cljs.core.get.call(null, mouse_pos, 0, 255), 255);
               var y = cljs.core.mod.call(null, cljs.core.get.call(null, mouse_pos, 1, 255), 255);
               var z = x - y;
               var canvchan__$1 = om.core.get_state.call(null, self__.owner, new cljs.core.Keyword(null, "canvchan", "canvchan", 908213866));
               var rgbstr = "rgb(" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(x) + "," + cljs.core.str.cljs$core$IFn$_invoke$arity$1(y) + ", " + cljs.core.str.cljs$core$IFn$_invoke$arity$1(z) + ")";
-              return cljs.core.apply.call(null, React.DOM.section, {"className":"full flex"}, cljs.core.flatten.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [React.DOM.canvas({"className":"", "ref":"canvas"}), om_tools.dom.element.call(null, React.DOM.article, om_tools.dom.element.call(null, React.DOM.ul, cljs.core.apply.call(null, React.DOM.li, null, cljs.core.flatten.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, 
-              ["My current orienting inquiries:", om_tools.dom.element.call(null, React.DOM.ul, React.DOM.li(null, "What is the relationship between inherents and coherence?"), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [React.DOM.li(null, "What is the relationship between grief and novelty?")], null))], null))), cljs.core.PersistentVector.EMPTY), cljs.core.PersistentVector.EMPTY)], null)));
+              return cljs.core.apply.call(null, React.DOM.section, {"backgroundColor":"gray", "className":"full flex"}, cljs.core.flatten.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [null], null)));
             };
-          }(validate__7247__auto__, ufv___14612, output_schema14595_14613, input_schema14596_14614, input_checker14597_14615, output_checker14598_14616);
-          dream.default$.t14607.prototype.om$core$IDidMount$ = true;
-          dream.default$.t14607.prototype.om$core$IDidMount$did_mount$arity$1 = function(validate__7247__auto__, ufv___14612, output_schema14595_14613, input_schema14596_14614, input_checker14597_14615, output_checker14598_14616) {
+          }(validate__7247__auto__, ufv___20590, output_schema20573_20591, input_schema20574_20592, input_checker20575_20593, output_checker20576_20594);
+          dream.default$.t20585.prototype.om$core$IDidMount$ = true;
+          dream.default$.t20585.prototype.om$core$IDidMount$did_mount$arity$1 = function(validate__7247__auto__, ufv___20590, output_schema20573_20591, input_schema20574_20592, input_checker20575_20593, output_checker20576_20594) {
             return function(_) {
               var self__ = this;
               var ___$1 = this;
-              return dream.default$.make_scene.call(null, self__.owner, 5, 5, "canvas");
+              return null;
             };
-          }(validate__7247__auto__, ufv___14612, output_schema14595_14613, input_schema14596_14614, input_checker14597_14615, output_checker14598_14616);
-          dream.default$.t14607.prototype.om$core$IInitState$ = true;
-          dream.default$.t14607.prototype.om$core$IInitState$init_state$arity$1 = function(validate__7247__auto__, ufv___14612, output_schema14595_14613, input_schema14596_14614, input_checker14597_14615, output_checker14598_14616) {
+          }(validate__7247__auto__, ufv___20590, output_schema20573_20591, input_schema20574_20592, input_checker20575_20593, output_checker20576_20594);
+          dream.default$.t20585.prototype.om$core$IInitState$ = true;
+          dream.default$.t20585.prototype.om$core$IInitState$init_state$arity$1 = function(validate__7247__auto__, ufv___20590, output_schema20573_20591, input_schema20574_20592, input_checker20575_20593, output_checker20576_20594) {
             return function(_) {
               var self__ = this;
               var ___$1 = this;
               return new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "canvchan", "canvchan", 908213866), cljs.core.async.chan.call(null)], null);
             };
-          }(validate__7247__auto__, ufv___14612, output_schema14595_14613, input_schema14596_14614, input_checker14597_14615, output_checker14598_14616);
-          dream.default$.t14607.prototype.cljs$core$IMeta$_meta$arity$1 = function(validate__7247__auto__, ufv___14612, output_schema14595_14613, input_schema14596_14614, input_checker14597_14615, output_checker14598_14616) {
-            return function(_14609) {
+          }(validate__7247__auto__, ufv___20590, output_schema20573_20591, input_schema20574_20592, input_checker20575_20593, output_checker20576_20594);
+          dream.default$.t20585.prototype.cljs$core$IMeta$_meta$arity$1 = function(validate__7247__auto__, ufv___20590, output_schema20573_20591, input_schema20574_20592, input_checker20575_20593, output_checker20576_20594) {
+            return function(_20587) {
               var self__ = this;
-              var _14609__$1 = this;
-              return self__.meta14608;
+              var _20587__$1 = this;
+              return self__.meta20586;
             };
-          }(validate__7247__auto__, ufv___14612, output_schema14595_14613, input_schema14596_14614, input_checker14597_14615, output_checker14598_14616);
-          dream.default$.t14607.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(validate__7247__auto__, ufv___14612, output_schema14595_14613, input_schema14596_14614, input_checker14597_14615, output_checker14598_14616) {
-            return function(_14609, meta14608__$1) {
+          }(validate__7247__auto__, ufv___20590, output_schema20573_20591, input_schema20574_20592, input_checker20575_20593, output_checker20576_20594);
+          dream.default$.t20585.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(validate__7247__auto__, ufv___20590, output_schema20573_20591, input_schema20574_20592, input_checker20575_20593, output_checker20576_20594) {
+            return function(_20587, meta20586__$1) {
               var self__ = this;
-              var _14609__$1 = this;
-              return new dream.default$.t14607(self__.opts, self__.output_checker14598, self__.ufv__, self__.output_schema14595, self__.default$, self__.G__14600, self__.data, self__.G__14601, self__.validate__7247__auto__, self__.G__14599, self__.input_schema14596, self__.owner, self__.input_checker14597, meta14608__$1);
+              var _20587__$1 = this;
+              return new dream.default$.t20585(self__.opts, self__.ufv__, self__.default$, self__.data, self__.validate__7247__auto__, self__.output_checker20576, self__.input_checker20575, self__.owner, self__.G__20578, self__.output_schema20573, self__.G__20577, self__.input_schema20574, self__.G__20579, meta20586__$1);
             };
-          }(validate__7247__auto__, ufv___14612, output_schema14595_14613, input_schema14596_14614, input_checker14597_14615, output_checker14598_14616);
-          dream.default$.__GT_t14607 = function(validate__7247__auto__, ufv___14612, output_schema14595_14613, input_schema14596_14614, input_checker14597_14615, output_checker14598_14616) {
-            return function __GT_t14607(opts__$1, output_checker14598__$1, ufv____$1, output_schema14595__$1, default$__$1, G__14600__$1, data__$1, G__14601__$1, validate__7247__auto____$1, G__14599__$1, input_schema14596__$1, owner__$1, input_checker14597__$1, meta14608) {
-              return new dream.default$.t14607(opts__$1, output_checker14598__$1, ufv____$1, output_schema14595__$1, default$__$1, G__14600__$1, data__$1, G__14601__$1, validate__7247__auto____$1, G__14599__$1, input_schema14596__$1, owner__$1, input_checker14597__$1, meta14608);
+          }(validate__7247__auto__, ufv___20590, output_schema20573_20591, input_schema20574_20592, input_checker20575_20593, output_checker20576_20594);
+          dream.default$.__GT_t20585 = function(validate__7247__auto__, ufv___20590, output_schema20573_20591, input_schema20574_20592, input_checker20575_20593, output_checker20576_20594) {
+            return function __GT_t20585(opts__$1, ufv____$1, default$__$1, data__$1, validate__7247__auto____$1, output_checker20576__$1, input_checker20575__$1, owner__$1, G__20578__$1, output_schema20573__$1, G__20577__$1, input_schema20574__$1, G__20579__$1, meta20586) {
+              return new dream.default$.t20585(opts__$1, ufv____$1, default$__$1, data__$1, validate__7247__auto____$1, output_checker20576__$1, input_checker20575__$1, owner__$1, G__20578__$1, output_schema20573__$1, G__20577__$1, input_schema20574__$1, G__20579__$1, meta20586);
             };
-          }(validate__7247__auto__, ufv___14612, output_schema14595_14613, input_schema14596_14614, input_checker14597_14615, output_checker14598_14616);
+          }(validate__7247__auto__, ufv___20590, output_schema20573_20591, input_schema20574_20592, input_checker20575_20593, output_checker20576_20594);
         }
-        return new dream.default$.t14607(opts, output_checker14598_14616, ufv___14612, output_schema14595_14613, default$, G__14600, data, G__14601, validate__7247__auto__, G__14599, input_schema14596_14614, owner, input_checker14597_14615, null);
+        return new dream.default$.t20585(opts, ufv___20590, default$, data, validate__7247__auto__, output_checker20576_20594, input_checker20575_20593, owner, G__20578, output_schema20573_20591, G__20577, input_schema20574_20592, G__20579, null);
         break;
       }
     }();
     if (cljs.core.truth_(validate__7247__auto__)) {
-      var temp__4092__auto___14620 = output_checker14598_14616.call(null, o__7250__auto__);
-      if (cljs.core.truth_(temp__4092__auto___14620)) {
-        var error__7249__auto___14621 = temp__4092__auto___14620;
-        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Output of %s does not match schema: %s", new cljs.core.Symbol(null, "default", "default", -95727622, null), cljs.core.pr_str.call(null, error__7249__auto___14621)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___14621, new cljs.core.Keyword(null, "schema", "schema", 4400883987), output_schema14595_14613, new cljs.core.Keyword(null, "value", "value", 
+      var temp__4092__auto___20598 = output_checker20576_20594.call(null, o__7250__auto__);
+      if (cljs.core.truth_(temp__4092__auto___20598)) {
+        var error__7249__auto___20599 = temp__4092__auto___20598;
+        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Output of %s does not match schema: %s", new cljs.core.Symbol(null, "default", "default", -95727622, null), cljs.core.pr_str.call(null, error__7249__auto___20599)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___20599, new cljs.core.Keyword(null, "schema", "schema", 4400883987), output_schema20573_20591, new cljs.core.Keyword(null, "value", "value", 
         1125876963), o__7250__auto__], null));
       } else {
       }
@@ -68084,22 +68083,22 @@ dream.default$.default$ = function(ufv___14612, output_schema14595_14613, input_
     }
     return o__7250__auto__;
   };
-}(ufv___14612, output_schema14595_14613, input_schema14596_14614, input_checker14597_14615, output_checker14598_14616);
-schema.utils.declare_class_schema_BANG_.call(null, schema.utils.fn_schema_bearer.call(null, dream.default$.default$), schema.core.make_fn_schema.call(null, output_schema14595_14613, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema14596_14614], null)));
+}(ufv___20590, output_schema20573_20591, input_schema20574_20592, input_checker20575_20593, output_checker20576_20594);
+schema.utils.declare_class_schema_BANG_.call(null, schema.utils.fn_schema_bearer.call(null, dream.default$.default$), schema.core.make_fn_schema.call(null, output_schema20573_20591, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema20574_20592], null)));
 dream.default$.__GT_default = function() {
   var __GT_default = null;
   var __GT_default__1 = function(cursor__9015__auto__) {
     return om.core.build.call(null, dream.default$.default$, cursor__9015__auto__);
   };
-  var __GT_default__2 = function(cursor__9015__auto__, m14594) {
-    return om.core.build.call(null, dream.default$.default$, cursor__9015__auto__, m14594);
+  var __GT_default__2 = function(cursor__9015__auto__, m20572) {
+    return om.core.build.call(null, dream.default$.default$, cursor__9015__auto__, m20572);
   };
-  __GT_default = function(cursor__9015__auto__, m14594) {
+  __GT_default = function(cursor__9015__auto__, m20572) {
     switch(arguments.length) {
       case 1:
         return __GT_default__1.call(this, cursor__9015__auto__);
       case 2:
-        return __GT_default__2.call(this, cursor__9015__auto__, m14594);
+        return __GT_default__2.call(this, cursor__9015__auto__, m20572);
     }
     throw new Error("Invalid arity: " + arguments.length);
   };
