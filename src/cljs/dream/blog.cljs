@@ -12,7 +12,7 @@
 
 
 
-
+f
 
 (defn resort [topics topic]
   (conj (filter #(not= % topic) topics) topic))

@@ -66408,99 +66408,99 @@ goog.require("om_tools.dom");
 goog.require("cljs.core.async");
 goog.require("goog.debug");
 dream.blog.resort = function resort(topics, topic) {
-  return cljs.core.conj.call(null, cljs.core.filter.call(null, function(p1__46338_SHARP_) {
-    return cljs.core.not_EQ_.call(null, p1__46338_SHARP_, topic);
+  return cljs.core.conj.call(null, cljs.core.filter.call(null, function(p1__48851_SHARP_) {
+    return cljs.core.not_EQ_.call(null, p1__48851_SHARP_, topic);
   }, topics), topic);
 };
-dream.blog.idxer = function idxer(chan, owner, p__46339) {
-  var vec__46341 = p__46339;
-  var key = cljs.core.nth.call(null, vec__46341, 0, null);
-  var val = cljs.core.nth.call(null, vec__46341, 1, null);
-  var idx = vec__46341;
+dream.blog.idxer = function idxer(chan, owner, p__48852) {
+  var vec__48854 = p__48852;
+  var key = cljs.core.nth.call(null, vec__48854, 0, null);
+  var val = cljs.core.nth.call(null, vec__48854, 1, null);
+  var idx = vec__48854;
   cljs.core.async.put_BANG_.call(null, chan, idx);
   return om.core.set_state_BANG_.call(null, owner, new cljs.core.Keyword(null, "idx", "idx", 1014008367), val);
 };
-var ufv___46364 = schema.utils.use_fn_validation;
-var output_schema46344_46365 = schema.core.Any;
-var input_schema46345_46366 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "data", "data", -1637455517, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "owner", "owner", -1534366612, null))], null);
-var input_checker46346_46367 = schema.core.checker.call(null, input_schema46345_46366);
-var output_checker46347_46368 = schema.core.checker.call(null, output_schema46344_46365);
-dream.blog.essay = function(ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368) {
-  return function essay(G__46348, G__46349) {
-    var validate__7247__auto__ = ufv___46364.get_cell();
+var ufv___48877 = schema.utils.use_fn_validation;
+var output_schema48857_48878 = schema.core.Any;
+var input_schema48858_48879 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "data", "data", -1637455517, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "owner", "owner", -1534366612, null))], null);
+var input_checker48859_48880 = schema.core.checker.call(null, input_schema48858_48879);
+var output_checker48860_48881 = schema.core.checker.call(null, output_schema48857_48878);
+dream.blog.essay = function(ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881) {
+  return function essay(G__48861, G__48862) {
+    var validate__7247__auto__ = ufv___48877.get_cell();
     if (cljs.core.truth_(validate__7247__auto__)) {
-      var args__7248__auto___46369 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__46348, G__46349], null);
-      var temp__4092__auto___46370 = input_checker46346_46367.call(null, args__7248__auto___46369);
-      if (cljs.core.truth_(temp__4092__auto___46370)) {
-        var error__7249__auto___46371 = temp__4092__auto___46370;
-        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Input to %s does not match schema: %s", new cljs.core.Symbol(null, "essay", "essay", -1543716298, null), cljs.core.pr_str.call(null, error__7249__auto___46371)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___46371, new cljs.core.Keyword(null, "schema", "schema", 4400883987), input_schema46345_46366, new cljs.core.Keyword(null, "value", "value", 
-        1125876963), args__7248__auto___46369], null));
+      var args__7248__auto___48882 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__48861, G__48862], null);
+      var temp__4092__auto___48883 = input_checker48859_48880.call(null, args__7248__auto___48882);
+      if (cljs.core.truth_(temp__4092__auto___48883)) {
+        var error__7249__auto___48884 = temp__4092__auto___48883;
+        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Input to %s does not match schema: %s", new cljs.core.Symbol(null, "essay", "essay", -1543716298, null), cljs.core.pr_str.call(null, error__7249__auto___48884)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___48884, new cljs.core.Keyword(null, "schema", "schema", 4400883987), input_schema48858_48879, new cljs.core.Keyword(null, "value", "value", 
+        1125876963), args__7248__auto___48882], null));
       } else {
       }
     } else {
     }
     var o__7250__auto__ = function() {
-      var data = G__46348;
-      var owner = G__46349;
+      var data = G__48861;
+      var owner = G__48862;
       while (true) {
-        if (typeof dream.blog.t46357 !== "undefined") {
+        if (typeof dream.blog.t48870 !== "undefined") {
         } else {
-          dream.blog.t46357 = function(essay, ufv__, input_checker46346, data, validate__7247__auto__, G__46348, input_schema46345, G__46349, owner, output_schema46344, output_checker46347, meta46358) {
+          dream.blog.t48870 = function(essay, ufv__, output_checker48860, data, validate__7247__auto__, output_schema48857, input_checker48859, owner, G__48862, G__48861, input_schema48858, meta48871) {
             this.essay = essay;
             this.ufv__ = ufv__;
-            this.input_checker46346 = input_checker46346;
+            this.output_checker48860 = output_checker48860;
             this.data = data;
             this.validate__7247__auto__ = validate__7247__auto__;
-            this.G__46348 = G__46348;
-            this.input_schema46345 = input_schema46345;
-            this.G__46349 = G__46349;
+            this.output_schema48857 = output_schema48857;
+            this.input_checker48859 = input_checker48859;
             this.owner = owner;
-            this.output_schema46344 = output_schema46344;
-            this.output_checker46347 = output_checker46347;
-            this.meta46358 = meta46358;
+            this.G__48862 = G__48862;
+            this.G__48861 = G__48861;
+            this.input_schema48858 = input_schema48858;
+            this.meta48871 = meta48871;
             this.cljs$lang$protocol_mask$partition1$ = 0;
             this.cljs$lang$protocol_mask$partition0$ = 393216;
           };
-          dream.blog.t46357.cljs$lang$type = true;
-          dream.blog.t46357.cljs$lang$ctorStr = "dream.blog/t46357";
-          dream.blog.t46357.cljs$lang$ctorPrWriter = function(validate__7247__auto__, ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368) {
+          dream.blog.t48870.cljs$lang$type = true;
+          dream.blog.t48870.cljs$lang$ctorStr = "dream.blog/t48870";
+          dream.blog.t48870.cljs$lang$ctorPrWriter = function(validate__7247__auto__, ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881) {
             return function(this__4108__auto__, writer__4109__auto__, opt__4110__auto__) {
-              return cljs.core._write.call(null, writer__4109__auto__, "dream.blog/t46357");
+              return cljs.core._write.call(null, writer__4109__auto__, "dream.blog/t48870");
             };
-          }(validate__7247__auto__, ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368);
-          dream.blog.t46357.prototype.om$core$IRenderState$ = true;
-          dream.blog.t46357.prototype.om$core$IRenderState$render_state$arity$2 = function(validate__7247__auto__, ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368) {
-            return function(_, p__46360) {
+          }(validate__7247__auto__, ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881);
+          dream.blog.t48870.prototype.om$core$IRenderState$ = true;
+          dream.blog.t48870.prototype.om$core$IRenderState$render_state$arity$2 = function(validate__7247__auto__, ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881) {
+            return function(_, p__48873) {
               var self__ = this;
-              var map__46361 = p__46360;
-              var map__46361__$1 = cljs.core.seq_QMARK_.call(null, map__46361) ? cljs.core.apply.call(null, cljs.core.hash_map, map__46361) : map__46361;
-              var c = cljs.core.get.call(null, map__46361__$1, new cljs.core.Keyword(null, "c", "c", 1013904341));
+              var map__48874 = p__48873;
+              var map__48874__$1 = cljs.core.seq_QMARK_.call(null, map__48874) ? cljs.core.apply.call(null, cljs.core.hash_map, map__48874) : map__48874;
+              var c = cljs.core.get.call(null, map__48874__$1, new cljs.core.Keyword(null, "c", "c", 1013904341));
               var ___$1 = this;
               return cljs.core.apply.call(null, React.DOM.div, {"style":{"background":"#DDD6E8", "height":"100%", "width":"90%"}, "className":"figure flex column back", "ref":"modal"}, cljs.core.flatten.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [function() {
                 var padding = new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "padding", "padding", 4502531971), "3%"], null);
-                var padify = function(padding, ___$1, map__46361, map__46361__$1, c, validate__7247__auto__, ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368) {
-                  return function(p1__46342_SHARP_) {
-                    return cljs.core.assoc.call(null, p1__46342_SHARP_, new cljs.core.Keyword(null, "style", "style", 1123684643), padding);
+                var padify = function(padding, ___$1, map__48874, map__48874__$1, c, validate__7247__auto__, ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881) {
+                  return function(p1__48855_SHARP_) {
+                    return cljs.core.assoc.call(null, p1__48855_SHARP_, new cljs.core.Keyword(null, "style", "style", 1123684643), padding);
                   };
-                }(padding, ___$1, map__46361, map__46361__$1, c, validate__7247__auto__, ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368);
+                }(padding, ___$1, map__48874, map__48874__$1, c, validate__7247__auto__, ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881);
                 return cljs.core.apply.call(null, React.DOM.div, {"className":"flex", "style":{"font-size":"8.0vh", "background-color":"white", "width":"90%"}, "ref":"title"}, cljs.core.flatten.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.apply.call(null, React.DOM.div, {"style":{"width":"75%", "font-sze":"5vh"}}, cljs.core.flatten.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [self__.data.call(null, 
                 new cljs.core.Keyword(null, "title", "title", 1124275658))], null))), om_tools.dom.element.call(null, React.DOM.div, padify.call(null, new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "class", "class", 1108647146), "fa fa-long-arrow-right", new cljs.core.Keyword(null, "style", "style", 1123684643), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "width", "width", 1127031096), "25%"], null), new cljs.core.Keyword(null, "on-click", "on-click", 
-                1416542092), function(padding, padify, ___$1, map__46361, map__46361__$1, c, validate__7247__auto__, ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368) {
+                1416542092), function(padding, padify, ___$1, map__48874, map__48874__$1, c, validate__7247__auto__, ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881) {
                   return function() {
                     return cljs.core.async.put_BANG_.call(null, c, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "flip", "flip", 1017050079)], null));
                   };
-                }(padding, padify, ___$1, map__46361, map__46361__$1, c, validate__7247__auto__, ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368)], null)), cljs.core.PersistentVector.EMPTY)], null)));
+                }(padding, padify, ___$1, map__48874, map__48874__$1, c, validate__7247__auto__, ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881)], null)), cljs.core.PersistentVector.EMPTY)], null)));
               }(), React.DOM.div({"dangerouslySetInnerHTML":{"__html":"" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(hiccups.runtime.render_html.call(null, self__.data.call(null, new cljs.core.Keyword(null, "content", "content", 1965434859))))}, "ref":"content", "style":{"padding":"5%", "width":"80%", "overflowY":"scroll", "height":"70%"}})], null)));
             };
-          }(validate__7247__auto__, ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368);
-          dream.blog.t46357.prototype.om$core$IWillUpdate$ = true;
-          dream.blog.t46357.prototype.om$core$IWillUpdate$will_update$arity$3 = function(validate__7247__auto__, ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368) {
-            return function(_, nprops, p__46362) {
+          }(validate__7247__auto__, ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881);
+          dream.blog.t48870.prototype.om$core$IWillUpdate$ = true;
+          dream.blog.t48870.prototype.om$core$IWillUpdate$will_update$arity$3 = function(validate__7247__auto__, ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881) {
+            return function(_, nprops, p__48875) {
               var self__ = this;
-              var map__46363 = p__46362;
-              var map__46363__$1 = cljs.core.seq_QMARK_.call(null, map__46363) ? cljs.core.apply.call(null, cljs.core.hash_map, map__46363) : map__46363;
-              var nstate = map__46363__$1;
-              var tophov = cljs.core.get.call(null, map__46363__$1, new cljs.core.Keyword(null, "tophov", "tophov", 4440836684));
+              var map__48876 = p__48875;
+              var map__48876__$1 = cljs.core.seq_QMARK_.call(null, map__48876) ? cljs.core.apply.call(null, cljs.core.hash_map, map__48876) : map__48876;
+              var nstate = map__48876__$1;
+              var tophov = cljs.core.get.call(null, map__48876__$1, new cljs.core.Keyword(null, "tophov", "tophov", 4440836684));
               var ___$1 = this;
               var oprops = om.core.get_props.call(null, self__.owner);
               if (cljs.core.not_EQ_.call(null, nprops, oprops)) {
@@ -66511,36 +66511,36 @@ dream.blog.essay = function(ufv___46364, output_schema46344_46365, input_schema4
                 return null;
               }
             };
-          }(validate__7247__auto__, ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368);
-          dream.blog.t46357.prototype.cljs$core$IMeta$_meta$arity$1 = function(validate__7247__auto__, ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368) {
-            return function(_46359) {
+          }(validate__7247__auto__, ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881);
+          dream.blog.t48870.prototype.cljs$core$IMeta$_meta$arity$1 = function(validate__7247__auto__, ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881) {
+            return function(_48872) {
               var self__ = this;
-              var _46359__$1 = this;
-              return self__.meta46358;
+              var _48872__$1 = this;
+              return self__.meta48871;
             };
-          }(validate__7247__auto__, ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368);
-          dream.blog.t46357.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(validate__7247__auto__, ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368) {
-            return function(_46359, meta46358__$1) {
+          }(validate__7247__auto__, ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881);
+          dream.blog.t48870.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(validate__7247__auto__, ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881) {
+            return function(_48872, meta48871__$1) {
               var self__ = this;
-              var _46359__$1 = this;
-              return new dream.blog.t46357(self__.essay, self__.ufv__, self__.input_checker46346, self__.data, self__.validate__7247__auto__, self__.G__46348, self__.input_schema46345, self__.G__46349, self__.owner, self__.output_schema46344, self__.output_checker46347, meta46358__$1);
+              var _48872__$1 = this;
+              return new dream.blog.t48870(self__.essay, self__.ufv__, self__.output_checker48860, self__.data, self__.validate__7247__auto__, self__.output_schema48857, self__.input_checker48859, self__.owner, self__.G__48862, self__.G__48861, self__.input_schema48858, meta48871__$1);
             };
-          }(validate__7247__auto__, ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368);
-          dream.blog.__GT_t46357 = function(validate__7247__auto__, ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368) {
-            return function __GT_t46357(essay__$1, ufv____$1, input_checker46346__$1, data__$1, validate__7247__auto____$1, G__46348__$1, input_schema46345__$1, G__46349__$1, owner__$1, output_schema46344__$1, output_checker46347__$1, meta46358) {
-              return new dream.blog.t46357(essay__$1, ufv____$1, input_checker46346__$1, data__$1, validate__7247__auto____$1, G__46348__$1, input_schema46345__$1, G__46349__$1, owner__$1, output_schema46344__$1, output_checker46347__$1, meta46358);
+          }(validate__7247__auto__, ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881);
+          dream.blog.__GT_t48870 = function(validate__7247__auto__, ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881) {
+            return function __GT_t48870(essay__$1, ufv____$1, output_checker48860__$1, data__$1, validate__7247__auto____$1, output_schema48857__$1, input_checker48859__$1, owner__$1, G__48862__$1, G__48861__$1, input_schema48858__$1, meta48871) {
+              return new dream.blog.t48870(essay__$1, ufv____$1, output_checker48860__$1, data__$1, validate__7247__auto____$1, output_schema48857__$1, input_checker48859__$1, owner__$1, G__48862__$1, G__48861__$1, input_schema48858__$1, meta48871);
             };
-          }(validate__7247__auto__, ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368);
+          }(validate__7247__auto__, ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881);
         }
-        return new dream.blog.t46357(essay, ufv___46364, input_checker46346_46367, data, validate__7247__auto__, G__46348, input_schema46345_46366, G__46349, owner, output_schema46344_46365, output_checker46347_46368, null);
+        return new dream.blog.t48870(essay, ufv___48877, output_checker48860_48881, data, validate__7247__auto__, output_schema48857_48878, input_checker48859_48880, owner, G__48862, G__48861, input_schema48858_48879, null);
         break;
       }
     }();
     if (cljs.core.truth_(validate__7247__auto__)) {
-      var temp__4092__auto___46372 = output_checker46347_46368.call(null, o__7250__auto__);
-      if (cljs.core.truth_(temp__4092__auto___46372)) {
-        var error__7249__auto___46373 = temp__4092__auto___46372;
-        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Output of %s does not match schema: %s", new cljs.core.Symbol(null, "essay", "essay", -1543716298, null), cljs.core.pr_str.call(null, error__7249__auto___46373)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___46373, new cljs.core.Keyword(null, "schema", "schema", 4400883987), output_schema46344_46365, new cljs.core.Keyword(null, "value", "value", 
+      var temp__4092__auto___48885 = output_checker48860_48881.call(null, o__7250__auto__);
+      if (cljs.core.truth_(temp__4092__auto___48885)) {
+        var error__7249__auto___48886 = temp__4092__auto___48885;
+        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Output of %s does not match schema: %s", new cljs.core.Symbol(null, "essay", "essay", -1543716298, null), cljs.core.pr_str.call(null, error__7249__auto___48886)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___48886, new cljs.core.Keyword(null, "schema", "schema", 4400883987), output_schema48857_48878, new cljs.core.Keyword(null, "value", "value", 
         1125876963), o__7250__auto__], null));
       } else {
       }
@@ -66548,22 +66548,22 @@ dream.blog.essay = function(ufv___46364, output_schema46344_46365, input_schema4
     }
     return o__7250__auto__;
   };
-}(ufv___46364, output_schema46344_46365, input_schema46345_46366, input_checker46346_46367, output_checker46347_46368);
-schema.utils.declare_class_schema_BANG_.call(null, schema.utils.fn_schema_bearer.call(null, dream.blog.essay), schema.core.make_fn_schema.call(null, output_schema46344_46365, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema46345_46366], null)));
+}(ufv___48877, output_schema48857_48878, input_schema48858_48879, input_checker48859_48880, output_checker48860_48881);
+schema.utils.declare_class_schema_BANG_.call(null, schema.utils.fn_schema_bearer.call(null, dream.blog.essay), schema.core.make_fn_schema.call(null, output_schema48857_48878, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema48858_48879], null)));
 dream.blog.__GT_essay = function() {
   var __GT_essay = null;
   var __GT_essay__1 = function(cursor__9015__auto__) {
     return om.core.build.call(null, dream.blog.essay, cursor__9015__auto__);
   };
-  var __GT_essay__2 = function(cursor__9015__auto__, m46343) {
-    return om.core.build.call(null, dream.blog.essay, cursor__9015__auto__, m46343);
+  var __GT_essay__2 = function(cursor__9015__auto__, m48856) {
+    return om.core.build.call(null, dream.blog.essay, cursor__9015__auto__, m48856);
   };
-  __GT_essay = function(cursor__9015__auto__, m46343) {
+  __GT_essay = function(cursor__9015__auto__, m48856) {
     switch(arguments.length) {
       case 1:
         return __GT_essay__1.call(this, cursor__9015__auto__);
       case 2:
-        return __GT_essay__2.call(this, cursor__9015__auto__, m46343);
+        return __GT_essay__2.call(this, cursor__9015__auto__, m48856);
     }
     throw new Error("Invalid arity: " + arguments.length);
   };
@@ -66573,68 +66573,68 @@ dream.blog.__GT_essay = function() {
 }();
 dream.blog.hue_process = function hue_process(owner) {
   var huec = cljs.core.async.chan.call(null);
-  var c__10470__auto___46436 = cljs.core.async.chan.call(null, 1);
-  cljs.core.async.impl.dispatch.run.call(null, function(c__10470__auto___46436, huec) {
+  var c__10470__auto___48949 = cljs.core.async.chan.call(null, 1);
+  cljs.core.async.impl.dispatch.run.call(null, function(c__10470__auto___48949, huec) {
     return function() {
       var f__10471__auto__ = function() {
-        var switch__10455__auto__ = function(c__10470__auto___46436, huec) {
-          return function(state_46422) {
-            var state_val_46423 = state_46422[1];
-            if (state_val_46423 === 6) {
-              var inst_46417 = state_46422[2];
-              var inst_46407 = inst_46417;
-              var state_46422__$1 = function() {
-                var statearr_46424 = state_46422;
-                statearr_46424[7] = inst_46407;
-                return statearr_46424;
+        var switch__10455__auto__ = function(c__10470__auto___48949, huec) {
+          return function(state_48935) {
+            var state_val_48936 = state_48935[1];
+            if (state_val_48936 === 6) {
+              var inst_48930 = state_48935[2];
+              var inst_48920 = inst_48930;
+              var state_48935__$1 = function() {
+                var statearr_48937 = state_48935;
+                statearr_48937[7] = inst_48920;
+                return statearr_48937;
               }();
-              var statearr_46425_46437 = state_46422__$1;
-              statearr_46425_46437[2] = null;
-              statearr_46425_46437[1] = 3;
+              var statearr_48938_48950 = state_48935__$1;
+              statearr_48938_48950[2] = null;
+              statearr_48938_48950[1] = 3;
               return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
             } else {
-              if (state_val_46423 === 5) {
-                var inst_46407 = state_46422[7];
-                var inst_46411 = state_46422[2];
-                var inst_46412 = cljs.core.mod.call(null, inst_46407, 255);
-                var inst_46413 = om.core.set_state_BANG_.call(null, owner, new cljs.core.Keyword(null, "hue", "hue", 1014007914), inst_46412);
-                var inst_46414 = cljs.core.mod.call(null, inst_46407, 100);
-                var inst_46415 = om.core.set_state_BANG_.call(null, owner, new cljs.core.Keyword(null, "width", "width", 1127031096), inst_46414);
-                var state_46422__$1 = function() {
-                  var statearr_46426 = state_46422;
-                  statearr_46426[8] = inst_46415;
-                  statearr_46426[9] = inst_46413;
-                  statearr_46426[10] = inst_46411;
-                  return statearr_46426;
+              if (state_val_48936 === 5) {
+                var inst_48920 = state_48935[7];
+                var inst_48924 = state_48935[2];
+                var inst_48925 = cljs.core.mod.call(null, inst_48920, 255);
+                var inst_48926 = om.core.set_state_BANG_.call(null, owner, new cljs.core.Keyword(null, "hue", "hue", 1014007914), inst_48925);
+                var inst_48927 = cljs.core.mod.call(null, inst_48920, 100);
+                var inst_48928 = om.core.set_state_BANG_.call(null, owner, new cljs.core.Keyword(null, "width", "width", 1127031096), inst_48927);
+                var state_48935__$1 = function() {
+                  var statearr_48939 = state_48935;
+                  statearr_48939[8] = inst_48924;
+                  statearr_48939[9] = inst_48926;
+                  statearr_48939[10] = inst_48928;
+                  return statearr_48939;
                 }();
-                return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_46422__$1, 6, huec);
+                return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_48935__$1, 6, huec);
               } else {
-                if (state_val_46423 === 4) {
-                  var inst_46420 = state_46422[2];
-                  var state_46422__$1 = state_46422;
-                  return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_46422__$1, inst_46420);
+                if (state_val_48936 === 4) {
+                  var inst_48933 = state_48935[2];
+                  var state_48935__$1 = state_48935;
+                  return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_48935__$1, inst_48933);
                 } else {
-                  if (state_val_46423 === 3) {
-                    var inst_46409 = cljs.core.async.timeout.call(null, 4);
-                    var state_46422__$1 = state_46422;
-                    return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_46422__$1, 5, inst_46409);
+                  if (state_val_48936 === 3) {
+                    var inst_48922 = cljs.core.async.timeout.call(null, 4);
+                    var state_48935__$1 = state_48935;
+                    return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_48935__$1, 5, inst_48922);
                   } else {
-                    if (state_val_46423 === 2) {
-                      var inst_46406 = state_46422[2];
-                      var inst_46407 = inst_46406;
-                      var state_46422__$1 = function() {
-                        var statearr_46427 = state_46422;
-                        statearr_46427[7] = inst_46407;
-                        return statearr_46427;
+                    if (state_val_48936 === 2) {
+                      var inst_48919 = state_48935[2];
+                      var inst_48920 = inst_48919;
+                      var state_48935__$1 = function() {
+                        var statearr_48940 = state_48935;
+                        statearr_48940[7] = inst_48920;
+                        return statearr_48940;
                       }();
-                      var statearr_46428_46438 = state_46422__$1;
-                      statearr_46428_46438[2] = null;
-                      statearr_46428_46438[1] = 3;
+                      var statearr_48941_48951 = state_48935__$1;
+                      statearr_48941_48951[2] = null;
+                      statearr_48941_48951[1] = 3;
                       return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                     } else {
-                      if (state_val_46423 === 1) {
-                        var state_46422__$1 = state_46422;
-                        return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_46422__$1, 2, huec);
+                      if (state_val_48936 === 1) {
+                        var state_48935__$1 = state_48935;
+                        return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_48935__$1, 2, huec);
                       } else {
                         return null;
                       }
@@ -66644,22 +66644,22 @@ dream.blog.hue_process = function hue_process(owner) {
               }
             }
           };
-        }(c__10470__auto___46436, huec);
-        return function(switch__10455__auto__, c__10470__auto___46436, huec) {
+        }(c__10470__auto___48949, huec);
+        return function(switch__10455__auto__, c__10470__auto___48949, huec) {
           return function() {
             var state_machine__10456__auto__ = null;
             var state_machine__10456__auto____0 = function() {
-              var statearr_46432 = [null, null, null, null, null, null, null, null, null, null, null];
-              statearr_46432[0] = state_machine__10456__auto__;
-              statearr_46432[1] = 1;
-              return statearr_46432;
+              var statearr_48945 = [null, null, null, null, null, null, null, null, null, null, null];
+              statearr_48945[0] = state_machine__10456__auto__;
+              statearr_48945[1] = 1;
+              return statearr_48945;
             };
-            var state_machine__10456__auto____1 = function(state_46422) {
+            var state_machine__10456__auto____1 = function(state_48935) {
               while (true) {
                 var ret_value__10457__auto__ = function() {
                   try {
                     while (true) {
-                      var result__10458__auto__ = switch__10455__auto__.call(null, state_46422);
+                      var result__10458__auto__ = switch__10455__auto__.call(null, state_48935);
                       if (cljs.core.keyword_identical_QMARK_.call(null, result__10458__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
                         continue;
                       } else {
@@ -66667,16 +66667,16 @@ dream.blog.hue_process = function hue_process(owner) {
                       }
                       break;
                     }
-                  } catch (e46433) {
-                    if (e46433 instanceof Object) {
-                      var ex__10459__auto__ = e46433;
-                      var statearr_46434_46439 = state_46422;
-                      statearr_46434_46439[5] = ex__10459__auto__;
-                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_46422);
+                  } catch (e48946) {
+                    if (e48946 instanceof Object) {
+                      var ex__10459__auto__ = e48946;
+                      var statearr_48947_48952 = state_48935;
+                      statearr_48947_48952[5] = ex__10459__auto__;
+                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_48935);
                       return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                     } else {
                       if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-                        throw e46433;
+                        throw e48946;
                       } else {
                         return null;
                       }
@@ -66684,8 +66684,8 @@ dream.blog.hue_process = function hue_process(owner) {
                   }
                 }();
                 if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__10457__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
-                  var G__46440 = state_46422;
-                  state_46422 = G__46440;
+                  var G__48953 = state_48935;
+                  state_48935 = G__48953;
                   continue;
                 } else {
                   return ret_value__10457__auto__;
@@ -66693,12 +66693,12 @@ dream.blog.hue_process = function hue_process(owner) {
                 break;
               }
             };
-            state_machine__10456__auto__ = function(state_46422) {
+            state_machine__10456__auto__ = function(state_48935) {
               switch(arguments.length) {
                 case 0:
                   return state_machine__10456__auto____0.call(this);
                 case 1:
-                  return state_machine__10456__auto____1.call(this, state_46422);
+                  return state_machine__10456__auto____1.call(this, state_48935);
               }
               throw new Error("Invalid arity: " + arguments.length);
             };
@@ -66706,62 +66706,62 @@ dream.blog.hue_process = function hue_process(owner) {
             state_machine__10456__auto__.cljs$core$IFn$_invoke$arity$1 = state_machine__10456__auto____1;
             return state_machine__10456__auto__;
           }();
-        }(switch__10455__auto__, c__10470__auto___46436, huec);
+        }(switch__10455__auto__, c__10470__auto___48949, huec);
       }();
       var state__10472__auto__ = function() {
-        var statearr_46435 = f__10471__auto__.call(null);
-        statearr_46435[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__10470__auto___46436;
-        return statearr_46435;
+        var statearr_48948 = f__10471__auto__.call(null);
+        statearr_48948[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__10470__auto___48949;
+        return statearr_48948;
       }();
       return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__10472__auto__);
     };
-  }(c__10470__auto___46436, huec));
+  }(c__10470__auto___48949, huec));
   return huec;
 };
 dream.blog.degreeput = function degreeput(huec) {
-  var seq__46445 = cljs.core.seq.call(null, cljs.core.range.call(null, 255));
-  var chunk__46446 = null;
-  var count__46447 = 0;
-  var i__46448 = 0;
+  var seq__48958 = cljs.core.seq.call(null, cljs.core.range.call(null, 255));
+  var chunk__48959 = null;
+  var count__48960 = 0;
+  var i__48961 = 0;
   while (true) {
-    if (i__46448 < count__46447) {
-      var number = cljs.core._nth.call(null, chunk__46446, i__46448);
+    if (i__48961 < count__48960) {
+      var number = cljs.core._nth.call(null, chunk__48959, i__48961);
       cljs.core.async.put_BANG_.call(null, huec, number);
-      var G__46449 = seq__46445;
-      var G__46450 = chunk__46446;
-      var G__46451 = count__46447;
-      var G__46452 = i__46448 + 1;
-      seq__46445 = G__46449;
-      chunk__46446 = G__46450;
-      count__46447 = G__46451;
-      i__46448 = G__46452;
+      var G__48962 = seq__48958;
+      var G__48963 = chunk__48959;
+      var G__48964 = count__48960;
+      var G__48965 = i__48961 + 1;
+      seq__48958 = G__48962;
+      chunk__48959 = G__48963;
+      count__48960 = G__48964;
+      i__48961 = G__48965;
       continue;
     } else {
-      var temp__4092__auto__ = cljs.core.seq.call(null, seq__46445);
+      var temp__4092__auto__ = cljs.core.seq.call(null, seq__48958);
       if (temp__4092__auto__) {
-        var seq__46445__$1 = temp__4092__auto__;
-        if (cljs.core.chunked_seq_QMARK_.call(null, seq__46445__$1)) {
-          var c__4297__auto__ = cljs.core.chunk_first.call(null, seq__46445__$1);
-          var G__46453 = cljs.core.chunk_rest.call(null, seq__46445__$1);
-          var G__46454 = c__4297__auto__;
-          var G__46455 = cljs.core.count.call(null, c__4297__auto__);
-          var G__46456 = 0;
-          seq__46445 = G__46453;
-          chunk__46446 = G__46454;
-          count__46447 = G__46455;
-          i__46448 = G__46456;
+        var seq__48958__$1 = temp__4092__auto__;
+        if (cljs.core.chunked_seq_QMARK_.call(null, seq__48958__$1)) {
+          var c__4297__auto__ = cljs.core.chunk_first.call(null, seq__48958__$1);
+          var G__48966 = cljs.core.chunk_rest.call(null, seq__48958__$1);
+          var G__48967 = c__4297__auto__;
+          var G__48968 = cljs.core.count.call(null, c__4297__auto__);
+          var G__48969 = 0;
+          seq__48958 = G__48966;
+          chunk__48959 = G__48967;
+          count__48960 = G__48968;
+          i__48961 = G__48969;
           continue;
         } else {
-          var number = cljs.core.first.call(null, seq__46445__$1);
+          var number = cljs.core.first.call(null, seq__48958__$1);
           cljs.core.async.put_BANG_.call(null, huec, number);
-          var G__46457 = cljs.core.next.call(null, seq__46445__$1);
-          var G__46458 = null;
-          var G__46459 = 0;
-          var G__46460 = 0;
-          seq__46445 = G__46457;
-          chunk__46446 = G__46458;
-          count__46447 = G__46459;
-          i__46448 = G__46460;
+          var G__48970 = cljs.core.next.call(null, seq__48958__$1);
+          var G__48971 = null;
+          var G__48972 = 0;
+          var G__48973 = 0;
+          seq__48958 = G__48970;
+          chunk__48959 = G__48971;
+          count__48960 = G__48972;
+          i__48961 = G__48973;
           continue;
         }
       } else {
@@ -66771,79 +66771,79 @@ dream.blog.degreeput = function degreeput(huec) {
     break;
   }
 };
-var ufv___46478 = schema.utils.use_fn_validation;
-var output_schema46462_46479 = schema.core.Any;
-var input_schema46463_46480 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "data", "data", -1637455517, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "owner", "owner", -1534366612, null))], null);
-var input_checker46464_46481 = schema.core.checker.call(null, input_schema46463_46480);
-var output_checker46465_46482 = schema.core.checker.call(null, output_schema46462_46479);
-dream.blog.esselement = function(ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482) {
-  return function esselement(G__46466, G__46467) {
-    var validate__7247__auto__ = ufv___46478.get_cell();
+var ufv___48991 = schema.utils.use_fn_validation;
+var output_schema48975_48992 = schema.core.Any;
+var input_schema48976_48993 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "data", "data", -1637455517, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "owner", "owner", -1534366612, null))], null);
+var input_checker48977_48994 = schema.core.checker.call(null, input_schema48976_48993);
+var output_checker48978_48995 = schema.core.checker.call(null, output_schema48975_48992);
+dream.blog.esselement = function(ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995) {
+  return function esselement(G__48979, G__48980) {
+    var validate__7247__auto__ = ufv___48991.get_cell();
     if (cljs.core.truth_(validate__7247__auto__)) {
-      var args__7248__auto___46483 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__46466, G__46467], null);
-      var temp__4092__auto___46484 = input_checker46464_46481.call(null, args__7248__auto___46483);
-      if (cljs.core.truth_(temp__4092__auto___46484)) {
-        var error__7249__auto___46485 = temp__4092__auto___46484;
-        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Input to %s does not match schema: %s", new cljs.core.Symbol(null, "esselement", "esselement", -520536176, null), cljs.core.pr_str.call(null, error__7249__auto___46485)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___46485, new cljs.core.Keyword(null, "schema", "schema", 4400883987), input_schema46463_46480, new cljs.core.Keyword(null, "value", 
-        "value", 1125876963), args__7248__auto___46483], null));
+      var args__7248__auto___48996 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__48979, G__48980], null);
+      var temp__4092__auto___48997 = input_checker48977_48994.call(null, args__7248__auto___48996);
+      if (cljs.core.truth_(temp__4092__auto___48997)) {
+        var error__7249__auto___48998 = temp__4092__auto___48997;
+        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Input to %s does not match schema: %s", new cljs.core.Symbol(null, "esselement", "esselement", -520536176, null), cljs.core.pr_str.call(null, error__7249__auto___48998)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___48998, new cljs.core.Keyword(null, "schema", "schema", 4400883987), input_schema48976_48993, new cljs.core.Keyword(null, "value", 
+        "value", 1125876963), args__7248__auto___48996], null));
       } else {
       }
     } else {
     }
     var o__7250__auto__ = function() {
-      var data = G__46466;
-      var owner = G__46467;
+      var data = G__48979;
+      var owner = G__48980;
       while (true) {
-        if (typeof dream.blog.t46473 !== "undefined") {
+        if (typeof dream.blog.t48986 !== "undefined") {
         } else {
-          dream.blog.t46473 = function(ufv__, G__46466, input_schema46463, G__46467, data, validate__7247__auto__, output_schema46462, input_checker46464, owner, esselement, output_checker46465, meta46474) {
+          dream.blog.t48986 = function(ufv__, data, validate__7247__auto__, output_checker48978, input_checker48977, G__48980, owner, esselement, output_schema48975, input_schema48976, G__48979, meta48987) {
             this.ufv__ = ufv__;
-            this.G__46466 = G__46466;
-            this.input_schema46463 = input_schema46463;
-            this.G__46467 = G__46467;
             this.data = data;
             this.validate__7247__auto__ = validate__7247__auto__;
-            this.output_schema46462 = output_schema46462;
-            this.input_checker46464 = input_checker46464;
+            this.output_checker48978 = output_checker48978;
+            this.input_checker48977 = input_checker48977;
+            this.G__48980 = G__48980;
             this.owner = owner;
             this.esselement = esselement;
-            this.output_checker46465 = output_checker46465;
-            this.meta46474 = meta46474;
+            this.output_schema48975 = output_schema48975;
+            this.input_schema48976 = input_schema48976;
+            this.G__48979 = G__48979;
+            this.meta48987 = meta48987;
             this.cljs$lang$protocol_mask$partition1$ = 0;
             this.cljs$lang$protocol_mask$partition0$ = 393216;
           };
-          dream.blog.t46473.cljs$lang$type = true;
-          dream.blog.t46473.cljs$lang$ctorStr = "dream.blog/t46473";
-          dream.blog.t46473.cljs$lang$ctorPrWriter = function(validate__7247__auto__, ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482) {
+          dream.blog.t48986.cljs$lang$type = true;
+          dream.blog.t48986.cljs$lang$ctorStr = "dream.blog/t48986";
+          dream.blog.t48986.cljs$lang$ctorPrWriter = function(validate__7247__auto__, ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995) {
             return function(this__4108__auto__, writer__4109__auto__, opt__4110__auto__) {
-              return cljs.core._write.call(null, writer__4109__auto__, "dream.blog/t46473");
+              return cljs.core._write.call(null, writer__4109__auto__, "dream.blog/t48986");
             };
-          }(validate__7247__auto__, ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482);
-          dream.blog.t46473.prototype.om$core$IRenderState$ = true;
-          dream.blog.t46473.prototype.om$core$IRenderState$render_state$arity$2 = function(validate__7247__auto__, ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482) {
-            return function(_, p__46476) {
+          }(validate__7247__auto__, ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995);
+          dream.blog.t48986.prototype.om$core$IRenderState$ = true;
+          dream.blog.t48986.prototype.om$core$IRenderState$render_state$arity$2 = function(validate__7247__auto__, ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995) {
+            return function(_, p__48989) {
               var self__ = this;
-              var map__46477 = p__46476;
-              var map__46477__$1 = cljs.core.seq_QMARK_.call(null, map__46477) ? cljs.core.apply.call(null, cljs.core.hash_map, map__46477) : map__46477;
-              var width = cljs.core.get.call(null, map__46477__$1, new cljs.core.Keyword(null, "width", "width", 1127031096));
-              var hue = cljs.core.get.call(null, map__46477__$1, new cljs.core.Keyword(null, "hue", "hue", 1014007914));
-              var c = cljs.core.get.call(null, map__46477__$1, new cljs.core.Keyword(null, "c", "c", 1013904341));
+              var map__48990 = p__48989;
+              var map__48990__$1 = cljs.core.seq_QMARK_.call(null, map__48990) ? cljs.core.apply.call(null, cljs.core.hash_map, map__48990) : map__48990;
+              var width = cljs.core.get.call(null, map__48990__$1, new cljs.core.Keyword(null, "width", "width", 1127031096));
+              var hue = cljs.core.get.call(null, map__48990__$1, new cljs.core.Keyword(null, "hue", "hue", 1014007914));
+              var c = cljs.core.get.call(null, map__48990__$1, new cljs.core.Keyword(null, "c", "c", 1013904341));
               var ___$1 = this;
               var huec = dream.blog.hue_process.call(null, self__.owner);
               cljs.core.print.call(null, "rerender", hue);
-              return cljs.core.apply.call(null, React.DOM.div, {"onClick":function(huec, ___$1, map__46477, map__46477__$1, width, hue, c, validate__7247__auto__, ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482) {
+              return cljs.core.apply.call(null, React.DOM.div, {"onClick":function(huec, ___$1, map__48990, map__48990__$1, width, hue, c, validate__7247__auto__, ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995) {
                 return function() {
                   return cljs.core.async.put_BANG_.call(null, c, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "idxflip", "idxflip", 2689393692), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [self__.data.call(null, new cljs.core.Keyword(null, "topic", "topic", 1124450465)), self__.data.call(null, new cljs.core.Keyword(null, "idx", "idx", 1014008367))], null)], null));
                 };
-              }(huec, ___$1, map__46477, map__46477__$1, width, hue, c, validate__7247__auto__, ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482), "onMouseLeave":function(huec, ___$1, map__46477, map__46477__$1, width, hue, c, validate__7247__auto__, ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482) {
+              }(huec, ___$1, map__48990, map__48990__$1, width, hue, c, validate__7247__auto__, ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995), "onMouseLeave":function(huec, ___$1, map__48990, map__48990__$1, width, hue, c, validate__7247__auto__, ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995) {
                 return function() {
                   return om.core.set_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "hue", "hue", 1014007914), null);
                 };
-              }(huec, ___$1, map__46477, map__46477__$1, width, hue, c, validate__7247__auto__, ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482), "onMouseEnter":function(huec, ___$1, map__46477, map__46477__$1, width, hue, c, validate__7247__auto__, ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482) {
+              }(huec, ___$1, map__48990, map__48990__$1, width, hue, c, validate__7247__auto__, ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995), "onMouseEnter":function(huec, ___$1, map__48990, map__48990__$1, width, hue, c, validate__7247__auto__, ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995) {
                 return function() {
                   return dream.blog.degreeput.call(null, huec);
                 };
-              }(huec, ___$1, map__46477, map__46477__$1, width, hue, c, validate__7247__auto__, ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482), "style":{"background-color":"rgb(" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(function() {
+              }(huec, ___$1, map__48990, map__48990__$1, width, hue, c, validate__7247__auto__, ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995), "style":{"background-color":"rgb(" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(function() {
                 var or__3541__auto__ = hue;
                 if (cljs.core.truth_(or__3541__auto__)) {
                   return or__3541__auto__;
@@ -66859,36 +66859,36 @@ dream.blog.esselement = function(ufv___46478, output_schema46462_46479, input_sc
                 }
               }()) + ", 255)", "width":"" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(width) + "%", "margin-left":"5.5%"}}, cljs.core.flatten.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(self__.data.call(null, new cljs.core.Keyword(null, "title", "title", 1124275658)))], null)));
             };
-          }(validate__7247__auto__, ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482);
-          dream.blog.t46473.prototype.cljs$core$IMeta$_meta$arity$1 = function(validate__7247__auto__, ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482) {
-            return function(_46475) {
+          }(validate__7247__auto__, ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995);
+          dream.blog.t48986.prototype.cljs$core$IMeta$_meta$arity$1 = function(validate__7247__auto__, ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995) {
+            return function(_48988) {
               var self__ = this;
-              var _46475__$1 = this;
-              return self__.meta46474;
+              var _48988__$1 = this;
+              return self__.meta48987;
             };
-          }(validate__7247__auto__, ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482);
-          dream.blog.t46473.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(validate__7247__auto__, ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482) {
-            return function(_46475, meta46474__$1) {
+          }(validate__7247__auto__, ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995);
+          dream.blog.t48986.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(validate__7247__auto__, ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995) {
+            return function(_48988, meta48987__$1) {
               var self__ = this;
-              var _46475__$1 = this;
-              return new dream.blog.t46473(self__.ufv__, self__.G__46466, self__.input_schema46463, self__.G__46467, self__.data, self__.validate__7247__auto__, self__.output_schema46462, self__.input_checker46464, self__.owner, self__.esselement, self__.output_checker46465, meta46474__$1);
+              var _48988__$1 = this;
+              return new dream.blog.t48986(self__.ufv__, self__.data, self__.validate__7247__auto__, self__.output_checker48978, self__.input_checker48977, self__.G__48980, self__.owner, self__.esselement, self__.output_schema48975, self__.input_schema48976, self__.G__48979, meta48987__$1);
             };
-          }(validate__7247__auto__, ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482);
-          dream.blog.__GT_t46473 = function(validate__7247__auto__, ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482) {
-            return function __GT_t46473(ufv____$1, G__46466__$1, input_schema46463__$1, G__46467__$1, data__$1, validate__7247__auto____$1, output_schema46462__$1, input_checker46464__$1, owner__$1, esselement__$1, output_checker46465__$1, meta46474) {
-              return new dream.blog.t46473(ufv____$1, G__46466__$1, input_schema46463__$1, G__46467__$1, data__$1, validate__7247__auto____$1, output_schema46462__$1, input_checker46464__$1, owner__$1, esselement__$1, output_checker46465__$1, meta46474);
+          }(validate__7247__auto__, ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995);
+          dream.blog.__GT_t48986 = function(validate__7247__auto__, ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995) {
+            return function __GT_t48986(ufv____$1, data__$1, validate__7247__auto____$1, output_checker48978__$1, input_checker48977__$1, G__48980__$1, owner__$1, esselement__$1, output_schema48975__$1, input_schema48976__$1, G__48979__$1, meta48987) {
+              return new dream.blog.t48986(ufv____$1, data__$1, validate__7247__auto____$1, output_checker48978__$1, input_checker48977__$1, G__48980__$1, owner__$1, esselement__$1, output_schema48975__$1, input_schema48976__$1, G__48979__$1, meta48987);
             };
-          }(validate__7247__auto__, ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482);
+          }(validate__7247__auto__, ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995);
         }
-        return new dream.blog.t46473(ufv___46478, G__46466, input_schema46463_46480, G__46467, data, validate__7247__auto__, output_schema46462_46479, input_checker46464_46481, owner, esselement, output_checker46465_46482, null);
+        return new dream.blog.t48986(ufv___48991, data, validate__7247__auto__, output_checker48978_48995, input_checker48977_48994, G__48980, owner, esselement, output_schema48975_48992, input_schema48976_48993, G__48979, null);
         break;
       }
     }();
     if (cljs.core.truth_(validate__7247__auto__)) {
-      var temp__4092__auto___46486 = output_checker46465_46482.call(null, o__7250__auto__);
-      if (cljs.core.truth_(temp__4092__auto___46486)) {
-        var error__7249__auto___46487 = temp__4092__auto___46486;
-        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Output of %s does not match schema: %s", new cljs.core.Symbol(null, "esselement", "esselement", -520536176, null), cljs.core.pr_str.call(null, error__7249__auto___46487)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___46487, new cljs.core.Keyword(null, "schema", "schema", 4400883987), output_schema46462_46479, new cljs.core.Keyword(null, "value", 
+      var temp__4092__auto___48999 = output_checker48978_48995.call(null, o__7250__auto__);
+      if (cljs.core.truth_(temp__4092__auto___48999)) {
+        var error__7249__auto___49000 = temp__4092__auto___48999;
+        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Output of %s does not match schema: %s", new cljs.core.Symbol(null, "esselement", "esselement", -520536176, null), cljs.core.pr_str.call(null, error__7249__auto___49000)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___49000, new cljs.core.Keyword(null, "schema", "schema", 4400883987), output_schema48975_48992, new cljs.core.Keyword(null, "value", 
         "value", 1125876963), o__7250__auto__], null));
       } else {
       }
@@ -66896,22 +66896,22 @@ dream.blog.esselement = function(ufv___46478, output_schema46462_46479, input_sc
     }
     return o__7250__auto__;
   };
-}(ufv___46478, output_schema46462_46479, input_schema46463_46480, input_checker46464_46481, output_checker46465_46482);
-schema.utils.declare_class_schema_BANG_.call(null, schema.utils.fn_schema_bearer.call(null, dream.blog.esselement), schema.core.make_fn_schema.call(null, output_schema46462_46479, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema46463_46480], null)));
+}(ufv___48991, output_schema48975_48992, input_schema48976_48993, input_checker48977_48994, output_checker48978_48995);
+schema.utils.declare_class_schema_BANG_.call(null, schema.utils.fn_schema_bearer.call(null, dream.blog.esselement), schema.core.make_fn_schema.call(null, output_schema48975_48992, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema48976_48993], null)));
 dream.blog.__GT_esselement = function() {
   var __GT_esselement = null;
   var __GT_esselement__1 = function(cursor__9015__auto__) {
     return om.core.build.call(null, dream.blog.esselement, cursor__9015__auto__);
   };
-  var __GT_esselement__2 = function(cursor__9015__auto__, m46461) {
-    return om.core.build.call(null, dream.blog.esselement, cursor__9015__auto__, m46461);
+  var __GT_esselement__2 = function(cursor__9015__auto__, m48974) {
+    return om.core.build.call(null, dream.blog.esselement, cursor__9015__auto__, m48974);
   };
-  __GT_esselement = function(cursor__9015__auto__, m46461) {
+  __GT_esselement = function(cursor__9015__auto__, m48974) {
     switch(arguments.length) {
       case 1:
         return __GT_esselement__1.call(this, cursor__9015__auto__);
       case 2:
-        return __GT_esselement__2.call(this, cursor__9015__auto__, m46461);
+        return __GT_esselement__2.call(this, cursor__9015__auto__, m48974);
     }
     throw new Error("Invalid arity: " + arguments.length);
   };
@@ -66919,80 +66919,80 @@ dream.blog.__GT_esselement = function() {
   __GT_esselement.cljs$core$IFn$_invoke$arity$2 = __GT_esselement__2;
   return __GT_esselement;
 }();
-var ufv___46513 = schema.utils.use_fn_validation;
-var output_schema46489_46514 = schema.core.Any;
-var input_schema46490_46515 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "arg0", "arg0", -1637529005, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "owner", "owner", -1534366612, null))], null);
-var input_checker46491_46516 = schema.core.checker.call(null, input_schema46490_46515);
-var output_checker46492_46517 = schema.core.checker.call(null, output_schema46489_46514);
-dream.blog.topic = function(ufv___46513, output_schema46489_46514, input_schema46490_46515, input_checker46491_46516, output_checker46492_46517) {
-  return function topic(G__46493, G__46494) {
-    var validate__7247__auto__ = ufv___46513.get_cell();
+var ufv___49026 = schema.utils.use_fn_validation;
+var output_schema49002_49027 = schema.core.Any;
+var input_schema49003_49028 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "arg0", "arg0", -1637529005, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "owner", "owner", -1534366612, null))], null);
+var input_checker49004_49029 = schema.core.checker.call(null, input_schema49003_49028);
+var output_checker49005_49030 = schema.core.checker.call(null, output_schema49002_49027);
+dream.blog.topic = function(ufv___49026, output_schema49002_49027, input_schema49003_49028, input_checker49004_49029, output_checker49005_49030) {
+  return function topic(G__49006, G__49007) {
+    var validate__7247__auto__ = ufv___49026.get_cell();
     if (cljs.core.truth_(validate__7247__auto__)) {
-      var args__7248__auto___46518 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__46493, G__46494], null);
-      var temp__4092__auto___46519 = input_checker46491_46516.call(null, args__7248__auto___46518);
-      if (cljs.core.truth_(temp__4092__auto___46519)) {
-        var error__7249__auto___46520 = temp__4092__auto___46519;
-        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Input to %s does not match schema: %s", new cljs.core.Symbol(null, "topic", "topic", -1529985304, null), cljs.core.pr_str.call(null, error__7249__auto___46520)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___46520, new cljs.core.Keyword(null, "schema", "schema", 4400883987), input_schema46490_46515, new cljs.core.Keyword(null, "value", "value", 
-        1125876963), args__7248__auto___46518], null));
+      var args__7248__auto___49031 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__49006, G__49007], null);
+      var temp__4092__auto___49032 = input_checker49004_49029.call(null, args__7248__auto___49031);
+      if (cljs.core.truth_(temp__4092__auto___49032)) {
+        var error__7249__auto___49033 = temp__4092__auto___49032;
+        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Input to %s does not match schema: %s", new cljs.core.Symbol(null, "topic", "topic", -1529985304, null), cljs.core.pr_str.call(null, error__7249__auto___49033)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___49033, new cljs.core.Keyword(null, "schema", "schema", 4400883987), input_schema49003_49028, new cljs.core.Keyword(null, "value", "value", 
+        1125876963), args__7248__auto___49031], null));
       } else {
       }
     } else {
     }
     var o__7250__auto__ = function() {
-      var G__46505 = G__46493;
-      var vec__46506 = G__46505;
-      var topic__$1 = cljs.core.nth.call(null, vec__46506, 0, null);
-      var posts = cljs.core.nth.call(null, vec__46506, 1, null);
-      var owner = G__46494;
-      var G__46505__$1 = G__46505;
+      var G__49018 = G__49006;
+      var vec__49019 = G__49018;
+      var topic__$1 = cljs.core.nth.call(null, vec__49019, 0, null);
+      var posts = cljs.core.nth.call(null, vec__49019, 1, null);
+      var owner = G__49007;
+      var G__49018__$1 = G__49018;
       var owner__$1 = owner;
       while (true) {
-        var vec__46507 = G__46505__$1;
-        var topic__$2 = cljs.core.nth.call(null, vec__46507, 0, null);
-        var posts__$1 = cljs.core.nth.call(null, vec__46507, 1, null);
+        var vec__49020 = G__49018__$1;
+        var topic__$2 = cljs.core.nth.call(null, vec__49020, 0, null);
+        var posts__$1 = cljs.core.nth.call(null, vec__49020, 1, null);
         var owner__$2 = owner__$1;
-        if (typeof dream.blog.t46508 !== "undefined") {
+        if (typeof dream.blog.t49021 !== "undefined") {
         } else {
-          dream.blog.t46508 = function(output_schema46489, ufv__, input_checker46491, validate__7247__auto__, topic, output_checker46492, vec__46507, vec__46506, G__46505, owner, G__46494, posts, G__46493, input_schema46490, meta46509) {
-            this.output_schema46489 = output_schema46489;
+          dream.blog.t49021 = function(ufv__, G__49018, output_schema49002, validate__7247__auto__, topic, output_checker49005, G__49007, G__49006, input_schema49003, owner, vec__49019, vec__49020, input_checker49004, posts, meta49022) {
             this.ufv__ = ufv__;
-            this.input_checker46491 = input_checker46491;
+            this.G__49018 = G__49018;
+            this.output_schema49002 = output_schema49002;
             this.validate__7247__auto__ = validate__7247__auto__;
             this.topic = topic;
-            this.output_checker46492 = output_checker46492;
-            this.vec__46507 = vec__46507;
-            this.vec__46506 = vec__46506;
-            this.G__46505 = G__46505;
+            this.output_checker49005 = output_checker49005;
+            this.G__49007 = G__49007;
+            this.G__49006 = G__49006;
+            this.input_schema49003 = input_schema49003;
             this.owner = owner;
-            this.G__46494 = G__46494;
+            this.vec__49019 = vec__49019;
+            this.vec__49020 = vec__49020;
+            this.input_checker49004 = input_checker49004;
             this.posts = posts;
-            this.G__46493 = G__46493;
-            this.input_schema46490 = input_schema46490;
-            this.meta46509 = meta46509;
+            this.meta49022 = meta49022;
             this.cljs$lang$protocol_mask$partition1$ = 0;
             this.cljs$lang$protocol_mask$partition0$ = 393216;
           };
-          dream.blog.t46508.cljs$lang$type = true;
-          dream.blog.t46508.cljs$lang$ctorStr = "dream.blog/t46508";
-          dream.blog.t46508.cljs$lang$ctorPrWriter = function(vec__46507, topic__$2, posts__$1, owner__$2, G__46505, vec__46506, topic__$1, posts, owner, validate__7247__auto__, ufv___46513, output_schema46489_46514, input_schema46490_46515, input_checker46491_46516, output_checker46492_46517) {
+          dream.blog.t49021.cljs$lang$type = true;
+          dream.blog.t49021.cljs$lang$ctorStr = "dream.blog/t49021";
+          dream.blog.t49021.cljs$lang$ctorPrWriter = function(vec__49020, topic__$2, posts__$1, owner__$2, G__49018, vec__49019, topic__$1, posts, owner, validate__7247__auto__, ufv___49026, output_schema49002_49027, input_schema49003_49028, input_checker49004_49029, output_checker49005_49030) {
             return function(this__4108__auto__, writer__4109__auto__, opt__4110__auto__) {
-              return cljs.core._write.call(null, writer__4109__auto__, "dream.blog/t46508");
+              return cljs.core._write.call(null, writer__4109__auto__, "dream.blog/t49021");
             };
-          }(vec__46507, topic__$2, posts__$1, owner__$2, G__46505, vec__46506, topic__$1, posts, owner, validate__7247__auto__, ufv___46513, output_schema46489_46514, input_schema46490_46515, input_checker46491_46516, output_checker46492_46517);
-          dream.blog.t46508.prototype.om$core$IRenderState$ = true;
-          dream.blog.t46508.prototype.om$core$IRenderState$render_state$arity$2 = function(vec__46507, topic__$2, posts__$1, owner__$2, G__46505, vec__46506, topic__$1, posts, owner, validate__7247__auto__, ufv___46513, output_schema46489_46514, input_schema46490_46515, input_checker46491_46516, output_checker46492_46517) {
-            return function(_, p__46511) {
+          }(vec__49020, topic__$2, posts__$1, owner__$2, G__49018, vec__49019, topic__$1, posts, owner, validate__7247__auto__, ufv___49026, output_schema49002_49027, input_schema49003_49028, input_checker49004_49029, output_checker49005_49030);
+          dream.blog.t49021.prototype.om$core$IRenderState$ = true;
+          dream.blog.t49021.prototype.om$core$IRenderState$render_state$arity$2 = function(vec__49020, topic__$2, posts__$1, owner__$2, G__49018, vec__49019, topic__$1, posts, owner, validate__7247__auto__, ufv___49026, output_schema49002_49027, input_schema49003_49028, input_checker49004_49029, output_checker49005_49030) {
+            return function(_, p__49024) {
               var self__ = this;
-              var map__46512 = p__46511;
-              var map__46512__$1 = cljs.core.seq_QMARK_.call(null, map__46512) ? cljs.core.apply.call(null, cljs.core.hash_map, map__46512) : map__46512;
-              var c = cljs.core.get.call(null, map__46512__$1, new cljs.core.Keyword(null, "c", "c", 1013904341));
+              var map__49025 = p__49024;
+              var map__49025__$1 = cljs.core.seq_QMARK_.call(null, map__49025) ? cljs.core.apply.call(null, cljs.core.hash_map, map__49025) : map__49025;
+              var c = cljs.core.get.call(null, map__49025__$1, new cljs.core.Keyword(null, "c", "c", 1013904341));
               var ___$1 = this;
               return cljs.core.apply.call(null, React.DOM.div, {"style":{"font-size":"5vh"}}, cljs.core.flatten.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.apply.call(null, React.DOM.span, {"style":{"font-size":"10vh"}}, cljs.core.flatten.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [self__.topic], null))), om.core.build_all.call(null, dream.blog.esselement, self__.posts, new cljs.core.PersistentArrayMap(null, 
               1, [new cljs.core.Keyword(null, "init-state", "init-state", 4479067398), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "c", "c", 1013904341), c], null)], null))], null)));
             };
-          }(vec__46507, topic__$2, posts__$1, owner__$2, G__46505, vec__46506, topic__$1, posts, owner, validate__7247__auto__, ufv___46513, output_schema46489_46514, input_schema46490_46515, input_checker46491_46516, output_checker46492_46517);
-          dream.blog.t46508.prototype.om$core$IWillUpdate$ = true;
-          dream.blog.t46508.prototype.om$core$IWillUpdate$will_update$arity$3 = function(vec__46507, topic__$2, posts__$1, owner__$2, G__46505, vec__46506, topic__$1, posts, owner, validate__7247__auto__, ufv___46513, output_schema46489_46514, input_schema46490_46515, input_checker46491_46516, output_checker46492_46517) {
+          }(vec__49020, topic__$2, posts__$1, owner__$2, G__49018, vec__49019, topic__$1, posts, owner, validate__7247__auto__, ufv___49026, output_schema49002_49027, input_schema49003_49028, input_checker49004_49029, output_checker49005_49030);
+          dream.blog.t49021.prototype.om$core$IWillUpdate$ = true;
+          dream.blog.t49021.prototype.om$core$IWillUpdate$will_update$arity$3 = function(vec__49020, topic__$2, posts__$1, owner__$2, G__49018, vec__49019, topic__$1, posts, owner, validate__7247__auto__, ufv___49026, output_schema49002_49027, input_schema49003_49028, input_checker49004_49029, output_checker49005_49030) {
             return function(_, nprops, nstate) {
               var self__ = this;
               var ___$1 = this;
@@ -67003,44 +67003,44 @@ dream.blog.topic = function(ufv___46513, output_schema46489_46514, input_schema4
                 return null;
               }
             };
-          }(vec__46507, topic__$2, posts__$1, owner__$2, G__46505, vec__46506, topic__$1, posts, owner, validate__7247__auto__, ufv___46513, output_schema46489_46514, input_schema46490_46515, input_checker46491_46516, output_checker46492_46517);
-          dream.blog.t46508.prototype.om$core$IDidUpdate$ = true;
-          dream.blog.t46508.prototype.om$core$IDidUpdate$did_update$arity$3 = function(vec__46507, topic__$2, posts__$1, owner__$2, G__46505, vec__46506, topic__$1, posts, owner, validate__7247__auto__, ufv___46513, output_schema46489_46514, input_schema46490_46515, input_checker46491_46516, output_checker46492_46517) {
+          }(vec__49020, topic__$2, posts__$1, owner__$2, G__49018, vec__49019, topic__$1, posts, owner, validate__7247__auto__, ufv___49026, output_schema49002_49027, input_schema49003_49028, input_checker49004_49029, output_checker49005_49030);
+          dream.blog.t49021.prototype.om$core$IDidUpdate$ = true;
+          dream.blog.t49021.prototype.om$core$IDidUpdate$did_update$arity$3 = function(vec__49020, topic__$2, posts__$1, owner__$2, G__49018, vec__49019, topic__$1, posts, owner, validate__7247__auto__, ufv___49026, output_schema49002_49027, input_schema49003_49028, input_checker49004_49029, output_checker49005_49030) {
             return function(_, props, state) {
               var self__ = this;
               var ___$1 = this;
               return dream.ani.create_animation.call(null, om.core.get_node.call(null, self__.owner), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "opacity", "opacity", 4041665405), 0], null), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "opacity", "opacity", 4041665405), 1], null)], null), 35);
             };
-          }(vec__46507, topic__$2, posts__$1, owner__$2, G__46505, vec__46506, topic__$1, posts, owner, validate__7247__auto__, ufv___46513, output_schema46489_46514, input_schema46490_46515, input_checker46491_46516, output_checker46492_46517);
-          dream.blog.t46508.prototype.cljs$core$IMeta$_meta$arity$1 = function(vec__46507, topic__$2, posts__$1, owner__$2, G__46505, vec__46506, topic__$1, posts, owner, validate__7247__auto__, ufv___46513, output_schema46489_46514, input_schema46490_46515, input_checker46491_46516, output_checker46492_46517) {
-            return function(_46510) {
+          }(vec__49020, topic__$2, posts__$1, owner__$2, G__49018, vec__49019, topic__$1, posts, owner, validate__7247__auto__, ufv___49026, output_schema49002_49027, input_schema49003_49028, input_checker49004_49029, output_checker49005_49030);
+          dream.blog.t49021.prototype.cljs$core$IMeta$_meta$arity$1 = function(vec__49020, topic__$2, posts__$1, owner__$2, G__49018, vec__49019, topic__$1, posts, owner, validate__7247__auto__, ufv___49026, output_schema49002_49027, input_schema49003_49028, input_checker49004_49029, output_checker49005_49030) {
+            return function(_49023) {
               var self__ = this;
-              var _46510__$1 = this;
-              return self__.meta46509;
+              var _49023__$1 = this;
+              return self__.meta49022;
             };
-          }(vec__46507, topic__$2, posts__$1, owner__$2, G__46505, vec__46506, topic__$1, posts, owner, validate__7247__auto__, ufv___46513, output_schema46489_46514, input_schema46490_46515, input_checker46491_46516, output_checker46492_46517);
-          dream.blog.t46508.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(vec__46507, topic__$2, posts__$1, owner__$2, G__46505, vec__46506, topic__$1, posts, owner, validate__7247__auto__, ufv___46513, output_schema46489_46514, input_schema46490_46515, input_checker46491_46516, output_checker46492_46517) {
-            return function(_46510, meta46509__$1) {
+          }(vec__49020, topic__$2, posts__$1, owner__$2, G__49018, vec__49019, topic__$1, posts, owner, validate__7247__auto__, ufv___49026, output_schema49002_49027, input_schema49003_49028, input_checker49004_49029, output_checker49005_49030);
+          dream.blog.t49021.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(vec__49020, topic__$2, posts__$1, owner__$2, G__49018, vec__49019, topic__$1, posts, owner, validate__7247__auto__, ufv___49026, output_schema49002_49027, input_schema49003_49028, input_checker49004_49029, output_checker49005_49030) {
+            return function(_49023, meta49022__$1) {
               var self__ = this;
-              var _46510__$1 = this;
-              return new dream.blog.t46508(self__.output_schema46489, self__.ufv__, self__.input_checker46491, self__.validate__7247__auto__, self__.topic, self__.output_checker46492, self__.vec__46507, self__.vec__46506, self__.G__46505, self__.owner, self__.G__46494, self__.posts, self__.G__46493, self__.input_schema46490, meta46509__$1);
+              var _49023__$1 = this;
+              return new dream.blog.t49021(self__.ufv__, self__.G__49018, self__.output_schema49002, self__.validate__7247__auto__, self__.topic, self__.output_checker49005, self__.G__49007, self__.G__49006, self__.input_schema49003, self__.owner, self__.vec__49019, self__.vec__49020, self__.input_checker49004, self__.posts, meta49022__$1);
             };
-          }(vec__46507, topic__$2, posts__$1, owner__$2, G__46505, vec__46506, topic__$1, posts, owner, validate__7247__auto__, ufv___46513, output_schema46489_46514, input_schema46490_46515, input_checker46491_46516, output_checker46492_46517);
-          dream.blog.__GT_t46508 = function(vec__46507, topic__$2, posts__$1, owner__$2, G__46505, vec__46506, topic__$1, posts, owner, validate__7247__auto__, ufv___46513, output_schema46489_46514, input_schema46490_46515, input_checker46491_46516, output_checker46492_46517) {
-            return function __GT_t46508(output_schema46489__$1, ufv____$1, input_checker46491__$1, validate__7247__auto____$1, topic__$3, output_checker46492__$1, vec__46507__$1, vec__46506__$1, G__46505__$2, owner__$3, G__46494__$1, posts__$2, G__46493__$1, input_schema46490__$1, meta46509) {
-              return new dream.blog.t46508(output_schema46489__$1, ufv____$1, input_checker46491__$1, validate__7247__auto____$1, topic__$3, output_checker46492__$1, vec__46507__$1, vec__46506__$1, G__46505__$2, owner__$3, G__46494__$1, posts__$2, G__46493__$1, input_schema46490__$1, meta46509);
+          }(vec__49020, topic__$2, posts__$1, owner__$2, G__49018, vec__49019, topic__$1, posts, owner, validate__7247__auto__, ufv___49026, output_schema49002_49027, input_schema49003_49028, input_checker49004_49029, output_checker49005_49030);
+          dream.blog.__GT_t49021 = function(vec__49020, topic__$2, posts__$1, owner__$2, G__49018, vec__49019, topic__$1, posts, owner, validate__7247__auto__, ufv___49026, output_schema49002_49027, input_schema49003_49028, input_checker49004_49029, output_checker49005_49030) {
+            return function __GT_t49021(ufv____$1, G__49018__$2, output_schema49002__$1, validate__7247__auto____$1, topic__$3, output_checker49005__$1, G__49007__$1, G__49006__$1, input_schema49003__$1, owner__$3, vec__49019__$1, vec__49020__$1, input_checker49004__$1, posts__$2, meta49022) {
+              return new dream.blog.t49021(ufv____$1, G__49018__$2, output_schema49002__$1, validate__7247__auto____$1, topic__$3, output_checker49005__$1, G__49007__$1, G__49006__$1, input_schema49003__$1, owner__$3, vec__49019__$1, vec__49020__$1, input_checker49004__$1, posts__$2, meta49022);
             };
-          }(vec__46507, topic__$2, posts__$1, owner__$2, G__46505, vec__46506, topic__$1, posts, owner, validate__7247__auto__, ufv___46513, output_schema46489_46514, input_schema46490_46515, input_checker46491_46516, output_checker46492_46517);
+          }(vec__49020, topic__$2, posts__$1, owner__$2, G__49018, vec__49019, topic__$1, posts, owner, validate__7247__auto__, ufv___49026, output_schema49002_49027, input_schema49003_49028, input_checker49004_49029, output_checker49005_49030);
         }
-        return new dream.blog.t46508(output_schema46489_46514, ufv___46513, input_checker46491_46516, validate__7247__auto__, topic__$2, output_checker46492_46517, vec__46507, vec__46506, G__46505__$1, owner__$2, G__46494, posts__$1, G__46493, input_schema46490_46515, null);
+        return new dream.blog.t49021(ufv___49026, G__49018__$1, output_schema49002_49027, validate__7247__auto__, topic__$2, output_checker49005_49030, G__49007, G__49006, input_schema49003_49028, owner__$2, vec__49019, vec__49020, input_checker49004_49029, posts__$1, null);
         break;
       }
     }();
     if (cljs.core.truth_(validate__7247__auto__)) {
-      var temp__4092__auto___46521 = output_checker46492_46517.call(null, o__7250__auto__);
-      if (cljs.core.truth_(temp__4092__auto___46521)) {
-        var error__7249__auto___46522 = temp__4092__auto___46521;
-        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Output of %s does not match schema: %s", new cljs.core.Symbol(null, "topic", "topic", -1529985304, null), cljs.core.pr_str.call(null, error__7249__auto___46522)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___46522, new cljs.core.Keyword(null, "schema", "schema", 4400883987), output_schema46489_46514, new cljs.core.Keyword(null, "value", "value", 
+      var temp__4092__auto___49034 = output_checker49005_49030.call(null, o__7250__auto__);
+      if (cljs.core.truth_(temp__4092__auto___49034)) {
+        var error__7249__auto___49035 = temp__4092__auto___49034;
+        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Output of %s does not match schema: %s", new cljs.core.Symbol(null, "topic", "topic", -1529985304, null), cljs.core.pr_str.call(null, error__7249__auto___49035)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___49035, new cljs.core.Keyword(null, "schema", "schema", 4400883987), output_schema49002_49027, new cljs.core.Keyword(null, "value", "value", 
         1125876963), o__7250__auto__], null));
       } else {
       }
@@ -67048,22 +67048,22 @@ dream.blog.topic = function(ufv___46513, output_schema46489_46514, input_schema4
     }
     return o__7250__auto__;
   };
-}(ufv___46513, output_schema46489_46514, input_schema46490_46515, input_checker46491_46516, output_checker46492_46517);
-schema.utils.declare_class_schema_BANG_.call(null, schema.utils.fn_schema_bearer.call(null, dream.blog.topic), schema.core.make_fn_schema.call(null, output_schema46489_46514, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema46490_46515], null)));
+}(ufv___49026, output_schema49002_49027, input_schema49003_49028, input_checker49004_49029, output_checker49005_49030);
+schema.utils.declare_class_schema_BANG_.call(null, schema.utils.fn_schema_bearer.call(null, dream.blog.topic), schema.core.make_fn_schema.call(null, output_schema49002_49027, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema49003_49028], null)));
 dream.blog.__GT_topic = function() {
   var __GT_topic = null;
   var __GT_topic__1 = function(cursor__9015__auto__) {
     return om.core.build.call(null, dream.blog.topic, cursor__9015__auto__);
   };
-  var __GT_topic__2 = function(cursor__9015__auto__, m46488) {
-    return om.core.build.call(null, dream.blog.topic, cursor__9015__auto__, m46488);
+  var __GT_topic__2 = function(cursor__9015__auto__, m49001) {
+    return om.core.build.call(null, dream.blog.topic, cursor__9015__auto__, m49001);
   };
-  __GT_topic = function(cursor__9015__auto__, m46488) {
+  __GT_topic = function(cursor__9015__auto__, m49001) {
     switch(arguments.length) {
       case 1:
         return __GT_topic__1.call(this, cursor__9015__auto__);
       case 2:
-        return __GT_topic__2.call(this, cursor__9015__auto__, m46488);
+        return __GT_topic__2.call(this, cursor__9015__auto__, m49001);
     }
     throw new Error("Invalid arity: " + arguments.length);
   };
@@ -67077,23 +67077,23 @@ dream.blog.random_thing = function random_thing(chan) {
     if (num > 100) {
       return num;
     } else {
-      var G__46523 = function() {
+      var G__49036 = function() {
         cljs.core.async.put_BANG_.call(null, chan, num);
         return num + 1;
       }();
-      num = G__46523;
+      num = G__49036;
       continue;
     }
     break;
   }
 };
 dream.blog.rand_process = function rand_process(chan, owner) {
-  var valfn = function(p1__46524_SHARP_) {
-    return om.core.set_state_BANG_.call(null, owner, new cljs.core.Keyword(null, "opacity", "opacity", 4041665405), p1__46524_SHARP_);
+  var valfn = function(p1__49037_SHARP_) {
+    return om.core.set_state_BANG_.call(null, owner, new cljs.core.Keyword(null, "opacity", "opacity", 4041665405), p1__49037_SHARP_);
   };
   var precision = function(valfn) {
-    return function(p1__46525_SHARP_) {
-      return Math.sin(p1__46525_SHARP_ / 100).toPrecision(2);
+    return function(p1__49038_SHARP_) {
+      return Math.sin(p1__49038_SHARP_ / 100).toPrecision(2);
     };
   }(valfn);
   var c__10470__auto__ = cljs.core.async.chan.call(null, 1);
@@ -67101,60 +67101,60 @@ dream.blog.rand_process = function rand_process(chan, owner) {
     return function() {
       var f__10471__auto__ = function() {
         var switch__10455__auto__ = function(c__10470__auto__, valfn, precision) {
-          return function(state_46570) {
-            var state_val_46571 = state_46570[1];
-            if (state_val_46571 === 6) {
-              var inst_46565 = state_46570[2];
-              var inst_46557 = inst_46565;
-              var state_46570__$1 = function() {
-                var statearr_46572 = state_46570;
-                statearr_46572[7] = inst_46557;
-                return statearr_46572;
+          return function(state_49083) {
+            var state_val_49084 = state_49083[1];
+            if (state_val_49084 === 6) {
+              var inst_49078 = state_49083[2];
+              var inst_49070 = inst_49078;
+              var state_49083__$1 = function() {
+                var statearr_49085 = state_49083;
+                statearr_49085[7] = inst_49070;
+                return statearr_49085;
               }();
-              var statearr_46573_46584 = state_46570__$1;
-              statearr_46573_46584[2] = null;
-              statearr_46573_46584[1] = 3;
+              var statearr_49086_49097 = state_49083__$1;
+              statearr_49086_49097[2] = null;
+              statearr_49086_49097[1] = 3;
               return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
             } else {
-              if (state_val_46571 === 5) {
-                var inst_46557 = state_46570[7];
-                var inst_46561 = state_46570[2];
-                var inst_46562 = precision.call(null, inst_46557);
-                var inst_46563 = valfn.call(null, inst_46562);
-                var state_46570__$1 = function() {
-                  var statearr_46574 = state_46570;
-                  statearr_46574[8] = inst_46563;
-                  statearr_46574[9] = inst_46561;
-                  return statearr_46574;
+              if (state_val_49084 === 5) {
+                var inst_49070 = state_49083[7];
+                var inst_49074 = state_49083[2];
+                var inst_49075 = precision.call(null, inst_49070);
+                var inst_49076 = valfn.call(null, inst_49075);
+                var state_49083__$1 = function() {
+                  var statearr_49087 = state_49083;
+                  statearr_49087[8] = inst_49074;
+                  statearr_49087[9] = inst_49076;
+                  return statearr_49087;
                 }();
-                return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_46570__$1, 6, chan);
+                return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_49083__$1, 6, chan);
               } else {
-                if (state_val_46571 === 4) {
-                  var inst_46568 = state_46570[2];
-                  var state_46570__$1 = state_46570;
-                  return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_46570__$1, inst_46568);
+                if (state_val_49084 === 4) {
+                  var inst_49081 = state_49083[2];
+                  var state_49083__$1 = state_49083;
+                  return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_49083__$1, inst_49081);
                 } else {
-                  if (state_val_46571 === 3) {
-                    var inst_46559 = cljs.core.async.timeout.call(null, 16);
-                    var state_46570__$1 = state_46570;
-                    return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_46570__$1, 5, inst_46559);
+                  if (state_val_49084 === 3) {
+                    var inst_49072 = cljs.core.async.timeout.call(null, 16);
+                    var state_49083__$1 = state_49083;
+                    return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_49083__$1, 5, inst_49072);
                   } else {
-                    if (state_val_46571 === 2) {
-                      var inst_46556 = state_46570[2];
-                      var inst_46557 = inst_46556;
-                      var state_46570__$1 = function() {
-                        var statearr_46575 = state_46570;
-                        statearr_46575[7] = inst_46557;
-                        return statearr_46575;
+                    if (state_val_49084 === 2) {
+                      var inst_49069 = state_49083[2];
+                      var inst_49070 = inst_49069;
+                      var state_49083__$1 = function() {
+                        var statearr_49088 = state_49083;
+                        statearr_49088[7] = inst_49070;
+                        return statearr_49088;
                       }();
-                      var statearr_46576_46585 = state_46570__$1;
-                      statearr_46576_46585[2] = null;
-                      statearr_46576_46585[1] = 3;
+                      var statearr_49089_49098 = state_49083__$1;
+                      statearr_49089_49098[2] = null;
+                      statearr_49089_49098[1] = 3;
                       return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                     } else {
-                      if (state_val_46571 === 1) {
-                        var state_46570__$1 = state_46570;
-                        return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_46570__$1, 2, chan);
+                      if (state_val_49084 === 1) {
+                        var state_49083__$1 = state_49083;
+                        return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_49083__$1, 2, chan);
                       } else {
                         return null;
                       }
@@ -67169,17 +67169,17 @@ dream.blog.rand_process = function rand_process(chan, owner) {
           return function() {
             var state_machine__10456__auto__ = null;
             var state_machine__10456__auto____0 = function() {
-              var statearr_46580 = [null, null, null, null, null, null, null, null, null, null];
-              statearr_46580[0] = state_machine__10456__auto__;
-              statearr_46580[1] = 1;
-              return statearr_46580;
+              var statearr_49093 = [null, null, null, null, null, null, null, null, null, null];
+              statearr_49093[0] = state_machine__10456__auto__;
+              statearr_49093[1] = 1;
+              return statearr_49093;
             };
-            var state_machine__10456__auto____1 = function(state_46570) {
+            var state_machine__10456__auto____1 = function(state_49083) {
               while (true) {
                 var ret_value__10457__auto__ = function() {
                   try {
                     while (true) {
-                      var result__10458__auto__ = switch__10455__auto__.call(null, state_46570);
+                      var result__10458__auto__ = switch__10455__auto__.call(null, state_49083);
                       if (cljs.core.keyword_identical_QMARK_.call(null, result__10458__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
                         continue;
                       } else {
@@ -67187,16 +67187,16 @@ dream.blog.rand_process = function rand_process(chan, owner) {
                       }
                       break;
                     }
-                  } catch (e46581) {
-                    if (e46581 instanceof Object) {
-                      var ex__10459__auto__ = e46581;
-                      var statearr_46582_46586 = state_46570;
-                      statearr_46582_46586[5] = ex__10459__auto__;
-                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_46570);
+                  } catch (e49094) {
+                    if (e49094 instanceof Object) {
+                      var ex__10459__auto__ = e49094;
+                      var statearr_49095_49099 = state_49083;
+                      statearr_49095_49099[5] = ex__10459__auto__;
+                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_49083);
                       return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                     } else {
                       if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-                        throw e46581;
+                        throw e49094;
                       } else {
                         return null;
                       }
@@ -67204,8 +67204,8 @@ dream.blog.rand_process = function rand_process(chan, owner) {
                   }
                 }();
                 if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__10457__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
-                  var G__46587 = state_46570;
-                  state_46570 = G__46587;
+                  var G__49100 = state_49083;
+                  state_49083 = G__49100;
                   continue;
                 } else {
                   return ret_value__10457__auto__;
@@ -67213,12 +67213,12 @@ dream.blog.rand_process = function rand_process(chan, owner) {
                 break;
               }
             };
-            state_machine__10456__auto__ = function(state_46570) {
+            state_machine__10456__auto__ = function(state_49083) {
               switch(arguments.length) {
                 case 0:
                   return state_machine__10456__auto____0.call(this);
                 case 1:
-                  return state_machine__10456__auto____1.call(this, state_46570);
+                  return state_machine__10456__auto____1.call(this, state_49083);
               }
               throw new Error("Invalid arity: " + arguments.length);
             };
@@ -67229,91 +67229,91 @@ dream.blog.rand_process = function rand_process(chan, owner) {
         }(switch__10455__auto__, c__10470__auto__, valfn, precision);
       }();
       var state__10472__auto__ = function() {
-        var statearr_46583 = f__10471__auto__.call(null);
-        statearr_46583[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__10470__auto__;
-        return statearr_46583;
+        var statearr_49096 = f__10471__auto__.call(null);
+        statearr_49096[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__10470__auto__;
+        return statearr_49096;
       }();
       return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__10472__auto__);
     };
   }(c__10470__auto__, valfn, precision));
   return c__10470__auto__;
 };
-var ufv___46726 = schema.utils.use_fn_validation;
-var output_schema46589_46727 = schema.core.Any;
-var input_schema46590_46728 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "data", "data", -1637455517, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "owner", "owner", -1534366612, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "arg2", "arg2", -1637529003, null))], null);
-var input_checker46591_46729 = schema.core.checker.call(null, input_schema46590_46728);
-var output_checker46592_46730 = schema.core.checker.call(null, output_schema46589_46727);
-dream.blog.blog = function(ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730) {
-  return function blog(G__46593, G__46594, G__46595) {
-    var validate__7247__auto__ = ufv___46726.get_cell();
+var ufv___49239 = schema.utils.use_fn_validation;
+var output_schema49102_49240 = schema.core.Any;
+var input_schema49103_49241 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "data", "data", -1637455517, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "owner", "owner", -1534366612, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "arg2", "arg2", -1637529003, null))], null);
+var input_checker49104_49242 = schema.core.checker.call(null, input_schema49103_49241);
+var output_checker49105_49243 = schema.core.checker.call(null, output_schema49102_49240);
+dream.blog.blog = function(ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243) {
+  return function blog(G__49106, G__49107, G__49108) {
+    var validate__7247__auto__ = ufv___49239.get_cell();
     if (cljs.core.truth_(validate__7247__auto__)) {
-      var args__7248__auto___46731 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__46593, G__46594, G__46595], null);
-      var temp__4092__auto___46732 = input_checker46591_46729.call(null, args__7248__auto___46731);
-      if (cljs.core.truth_(temp__4092__auto___46732)) {
-        var error__7249__auto___46733 = temp__4092__auto___46732;
-        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Input to %s does not match schema: %s", new cljs.core.Symbol(null, "blog", "blog", -1637504677, null), cljs.core.pr_str.call(null, error__7249__auto___46733)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___46733, new cljs.core.Keyword(null, "schema", "schema", 4400883987), input_schema46590_46728, new cljs.core.Keyword(null, "value", "value", 
-        1125876963), args__7248__auto___46731], null));
+      var args__7248__auto___49244 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__49106, G__49107, G__49108], null);
+      var temp__4092__auto___49245 = input_checker49104_49242.call(null, args__7248__auto___49244);
+      if (cljs.core.truth_(temp__4092__auto___49245)) {
+        var error__7249__auto___49246 = temp__4092__auto___49245;
+        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Input to %s does not match schema: %s", new cljs.core.Symbol(null, "blog", "blog", -1637504677, null), cljs.core.pr_str.call(null, error__7249__auto___49246)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___49246, new cljs.core.Keyword(null, "schema", "schema", 4400883987), input_schema49103_49241, new cljs.core.Keyword(null, "value", "value", 
+        1125876963), args__7248__auto___49244], null));
       } else {
       }
     } else {
     }
     var o__7250__auto__ = function() {
-      var data = G__46593;
-      var owner = G__46594;
-      var G__46662 = G__46595;
-      var map__46663 = G__46662;
-      var map__46663__$1 = cljs.core.seq_QMARK_.call(null, map__46663) ? cljs.core.apply.call(null, cljs.core.hash_map, map__46663) : map__46663;
-      var clear_route = cljs.core.get.call(null, map__46663__$1, new cljs.core.Keyword(null, "clear-route", "clear-route", 2633548347));
+      var data = G__49106;
+      var owner = G__49107;
+      var G__49175 = G__49108;
+      var map__49176 = G__49175;
+      var map__49176__$1 = cljs.core.seq_QMARK_.call(null, map__49176) ? cljs.core.apply.call(null, cljs.core.hash_map, map__49176) : map__49176;
+      var clear_route = cljs.core.get.call(null, map__49176__$1, new cljs.core.Keyword(null, "clear-route", "clear-route", 2633548347));
       var data__$1 = data;
       var owner__$1 = owner;
-      var G__46662__$1 = G__46662;
+      var G__49175__$1 = G__49175;
       while (true) {
         var data__$2 = data__$1;
         var owner__$2 = owner__$1;
-        var map__46664 = G__46662__$1;
-        var map__46664__$1 = cljs.core.seq_QMARK_.call(null, map__46664) ? cljs.core.apply.call(null, cljs.core.hash_map, map__46664) : map__46664;
-        var clear_route__$1 = cljs.core.get.call(null, map__46664__$1, new cljs.core.Keyword(null, "clear-route", "clear-route", 2633548347));
-        if (typeof dream.blog.t46665 !== "undefined") {
+        var map__49177 = G__49175__$1;
+        var map__49177__$1 = cljs.core.seq_QMARK_.call(null, map__49177) ? cljs.core.apply.call(null, cljs.core.hash_map, map__49177) : map__49177;
+        var clear_route__$1 = cljs.core.get.call(null, map__49177__$1, new cljs.core.Keyword(null, "clear-route", "clear-route", 2633548347));
+        if (typeof dream.blog.t49178 !== "undefined") {
         } else {
-          dream.blog.t46665 = function(map__46664, clear_route, map__46663, blog, G__46595, ufv__, data, validate__7247__auto__, G__46662, G__46593, input_schema46590, G__46594, output_schema46589, input_checker46591, owner, output_checker46592, meta46666) {
-            this.map__46664 = map__46664;
+          dream.blog.t49178 = function(input_schema49103, G__49106, G__49107, G__49108, clear_route, G__49175, blog, map__49177, ufv__, data, validate__7247__auto__, input_checker49104, output_checker49105, owner, output_schema49102, map__49176, meta49179) {
+            this.input_schema49103 = input_schema49103;
+            this.G__49106 = G__49106;
+            this.G__49107 = G__49107;
+            this.G__49108 = G__49108;
             this.clear_route = clear_route;
-            this.map__46663 = map__46663;
+            this.G__49175 = G__49175;
             this.blog = blog;
-            this.G__46595 = G__46595;
+            this.map__49177 = map__49177;
             this.ufv__ = ufv__;
             this.data = data;
             this.validate__7247__auto__ = validate__7247__auto__;
-            this.G__46662 = G__46662;
-            this.G__46593 = G__46593;
-            this.input_schema46590 = input_schema46590;
-            this.G__46594 = G__46594;
-            this.output_schema46589 = output_schema46589;
-            this.input_checker46591 = input_checker46591;
+            this.input_checker49104 = input_checker49104;
+            this.output_checker49105 = output_checker49105;
             this.owner = owner;
-            this.output_checker46592 = output_checker46592;
-            this.meta46666 = meta46666;
+            this.output_schema49102 = output_schema49102;
+            this.map__49176 = map__49176;
+            this.meta49179 = meta49179;
             this.cljs$lang$protocol_mask$partition1$ = 0;
             this.cljs$lang$protocol_mask$partition0$ = 393216;
           };
-          dream.blog.t46665.cljs$lang$type = true;
-          dream.blog.t46665.cljs$lang$ctorStr = "dream.blog/t46665";
-          dream.blog.t46665.cljs$lang$ctorPrWriter = function(data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730) {
+          dream.blog.t49178.cljs$lang$type = true;
+          dream.blog.t49178.cljs$lang$ctorStr = "dream.blog/t49178";
+          dream.blog.t49178.cljs$lang$ctorPrWriter = function(data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243) {
             return function(this__4108__auto__, writer__4109__auto__, opt__4110__auto__) {
-              return cljs.core._write.call(null, writer__4109__auto__, "dream.blog/t46665");
+              return cljs.core._write.call(null, writer__4109__auto__, "dream.blog/t49178");
             };
-          }(data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730);
-          dream.blog.t46665.prototype.om$core$IRenderState$ = true;
-          dream.blog.t46665.prototype.om$core$IRenderState$render_state$arity$2 = function(data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730) {
-            return function(_, p__46668) {
+          }(data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243);
+          dream.blog.t49178.prototype.om$core$IRenderState$ = true;
+          dream.blog.t49178.prototype.om$core$IRenderState$render_state$arity$2 = function(data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243) {
+            return function(_, p__49181) {
               var self__ = this;
-              var map__46669 = p__46668;
-              var map__46669__$1 = cljs.core.seq_QMARK_.call(null, map__46669) ? cljs.core.apply.call(null, cljs.core.hash_map, map__46669) : map__46669;
-              var opacity = cljs.core.get.call(null, map__46669__$1, new cljs.core.Keyword(null, "opacity", "opacity", 4041665405));
-              var topidx = cljs.core.get.call(null, map__46669__$1, new cljs.core.Keyword(null, "topidx", "topidx", 4440837306));
-              var flip = cljs.core.get.call(null, map__46669__$1, new cljs.core.Keyword(null, "flip", "flip", 1017050079));
-              var c = cljs.core.get.call(null, map__46669__$1, new cljs.core.Keyword(null, "c", "c", 1013904341));
-              var idx = cljs.core.get.call(null, map__46669__$1, new cljs.core.Keyword(null, "idx", "idx", 1014008367));
+              var map__49182 = p__49181;
+              var map__49182__$1 = cljs.core.seq_QMARK_.call(null, map__49182) ? cljs.core.apply.call(null, cljs.core.hash_map, map__49182) : map__49182;
+              var opacity = cljs.core.get.call(null, map__49182__$1, new cljs.core.Keyword(null, "opacity", "opacity", 4041665405));
+              var topidx = cljs.core.get.call(null, map__49182__$1, new cljs.core.Keyword(null, "topidx", "topidx", 4440837306));
+              var flip = cljs.core.get.call(null, map__49182__$1, new cljs.core.Keyword(null, "flip", "flip", 1017050079));
+              var c = cljs.core.get.call(null, map__49182__$1, new cljs.core.Keyword(null, "c", "c", 1013904341));
+              var idx = cljs.core.get.call(null, map__49182__$1, new cljs.core.Keyword(null, "idx", "idx", 1014008367));
               var ___$1 = this;
               var blog__$2 = self__.data.call(null, new cljs.core.Keyword(null, "routes", "routes", 4383738556)).call(null, new cljs.core.Keyword(null, "blog", "blog", 1016931092));
               var blogseq = cljs.core.seq.call(null, self__.data.call(null, new cljs.core.Keyword(null, "routes", "routes", 4383738556)).call(null, new cljs.core.Keyword(null, "blog", "blog", 1016931092)));
@@ -67326,182 +67326,182 @@ dream.blog.blog = function(ufv___46726, output_schema46589_46727, input_schema46
                   return 0;
                 }
               }(), "transform-style":"preserve-3d"}, "className":"full neutral"}, cljs.core.flatten.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.apply.call(null, React.DOM.div, {"className":cljs.core.truth_(flip) ? "full trans flipped" : "full trans", "id":"card"}, cljs.core.flatten.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.apply.call(null, React.DOM.div, {"className":"figure front full flex"}, 
-              cljs.core.flatten.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [om_tools.dom.element.call(null, React.DOM.div, blogcount > 1 ? React.DOM.button({"onClick":function(blog__$2, blogseq, blogcount, ___$1, map__46669, map__46669__$1, opacity, topidx, flip, c, idx, data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, 
-              input_schema46590_46728, input_checker46591_46729, output_checker46592_46730) {
+              cljs.core.flatten.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [om_tools.dom.element.call(null, React.DOM.div, blogcount > 1 ? React.DOM.button({"onClick":function(blog__$2, blogseq, blogcount, ___$1, map__49182, map__49182__$1, opacity, topidx, flip, c, idx, data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, 
+              input_schema49103_49241, input_checker49104_49242, output_checker49105_49243) {
                 return function() {
-                  return om.core.update_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "topidx", "topidx", 4440837306), function(blog__$2, blogseq, blogcount, ___$1, map__46669, map__46669__$1, opacity, topidx, flip, c, idx, data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730) {
+                  return om.core.update_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "topidx", "topidx", 4440837306), function(blog__$2, blogseq, blogcount, ___$1, map__49182, map__49182__$1, opacity, topidx, flip, c, idx, data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243) {
                     return function(pc) {
                       return cljs.core.mod.call(null, pc + 1, blogcount);
                     };
-                  }(blog__$2, blogseq, blogcount, ___$1, map__46669, map__46669__$1, opacity, topidx, flip, c, idx, data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730));
+                  }(blog__$2, blogseq, blogcount, ___$1, map__49182, map__49182__$1, opacity, topidx, flip, c, idx, data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243));
                 };
-              }(blog__$2, blogseq, blogcount, ___$1, map__46669, map__46669__$1, opacity, topidx, flip, c, idx, data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730)}) : null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [om.core.build.call(null, 
+              }(blog__$2, blogseq, blogcount, ___$1, map__49182, map__49182__$1, opacity, topidx, flip, c, idx, data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243)}) : null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [om.core.build.call(null, 
               dream.blog.topic, cljs.core.nth.call(null, blogseq, topidx), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "init-state", "init-state", 4479067398), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "c", "c", 1013904341), c], null)], null))], null))], null))), om.core.build.call(null, dream.blog.essay, function() {
                 var temp__4092__auto__ = idx;
                 if (cljs.core.truth_(temp__4092__auto__)) {
-                  var vec__46670 = temp__4092__auto__;
-                  var key = cljs.core.nth.call(null, vec__46670, 0, null);
-                  var ess = cljs.core.nth.call(null, vec__46670, 1, null);
+                  var vec__49183 = temp__4092__auto__;
+                  var key = cljs.core.nth.call(null, vec__49183, 0, null);
+                  var ess = cljs.core.nth.call(null, vec__49183, 1, null);
                   return cljs.core.nth.call(null, cljs.core.reverse.call(null, blog__$2.call(null, key)), ess, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "content", "content", 1965434859), ""], null));
                 } else {
                   return null;
                 }
               }(), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "init-state", "init-state", 4479067398), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "c", "c", 1013904341), c], null)], null))], null)))], null)));
             };
-          }(data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730);
-          dream.blog.t46665.prototype.om$core$IWillMount$ = true;
-          dream.blog.t46665.prototype.om$core$IWillMount$will_mount$arity$1 = function(data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730) {
+          }(data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243);
+          dream.blog.t49178.prototype.om$core$IWillMount$ = true;
+          dream.blog.t49178.prototype.om$core$IWillMount$will_mount$arity$1 = function(data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243) {
             return function(_) {
               var self__ = this;
               var ___$1 = this;
               var c = om.core.get_state.call(null, self__.owner, new cljs.core.Keyword(null, "c", "c", 1013904341));
-              var vec__46671 = om.core.get_state.call(null, self__.owner, new cljs.core.Keyword(null, "context", "context", 1965435169));
-              var top = cljs.core.nth.call(null, vec__46671, 0, null);
-              var ess = cljs.core.nth.call(null, vec__46671, 1, null);
-              var ctx = vec__46671;
-              var G__46672_46734 = cljs.core.count.call(null, ctx);
-              var caseval__46735;
-              switch(G__46672_46734) {
+              var vec__49184 = om.core.get_state.call(null, self__.owner, new cljs.core.Keyword(null, "context", "context", 1965435169));
+              var top = cljs.core.nth.call(null, vec__49184, 0, null);
+              var ess = cljs.core.nth.call(null, vec__49184, 1, null);
+              var ctx = vec__49184;
+              var G__49185_49247 = cljs.core.count.call(null, ctx);
+              var caseval__49248;
+              switch(G__49185_49247) {
                 case 2:
                   (function() {
-                    var G__46673 = self__.owner;
-                    om.core.set_state_BANG_.call(null, G__46673, new cljs.core.Keyword(null, "idx", "idx", 1014008367), ctx);
-                    om.core.set_state_BANG_.call(null, G__46673, new cljs.core.Keyword(null, "flip", "flip", 1017050079), true);
-                    return G__46673;
+                    var G__49186 = self__.owner;
+                    om.core.set_state_BANG_.call(null, G__49186, new cljs.core.Keyword(null, "idx", "idx", 1014008367), ctx);
+                    om.core.set_state_BANG_.call(null, G__49186, new cljs.core.Keyword(null, "flip", "flip", 1017050079), true);
+                    return G__49186;
                   })();
                   break;
                 default:
                   cljs.core.print.call(null, "Well then");
               }
-              var rand_chan_46736 = cljs.core.async.chan.call(null);
-              dream.blog.rand_process.call(null, rand_chan_46736, self__.owner);
-              dream.blog.random_thing.call(null, rand_chan_46736);
+              var rand_chan_49249 = cljs.core.async.chan.call(null);
+              dream.blog.rand_process.call(null, rand_chan_49249, self__.owner);
+              dream.blog.random_thing.call(null, rand_chan_49249);
               var c__10470__auto__ = cljs.core.async.chan.call(null, 1);
-              cljs.core.async.impl.dispatch.run.call(null, function(c__10470__auto__, c, vec__46671, top, ess, ctx, ___$1, data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730) {
+              cljs.core.async.impl.dispatch.run.call(null, function(c__10470__auto__, c, vec__49184, top, ess, ctx, ___$1, data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243) {
                 return function() {
                   var f__10471__auto__ = function() {
-                    var switch__10455__auto__ = function(c__10470__auto__, c, vec__46671, top, ess, ctx, ___$1, data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730) {
-                      return function(state_46702) {
-                        var state_val_46703 = state_46702[1];
-                        if (state_val_46703 === 9) {
-                          var inst_46697 = state_46702[2];
-                          var inst_46681 = inst_46697;
-                          var state_46702__$1 = function() {
-                            var statearr_46704 = state_46702;
-                            statearr_46704[7] = inst_46681;
-                            return statearr_46704;
+                    var switch__10455__auto__ = function(c__10470__auto__, c, vec__49184, top, ess, ctx, ___$1, data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243) {
+                      return function(state_49215) {
+                        var state_val_49216 = state_49215[1];
+                        if (state_val_49216 === 9) {
+                          var inst_49210 = state_49215[2];
+                          var inst_49194 = inst_49210;
+                          var state_49215__$1 = function() {
+                            var statearr_49217 = state_49215;
+                            statearr_49217[7] = inst_49194;
+                            return statearr_49217;
                           }();
-                          var statearr_46705_46737 = state_46702__$1;
-                          statearr_46705_46737[2] = null;
-                          statearr_46705_46737[1] = 3;
+                          var statearr_49218_49250 = state_49215__$1;
+                          statearr_49218_49250[2] = null;
+                          statearr_49218_49250[1] = 3;
                           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                         } else {
-                          if (state_val_46703 === 8) {
-                            var inst_46685 = state_46702[8];
-                            var inst_46691 = om.core.set_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "idx", "idx", 1014008367), inst_46685);
-                            var inst_46692 = om.core.update_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "flip", "flip", 1017050079), cljs.core.not);
-                            var state_46702__$1 = function() {
-                              var statearr_46706 = state_46702;
-                              statearr_46706[9] = inst_46692;
-                              statearr_46706[10] = inst_46691;
-                              return statearr_46706;
+                          if (state_val_49216 === 8) {
+                            var inst_49198 = state_49215[8];
+                            var inst_49204 = om.core.set_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "idx", "idx", 1014008367), inst_49198);
+                            var inst_49205 = om.core.update_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "flip", "flip", 1017050079), cljs.core.not);
+                            var state_49215__$1 = function() {
+                              var statearr_49219 = state_49215;
+                              statearr_49219[9] = inst_49205;
+                              statearr_49219[10] = inst_49204;
+                              return statearr_49219;
                             }();
-                            var statearr_46707_46738 = state_46702__$1;
-                            statearr_46707_46738[2] = self__.owner;
-                            statearr_46707_46738[1] = 5;
+                            var statearr_49220_49251 = state_49215__$1;
+                            statearr_49220_49251[2] = self__.owner;
+                            statearr_49220_49251[1] = 5;
                             return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                           } else {
-                            if (state_val_46703 === 7) {
-                              var inst_46688 = om.core.update_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "flip", "flip", 1017050079), cljs.core.not);
-                              var state_46702__$1 = state_46702;
-                              var statearr_46708_46739 = state_46702__$1;
-                              statearr_46708_46739[2] = inst_46688;
-                              statearr_46708_46739[1] = 5;
+                            if (state_val_49216 === 7) {
+                              var inst_49201 = om.core.update_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "flip", "flip", 1017050079), cljs.core.not);
+                              var state_49215__$1 = state_49215;
+                              var statearr_49221_49252 = state_49215__$1;
+                              statearr_49221_49252[2] = inst_49201;
+                              statearr_49221_49252[1] = 5;
                               return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                             } else {
-                              if (state_val_46703 === 6) {
-                                var inst_46685 = state_46702[8];
-                                var inst_46686 = om.core.set_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "idx", "idx", 1014008367), inst_46685);
-                                var state_46702__$1 = state_46702;
-                                var statearr_46709_46740 = state_46702__$1;
-                                statearr_46709_46740[2] = inst_46686;
-                                statearr_46709_46740[1] = 5;
+                              if (state_val_49216 === 6) {
+                                var inst_49198 = state_49215[8];
+                                var inst_49199 = om.core.set_state_BANG_.call(null, self__.owner, new cljs.core.Keyword(null, "idx", "idx", 1014008367), inst_49198);
+                                var state_49215__$1 = state_49215;
+                                var statearr_49222_49253 = state_49215__$1;
+                                statearr_49222_49253[2] = inst_49199;
+                                statearr_49222_49253[1] = 5;
                                 return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                               } else {
-                                if (state_val_46703 === 5) {
-                                  var inst_46695 = state_46702[2];
-                                  var state_46702__$1 = function() {
-                                    var statearr_46710 = state_46702;
-                                    statearr_46710[11] = inst_46695;
-                                    return statearr_46710;
+                                if (state_val_49216 === 5) {
+                                  var inst_49208 = state_49215[2];
+                                  var state_49215__$1 = function() {
+                                    var statearr_49223 = state_49215;
+                                    statearr_49223[11] = inst_49208;
+                                    return statearr_49223;
                                   }();
-                                  return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_46702__$1, 9, c);
+                                  return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_49215__$1, 9, c);
                                 } else {
-                                  if (state_val_46703 === 4) {
-                                    var inst_46700 = state_46702[2];
-                                    var state_46702__$1 = state_46702;
-                                    return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_46702__$1, inst_46700);
+                                  if (state_val_49216 === 4) {
+                                    var inst_49213 = state_49215[2];
+                                    var state_49215__$1 = state_49215;
+                                    return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_49215__$1, inst_49213);
                                   } else {
-                                    if (state_val_46703 === 3) {
-                                      var inst_46681 = state_46702[7];
-                                      var inst_46684 = cljs.core.nth.call(null, inst_46681, 0, null);
-                                      var inst_46685 = cljs.core.nth.call(null, inst_46681, 1, null);
-                                      var state_46702__$1 = function() {
-                                        var statearr_46711 = state_46702;
-                                        statearr_46711[8] = inst_46685;
-                                        return statearr_46711;
+                                    if (state_val_49216 === 3) {
+                                      var inst_49194 = state_49215[7];
+                                      var inst_49197 = cljs.core.nth.call(null, inst_49194, 0, null);
+                                      var inst_49198 = cljs.core.nth.call(null, inst_49194, 1, null);
+                                      var state_49215__$1 = function() {
+                                        var statearr_49224 = state_49215;
+                                        statearr_49224[8] = inst_49198;
+                                        return statearr_49224;
                                       }();
-                                      var G__46712_46741 = inst_46684 instanceof cljs.core.Keyword ? inst_46684.fqn : null;
-                                      var caseval__46742;
-                                      switch(G__46712_46741) {
+                                      var G__49225_49254 = inst_49197 instanceof cljs.core.Keyword ? inst_49197.fqn : null;
+                                      var caseval__49255;
+                                      switch(G__49225_49254) {
                                         case "idxflip":
                                           (function() {
-                                            var statearr_46713 = state_46702__$1;
-                                            statearr_46713[1] = 8;
-                                            return statearr_46713;
+                                            var statearr_49226 = state_49215__$1;
+                                            statearr_49226[1] = 8;
+                                            return statearr_49226;
                                           })();
                                           break;
                                         case "flip":
                                           (function() {
-                                            var statearr_46714 = state_46702__$1;
-                                            statearr_46714[1] = 7;
-                                            return statearr_46714;
+                                            var statearr_49227 = state_49215__$1;
+                                            statearr_49227[1] = 7;
+                                            return statearr_49227;
                                           })();
                                           break;
                                         case "idx":
                                           (function() {
-                                            var statearr_46715 = state_46702__$1;
-                                            statearr_46715[1] = 6;
-                                            return statearr_46715;
+                                            var statearr_49228 = state_49215__$1;
+                                            statearr_49228[1] = 6;
+                                            return statearr_49228;
                                           })();
                                           break;
                                         default:
                                           (function() {
-                                            throw new Error("No matching clause: " + cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_46684));
+                                            throw new Error("No matching clause: " + cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_49197));
                                           })();
                                       }
                                       return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                                     } else {
-                                      if (state_val_46703 === 2) {
-                                        var inst_46678 = state_46702[2];
-                                        var inst_46679 = cljs.core.nth.call(null, inst_46678, 0, null);
-                                        var inst_46680 = cljs.core.nth.call(null, inst_46678, 1, null);
-                                        var inst_46681 = inst_46678;
-                                        var state_46702__$1 = function() {
-                                          var statearr_46716 = state_46702;
-                                          statearr_46716[7] = inst_46681;
-                                          statearr_46716[12] = inst_46680;
-                                          statearr_46716[13] = inst_46679;
-                                          return statearr_46716;
+                                      if (state_val_49216 === 2) {
+                                        var inst_49191 = state_49215[2];
+                                        var inst_49192 = cljs.core.nth.call(null, inst_49191, 0, null);
+                                        var inst_49193 = cljs.core.nth.call(null, inst_49191, 1, null);
+                                        var inst_49194 = inst_49191;
+                                        var state_49215__$1 = function() {
+                                          var statearr_49229 = state_49215;
+                                          statearr_49229[12] = inst_49192;
+                                          statearr_49229[13] = inst_49193;
+                                          statearr_49229[7] = inst_49194;
+                                          return statearr_49229;
                                         }();
-                                        var statearr_46717_46743 = state_46702__$1;
-                                        statearr_46717_46743[2] = null;
-                                        statearr_46717_46743[1] = 3;
+                                        var statearr_49230_49256 = state_49215__$1;
+                                        statearr_49230_49256[2] = null;
+                                        statearr_49230_49256[1] = 3;
                                         return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                                       } else {
-                                        if (state_val_46703 === 1) {
-                                          var state_46702__$1 = state_46702;
-                                          return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_46702__$1, 2, c);
+                                        if (state_val_49216 === 1) {
+                                          var state_49215__$1 = state_49215;
+                                          return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_49215__$1, 2, c);
                                         } else {
                                           return null;
                                         }
@@ -67514,22 +67514,22 @@ dream.blog.blog = function(ufv___46726, output_schema46589_46727, input_schema46
                           }
                         }
                       };
-                    }(c__10470__auto__, c, vec__46671, top, ess, ctx, ___$1, data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730);
-                    return function(switch__10455__auto__, c__10470__auto__, c, vec__46671, top, ess, ctx, ___$1, data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730) {
+                    }(c__10470__auto__, c, vec__49184, top, ess, ctx, ___$1, data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243);
+                    return function(switch__10455__auto__, c__10470__auto__, c, vec__49184, top, ess, ctx, ___$1, data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243) {
                       return function() {
                         var state_machine__10456__auto__ = null;
                         var state_machine__10456__auto____0 = function() {
-                          var statearr_46721 = [null, null, null, null, null, null, null, null, null, null, null, null, null, null];
-                          statearr_46721[0] = state_machine__10456__auto__;
-                          statearr_46721[1] = 1;
-                          return statearr_46721;
+                          var statearr_49234 = [null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+                          statearr_49234[0] = state_machine__10456__auto__;
+                          statearr_49234[1] = 1;
+                          return statearr_49234;
                         };
-                        var state_machine__10456__auto____1 = function(state_46702) {
+                        var state_machine__10456__auto____1 = function(state_49215) {
                           while (true) {
                             var ret_value__10457__auto__ = function() {
                               try {
                                 while (true) {
-                                  var result__10458__auto__ = switch__10455__auto__.call(null, state_46702);
+                                  var result__10458__auto__ = switch__10455__auto__.call(null, state_49215);
                                   if (cljs.core.keyword_identical_QMARK_.call(null, result__10458__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
                                     continue;
                                   } else {
@@ -67537,16 +67537,16 @@ dream.blog.blog = function(ufv___46726, output_schema46589_46727, input_schema46
                                   }
                                   break;
                                 }
-                              } catch (e46722) {
-                                if (e46722 instanceof Object) {
-                                  var ex__10459__auto__ = e46722;
-                                  var statearr_46723_46744 = state_46702;
-                                  statearr_46723_46744[5] = ex__10459__auto__;
-                                  cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_46702);
+                              } catch (e49235) {
+                                if (e49235 instanceof Object) {
+                                  var ex__10459__auto__ = e49235;
+                                  var statearr_49236_49257 = state_49215;
+                                  statearr_49236_49257[5] = ex__10459__auto__;
+                                  cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_49215);
                                   return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                                 } else {
                                   if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-                                    throw e46722;
+                                    throw e49235;
                                   } else {
                                     return null;
                                   }
@@ -67554,8 +67554,8 @@ dream.blog.blog = function(ufv___46726, output_schema46589_46727, input_schema46
                               }
                             }();
                             if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__10457__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
-                              var G__46745 = state_46702;
-                              state_46702 = G__46745;
+                              var G__49258 = state_49215;
+                              state_49215 = G__49258;
                               continue;
                             } else {
                               return ret_value__10457__auto__;
@@ -67563,12 +67563,12 @@ dream.blog.blog = function(ufv___46726, output_schema46589_46727, input_schema46
                             break;
                           }
                         };
-                        state_machine__10456__auto__ = function(state_46702) {
+                        state_machine__10456__auto__ = function(state_49215) {
                           switch(arguments.length) {
                             case 0:
                               return state_machine__10456__auto____0.call(this);
                             case 1:
-                              return state_machine__10456__auto____1.call(this, state_46702);
+                              return state_machine__10456__auto____1.call(this, state_49215);
                           }
                           throw new Error("Invalid arity: " + arguments.length);
                         };
@@ -67576,59 +67576,59 @@ dream.blog.blog = function(ufv___46726, output_schema46589_46727, input_schema46
                         state_machine__10456__auto__.cljs$core$IFn$_invoke$arity$1 = state_machine__10456__auto____1;
                         return state_machine__10456__auto__;
                       }();
-                    }(switch__10455__auto__, c__10470__auto__, c, vec__46671, top, ess, ctx, ___$1, data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730);
+                    }(switch__10455__auto__, c__10470__auto__, c, vec__49184, top, ess, ctx, ___$1, data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243);
                   }();
                   var state__10472__auto__ = function() {
-                    var statearr_46724 = f__10471__auto__.call(null);
-                    statearr_46724[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__10470__auto__;
-                    return statearr_46724;
+                    var statearr_49237 = f__10471__auto__.call(null);
+                    statearr_49237[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__10470__auto__;
+                    return statearr_49237;
                   }();
                   return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__10472__auto__);
                 };
-              }(c__10470__auto__, c, vec__46671, top, ess, ctx, ___$1, data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730));
+              }(c__10470__auto__, c, vec__49184, top, ess, ctx, ___$1, data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243));
               return c__10470__auto__;
             };
-          }(data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730);
-          dream.blog.t46665.prototype.om$core$IInitState$ = true;
-          dream.blog.t46665.prototype.om$core$IInitState$init_state$arity$1 = function(data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730) {
+          }(data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243);
+          dream.blog.t49178.prototype.om$core$IInitState$ = true;
+          dream.blog.t49178.prototype.om$core$IInitState$init_state$arity$1 = function(data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243) {
             return function(_) {
               var self__ = this;
               var ___$1 = this;
-              var vec__46725 = cljs.core.first.call(null, cljs.core.seq.call(null, self__.data.call(null, new cljs.core.Keyword(null, "routes", "routes", 4383738556)).call(null, new cljs.core.Keyword(null, "blog", "blog", 1016931092))));
-              var top = cljs.core.nth.call(null, vec__46725, 0, null);
-              var posts = cljs.core.nth.call(null, vec__46725, 1, null);
+              var vec__49238 = cljs.core.first.call(null, cljs.core.seq.call(null, self__.data.call(null, new cljs.core.Keyword(null, "routes", "routes", 4383738556)).call(null, new cljs.core.Keyword(null, "blog", "blog", 1016931092))));
+              var top = cljs.core.nth.call(null, vec__49238, 0, null);
+              var posts = cljs.core.nth.call(null, vec__49238, 1, null);
               return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "c", "c", 1013904341), cljs.core.async.chan.call(null), new cljs.core.Keyword(null, "topidx", "topidx", 4440837306), 0, new cljs.core.Keyword(null, "idx", "idx", 1014008367), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [top, -1], null)], null);
             };
-          }(data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730);
-          dream.blog.t46665.prototype.cljs$core$IMeta$_meta$arity$1 = function(data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730) {
-            return function(_46667) {
+          }(data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243);
+          dream.blog.t49178.prototype.cljs$core$IMeta$_meta$arity$1 = function(data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243) {
+            return function(_49180) {
               var self__ = this;
-              var _46667__$1 = this;
-              return self__.meta46666;
+              var _49180__$1 = this;
+              return self__.meta49179;
             };
-          }(data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730);
-          dream.blog.t46665.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730) {
-            return function(_46667, meta46666__$1) {
+          }(data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243);
+          dream.blog.t49178.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243) {
+            return function(_49180, meta49179__$1) {
               var self__ = this;
-              var _46667__$1 = this;
-              return new dream.blog.t46665(self__.map__46664, self__.clear_route, self__.map__46663, self__.blog, self__.G__46595, self__.ufv__, self__.data, self__.validate__7247__auto__, self__.G__46662, self__.G__46593, self__.input_schema46590, self__.G__46594, self__.output_schema46589, self__.input_checker46591, self__.owner, self__.output_checker46592, meta46666__$1);
+              var _49180__$1 = this;
+              return new dream.blog.t49178(self__.input_schema49103, self__.G__49106, self__.G__49107, self__.G__49108, self__.clear_route, self__.G__49175, self__.blog, self__.map__49177, self__.ufv__, self__.data, self__.validate__7247__auto__, self__.input_checker49104, self__.output_checker49105, self__.owner, self__.output_schema49102, self__.map__49176, meta49179__$1);
             };
-          }(data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730);
-          dream.blog.__GT_t46665 = function(data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730) {
-            return function __GT_t46665(map__46664__$2, clear_route__$2, map__46663__$2, blog__$1, G__46595__$1, ufv____$1, data__$3, validate__7247__auto____$1, G__46662__$2, G__46593__$1, input_schema46590__$1, G__46594__$1, output_schema46589__$1, input_checker46591__$1, owner__$3, output_checker46592__$1, meta46666) {
-              return new dream.blog.t46665(map__46664__$2, clear_route__$2, map__46663__$2, blog__$1, G__46595__$1, ufv____$1, data__$3, validate__7247__auto____$1, G__46662__$2, G__46593__$1, input_schema46590__$1, G__46594__$1, output_schema46589__$1, input_checker46591__$1, owner__$3, output_checker46592__$1, meta46666);
+          }(data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243);
+          dream.blog.__GT_t49178 = function(data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243) {
+            return function __GT_t49178(input_schema49103__$1, G__49106__$1, G__49107__$1, G__49108__$1, clear_route__$2, G__49175__$2, blog__$1, map__49177__$2, ufv____$1, data__$3, validate__7247__auto____$1, input_checker49104__$1, output_checker49105__$1, owner__$3, output_schema49102__$1, map__49176__$2, meta49179) {
+              return new dream.blog.t49178(input_schema49103__$1, G__49106__$1, G__49107__$1, G__49108__$1, clear_route__$2, G__49175__$2, blog__$1, map__49177__$2, ufv____$1, data__$3, validate__7247__auto____$1, input_checker49104__$1, output_checker49105__$1, owner__$3, output_schema49102__$1, map__49176__$2, meta49179);
             };
-          }(data__$2, owner__$2, map__46664, map__46664__$1, clear_route__$1, data, owner, G__46662, map__46663, map__46663__$1, clear_route, validate__7247__auto__, ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730);
+          }(data__$2, owner__$2, map__49177, map__49177__$1, clear_route__$1, data, owner, G__49175, map__49176, map__49176__$1, clear_route, validate__7247__auto__, ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243);
         }
-        return new dream.blog.t46665(map__46664__$1, clear_route__$1, map__46663__$1, blog, G__46595, ufv___46726, data__$2, validate__7247__auto__, G__46662__$1, G__46593, input_schema46590_46728, G__46594, output_schema46589_46727, input_checker46591_46729, owner__$2, output_checker46592_46730, null);
+        return new dream.blog.t49178(input_schema49103_49241, G__49106, G__49107, G__49108, clear_route__$1, G__49175__$1, blog, map__49177__$1, ufv___49239, data__$2, validate__7247__auto__, input_checker49104_49242, output_checker49105_49243, owner__$2, output_schema49102_49240, map__49176__$1, null);
         break;
       }
     }();
     if (cljs.core.truth_(validate__7247__auto__)) {
-      var temp__4092__auto___46746 = output_checker46592_46730.call(null, o__7250__auto__);
-      if (cljs.core.truth_(temp__4092__auto___46746)) {
-        var error__7249__auto___46747 = temp__4092__auto___46746;
-        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Output of %s does not match schema: %s", new cljs.core.Symbol(null, "blog", "blog", -1637504677, null), cljs.core.pr_str.call(null, error__7249__auto___46747)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___46747, new cljs.core.Keyword(null, "schema", "schema", 4400883987), output_schema46589_46727, new cljs.core.Keyword(null, "value", "value", 
+      var temp__4092__auto___49259 = output_checker49105_49243.call(null, o__7250__auto__);
+      if (cljs.core.truth_(temp__4092__auto___49259)) {
+        var error__7249__auto___49260 = temp__4092__auto___49259;
+        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Output of %s does not match schema: %s", new cljs.core.Symbol(null, "blog", "blog", -1637504677, null), cljs.core.pr_str.call(null, error__7249__auto___49260)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___49260, new cljs.core.Keyword(null, "schema", "schema", 4400883987), output_schema49102_49240, new cljs.core.Keyword(null, "value", "value", 
         1125876963), o__7250__auto__], null));
       } else {
       }
@@ -67636,22 +67636,22 @@ dream.blog.blog = function(ufv___46726, output_schema46589_46727, input_schema46
     }
     return o__7250__auto__;
   };
-}(ufv___46726, output_schema46589_46727, input_schema46590_46728, input_checker46591_46729, output_checker46592_46730);
-schema.utils.declare_class_schema_BANG_.call(null, schema.utils.fn_schema_bearer.call(null, dream.blog.blog), schema.core.make_fn_schema.call(null, output_schema46589_46727, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema46590_46728], null)));
+}(ufv___49239, output_schema49102_49240, input_schema49103_49241, input_checker49104_49242, output_checker49105_49243);
+schema.utils.declare_class_schema_BANG_.call(null, schema.utils.fn_schema_bearer.call(null, dream.blog.blog), schema.core.make_fn_schema.call(null, output_schema49102_49240, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema49103_49241], null)));
 dream.blog.__GT_blog = function() {
   var __GT_blog = null;
   var __GT_blog__1 = function(cursor__9015__auto__) {
     return om.core.build.call(null, dream.blog.blog, cursor__9015__auto__);
   };
-  var __GT_blog__2 = function(cursor__9015__auto__, m46588) {
-    return om.core.build.call(null, dream.blog.blog, cursor__9015__auto__, m46588);
+  var __GT_blog__2 = function(cursor__9015__auto__, m49101) {
+    return om.core.build.call(null, dream.blog.blog, cursor__9015__auto__, m49101);
   };
-  __GT_blog = function(cursor__9015__auto__, m46588) {
+  __GT_blog = function(cursor__9015__auto__, m49101) {
     switch(arguments.length) {
       case 1:
         return __GT_blog__1.call(this, cursor__9015__auto__);
       case 2:
-        return __GT_blog__2.call(this, cursor__9015__auto__, m46588);
+        return __GT_blog__2.call(this, cursor__9015__auto__, m49101);
     }
     throw new Error("Invalid arity: " + arguments.length);
   };
@@ -67761,7 +67761,7 @@ goog.history.Html5History.TokenTransformer.prototype.retrieveToken = function(pa
 };
 goog.history.Html5History.TokenTransformer.prototype.createUrl = function(token, pathPrefix, location) {
 };
-goog.provide("dream.routes");
+goog.provide("dream.default$");
 goog.require("cljs.core");
 goog.require("cljs.core.async");
 goog.require("om_tools.core");
@@ -67773,6 +67773,354 @@ goog.require("om_tools.dom");
 goog.require("om.core");
 goog.require("dream.ani");
 goog.require("om.core");
+goog.require("om_tools.dom");
+goog.require("cljs.core.async");
+goog.require("goog.events");
+goog.require("goog.debug");
+dream.default$.make_cell = function make_cell(owner, ref, x, y) {
+  var node = om.core.get_node.call(null, owner, ref);
+  var ctx = node.getContext("2d");
+  var c__10470__auto__ = cljs.core.async.chan.call(null, 1);
+  cljs.core.async.impl.dispatch.run.call(null, function(c__10470__auto__, node, ctx) {
+    return function() {
+      var f__10471__auto__ = function() {
+        var switch__10455__auto__ = function(c__10470__auto__, node, ctx) {
+          return function(state_60310) {
+            var state_val_60311 = state_60310[1];
+            if (state_val_60311 === 7) {
+              var inst_60302 = state_60310[2];
+              var state_60310__$1 = function() {
+                var statearr_60312 = state_60310;
+                statearr_60312[7] = inst_60302;
+                return statearr_60312;
+              }();
+              var statearr_60313_60327 = state_60310__$1;
+              statearr_60313_60327[2] = null;
+              statearr_60313_60327[1] = 2;
+              return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
+            } else {
+              if (state_val_60311 === 6) {
+                var inst_60306 = state_60310[2];
+                var state_60310__$1 = state_60310;
+                var statearr_60314_60328 = state_60310__$1;
+                statearr_60314_60328[2] = inst_60306;
+                statearr_60314_60328[1] = 3;
+                return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
+              } else {
+                if (state_val_60311 === 5) {
+                  var state_60310__$1 = state_60310;
+                  var statearr_60315_60329 = state_60310__$1;
+                  statearr_60315_60329[2] = null;
+                  statearr_60315_60329[1] = 6;
+                  return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
+                } else {
+                  if (state_val_60311 === 4) {
+                    var inst_60293 = cljs.core.rand_int.call(null, 255);
+                    var inst_60294 = cljs.core.rand_int.call(null, 255);
+                    var inst_60295 = cljs.core.rand_int.call(null, 255);
+                    var inst_60296 = "rgb(" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_60293) + "," + cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_60294) + "," + cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_60295) + ")";
+                    var inst_60297 = ctx.fillStyle = inst_60296;
+                    var inst_60298 = ctx.fillRect(x, y, 10, 10);
+                    var inst_60299 = cljs.core.rand_int.call(null, 1E3);
+                    var inst_60300 = cljs.core.async.timeout.call(null, inst_60299);
+                    var state_60310__$1 = function() {
+                      var statearr_60316 = state_60310;
+                      statearr_60316[8] = inst_60297;
+                      statearr_60316[9] = inst_60298;
+                      return statearr_60316;
+                    }();
+                    return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_60310__$1, 7, inst_60300);
+                  } else {
+                    if (state_val_60311 === 3) {
+                      var inst_60308 = state_60310[2];
+                      var state_60310__$1 = state_60310;
+                      return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_60310__$1, inst_60308);
+                    } else {
+                      if (state_val_60311 === 2) {
+                        var state_60310__$1 = state_60310;
+                        if (true) {
+                          var statearr_60317_60330 = state_60310__$1;
+                          statearr_60317_60330[1] = 4;
+                        } else {
+                          var statearr_60318_60331 = state_60310__$1;
+                          statearr_60318_60331[1] = 5;
+                        }
+                        return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
+                      } else {
+                        if (state_val_60311 === 1) {
+                          var state_60310__$1 = state_60310;
+                          var statearr_60319_60332 = state_60310__$1;
+                          statearr_60319_60332[2] = null;
+                          statearr_60319_60332[1] = 2;
+                          return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
+                        } else {
+                          return null;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          };
+        }(c__10470__auto__, node, ctx);
+        return function(switch__10455__auto__, c__10470__auto__, node, ctx) {
+          return function() {
+            var state_machine__10456__auto__ = null;
+            var state_machine__10456__auto____0 = function() {
+              var statearr_60323 = [null, null, null, null, null, null, null, null, null, null];
+              statearr_60323[0] = state_machine__10456__auto__;
+              statearr_60323[1] = 1;
+              return statearr_60323;
+            };
+            var state_machine__10456__auto____1 = function(state_60310) {
+              while (true) {
+                var ret_value__10457__auto__ = function() {
+                  try {
+                    while (true) {
+                      var result__10458__auto__ = switch__10455__auto__.call(null, state_60310);
+                      if (cljs.core.keyword_identical_QMARK_.call(null, result__10458__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
+                        continue;
+                      } else {
+                        return result__10458__auto__;
+                      }
+                      break;
+                    }
+                  } catch (e60324) {
+                    if (e60324 instanceof Object) {
+                      var ex__10459__auto__ = e60324;
+                      var statearr_60325_60333 = state_60310;
+                      statearr_60325_60333[5] = ex__10459__auto__;
+                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_60310);
+                      return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
+                    } else {
+                      if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
+                        throw e60324;
+                      } else {
+                        return null;
+                      }
+                    }
+                  }
+                }();
+                if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__10457__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
+                  var G__60334 = state_60310;
+                  state_60310 = G__60334;
+                  continue;
+                } else {
+                  return ret_value__10457__auto__;
+                }
+                break;
+              }
+            };
+            state_machine__10456__auto__ = function(state_60310) {
+              switch(arguments.length) {
+                case 0:
+                  return state_machine__10456__auto____0.call(this);
+                case 1:
+                  return state_machine__10456__auto____1.call(this, state_60310);
+              }
+              throw new Error("Invalid arity: " + arguments.length);
+            };
+            state_machine__10456__auto__.cljs$core$IFn$_invoke$arity$0 = state_machine__10456__auto____0;
+            state_machine__10456__auto__.cljs$core$IFn$_invoke$arity$1 = state_machine__10456__auto____1;
+            return state_machine__10456__auto__;
+          }();
+        }(switch__10455__auto__, c__10470__auto__, node, ctx);
+      }();
+      var state__10472__auto__ = function() {
+        var statearr_60326 = f__10471__auto__.call(null);
+        statearr_60326[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__10470__auto__;
+        return statearr_60326;
+      }();
+      return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__10472__auto__);
+    };
+  }(c__10470__auto__, node, ctx));
+  return c__10470__auto__;
+};
+dream.default$.make_scene = function make_scene(owner, rows, cols, ref) {
+  var n__4397__auto__ = cols;
+  var x = 0;
+  while (true) {
+    if (x < n__4397__auto__) {
+      var n__4397__auto___60335__$1 = rows;
+      var y_60336 = 0;
+      while (true) {
+        if (y_60336 < n__4397__auto___60335__$1) {
+          dream.default$.make_cell.call(null, owner, ref, 10 * x, 10 * y_60336);
+          var G__60337 = y_60336 + 1;
+          y_60336 = G__60337;
+          continue;
+        } else {
+        }
+        break;
+      }
+      var G__60338 = x + 1;
+      x = G__60338;
+      continue;
+    } else {
+      return null;
+    }
+    break;
+  }
+};
+var ufv___60357 = schema.utils.use_fn_validation;
+var output_schema60340_60358 = schema.core.Any;
+var input_schema60341_60359 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "data", "data", -1637455517, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "owner", "owner", -1534366612, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "opts", "opts", -1637113383, null))], null);
+var input_checker60342_60360 = schema.core.checker.call(null, input_schema60341_60359);
+var output_checker60343_60361 = schema.core.checker.call(null, output_schema60340_60358);
+dream.default$.default$ = function(ufv___60357, output_schema60340_60358, input_schema60341_60359, input_checker60342_60360, output_checker60343_60361) {
+  return function default$(G__60344, G__60345, G__60346) {
+    var validate__7247__auto__ = ufv___60357.get_cell();
+    if (cljs.core.truth_(validate__7247__auto__)) {
+      var args__7248__auto___60362 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__60344, G__60345, G__60346], null);
+      var temp__4092__auto___60363 = input_checker60342_60360.call(null, args__7248__auto___60362);
+      if (cljs.core.truth_(temp__4092__auto___60363)) {
+        var error__7249__auto___60364 = temp__4092__auto___60363;
+        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Input to %s does not match schema: %s", new cljs.core.Symbol(null, "default", "default", -95727622, null), cljs.core.pr_str.call(null, error__7249__auto___60364)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___60364, new cljs.core.Keyword(null, "schema", "schema", 4400883987), input_schema60341_60359, new cljs.core.Keyword(null, "value", "value", 
+        1125876963), args__7248__auto___60362], null));
+      } else {
+      }
+    } else {
+    }
+    var o__7250__auto__ = function() {
+      var data = G__60344;
+      var owner = G__60345;
+      var opts = G__60346;
+      while (true) {
+        if (typeof dream.default$.t60352 !== "undefined") {
+        } else {
+          dream.default$.t60352 = function(opts, G__60346, G__60345, ufv__, G__60344, input_schema60341, default$, data, validate__7247__auto__, output_schema60340, output_checker60343, owner, input_checker60342, meta60353) {
+            this.opts = opts;
+            this.G__60346 = G__60346;
+            this.G__60345 = G__60345;
+            this.ufv__ = ufv__;
+            this.G__60344 = G__60344;
+            this.input_schema60341 = input_schema60341;
+            this.default$ = default$;
+            this.data = data;
+            this.validate__7247__auto__ = validate__7247__auto__;
+            this.output_schema60340 = output_schema60340;
+            this.output_checker60343 = output_checker60343;
+            this.owner = owner;
+            this.input_checker60342 = input_checker60342;
+            this.meta60353 = meta60353;
+            this.cljs$lang$protocol_mask$partition1$ = 0;
+            this.cljs$lang$protocol_mask$partition0$ = 393216;
+          };
+          dream.default$.t60352.cljs$lang$type = true;
+          dream.default$.t60352.cljs$lang$ctorStr = "dream.default/t60352";
+          dream.default$.t60352.cljs$lang$ctorPrWriter = function(validate__7247__auto__, ufv___60357, output_schema60340_60358, input_schema60341_60359, input_checker60342_60360, output_checker60343_60361) {
+            return function(this__4108__auto__, writer__4109__auto__, opt__4110__auto__) {
+              return cljs.core._write.call(null, writer__4109__auto__, "dream.default/t60352");
+            };
+          }(validate__7247__auto__, ufv___60357, output_schema60340_60358, input_schema60341_60359, input_checker60342_60360, output_checker60343_60361);
+          dream.default$.t60352.prototype.om$core$IRenderState$ = true;
+          dream.default$.t60352.prototype.om$core$IRenderState$render_state$arity$2 = function(validate__7247__auto__, ufv___60357, output_schema60340_60358, input_schema60341_60359, input_checker60342_60360, output_checker60343_60361) {
+            return function(_, p__60355) {
+              var self__ = this;
+              var map__60356 = p__60355;
+              var map__60356__$1 = cljs.core.seq_QMARK_.call(null, map__60356) ? cljs.core.apply.call(null, cljs.core.hash_map, map__60356) : map__60356;
+              var canvchan = cljs.core.get.call(null, map__60356__$1, new cljs.core.Keyword(null, "canvchan", "canvchan", 908213866));
+              var mouse_pos = cljs.core.get.call(null, map__60356__$1, new cljs.core.Keyword(null, "mouse-pos", "mouse-pos", 1599110302));
+              var ___$1 = this;
+              var x = cljs.core.mod.call(null, cljs.core.get.call(null, mouse_pos, 0, 255), 255);
+              var y = cljs.core.mod.call(null, cljs.core.get.call(null, mouse_pos, 1, 255), 255);
+              var z = x - y;
+              var canvchan__$1 = om.core.get_state.call(null, self__.owner, new cljs.core.Keyword(null, "canvchan", "canvchan", 908213866));
+              var rgbstr = "rgb(" + cljs.core.str.cljs$core$IFn$_invoke$arity$1(x) + "," + cljs.core.str.cljs$core$IFn$_invoke$arity$1(y) + ", " + cljs.core.str.cljs$core$IFn$_invoke$arity$1(z) + ")";
+              return cljs.core.apply.call(null, React.DOM.section, {"className":"full flex"}, cljs.core.flatten.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [React.DOM.canvas({"className":"", "ref":"canvas"}), om_tools.dom.element.call(null, React.DOM.article, om_tools.dom.element.call(null, React.DOM.ul, cljs.core.apply.call(null, React.DOM.li, null, cljs.core.flatten.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, 
+              ["My current orienting inquiries:", om_tools.dom.element.call(null, React.DOM.ul, React.DOM.li(null, "What is the relationship between inherents and coherence?"), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [React.DOM.li(null, "What is the relationship between grief and novelty?")], null))], null))), cljs.core.PersistentVector.EMPTY), cljs.core.PersistentVector.EMPTY)], null)));
+            };
+          }(validate__7247__auto__, ufv___60357, output_schema60340_60358, input_schema60341_60359, input_checker60342_60360, output_checker60343_60361);
+          dream.default$.t60352.prototype.om$core$IDidMount$ = true;
+          dream.default$.t60352.prototype.om$core$IDidMount$did_mount$arity$1 = function(validate__7247__auto__, ufv___60357, output_schema60340_60358, input_schema60341_60359, input_checker60342_60360, output_checker60343_60361) {
+            return function(_) {
+              var self__ = this;
+              var ___$1 = this;
+              return dream.default$.make_scene.call(null, self__.owner, 50, 50, "canvas");
+            };
+          }(validate__7247__auto__, ufv___60357, output_schema60340_60358, input_schema60341_60359, input_checker60342_60360, output_checker60343_60361);
+          dream.default$.t60352.prototype.om$core$IInitState$ = true;
+          dream.default$.t60352.prototype.om$core$IInitState$init_state$arity$1 = function(validate__7247__auto__, ufv___60357, output_schema60340_60358, input_schema60341_60359, input_checker60342_60360, output_checker60343_60361) {
+            return function(_) {
+              var self__ = this;
+              var ___$1 = this;
+              return new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "canvchan", "canvchan", 908213866), cljs.core.async.chan.call(null)], null);
+            };
+          }(validate__7247__auto__, ufv___60357, output_schema60340_60358, input_schema60341_60359, input_checker60342_60360, output_checker60343_60361);
+          dream.default$.t60352.prototype.cljs$core$IMeta$_meta$arity$1 = function(validate__7247__auto__, ufv___60357, output_schema60340_60358, input_schema60341_60359, input_checker60342_60360, output_checker60343_60361) {
+            return function(_60354) {
+              var self__ = this;
+              var _60354__$1 = this;
+              return self__.meta60353;
+            };
+          }(validate__7247__auto__, ufv___60357, output_schema60340_60358, input_schema60341_60359, input_checker60342_60360, output_checker60343_60361);
+          dream.default$.t60352.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(validate__7247__auto__, ufv___60357, output_schema60340_60358, input_schema60341_60359, input_checker60342_60360, output_checker60343_60361) {
+            return function(_60354, meta60353__$1) {
+              var self__ = this;
+              var _60354__$1 = this;
+              return new dream.default$.t60352(self__.opts, self__.G__60346, self__.G__60345, self__.ufv__, self__.G__60344, self__.input_schema60341, self__.default$, self__.data, self__.validate__7247__auto__, self__.output_schema60340, self__.output_checker60343, self__.owner, self__.input_checker60342, meta60353__$1);
+            };
+          }(validate__7247__auto__, ufv___60357, output_schema60340_60358, input_schema60341_60359, input_checker60342_60360, output_checker60343_60361);
+          dream.default$.__GT_t60352 = function(validate__7247__auto__, ufv___60357, output_schema60340_60358, input_schema60341_60359, input_checker60342_60360, output_checker60343_60361) {
+            return function __GT_t60352(opts__$1, G__60346__$1, G__60345__$1, ufv____$1, G__60344__$1, input_schema60341__$1, default$__$1, data__$1, validate__7247__auto____$1, output_schema60340__$1, output_checker60343__$1, owner__$1, input_checker60342__$1, meta60353) {
+              return new dream.default$.t60352(opts__$1, G__60346__$1, G__60345__$1, ufv____$1, G__60344__$1, input_schema60341__$1, default$__$1, data__$1, validate__7247__auto____$1, output_schema60340__$1, output_checker60343__$1, owner__$1, input_checker60342__$1, meta60353);
+            };
+          }(validate__7247__auto__, ufv___60357, output_schema60340_60358, input_schema60341_60359, input_checker60342_60360, output_checker60343_60361);
+        }
+        return new dream.default$.t60352(opts, G__60346, G__60345, ufv___60357, G__60344, input_schema60341_60359, default$, data, validate__7247__auto__, output_schema60340_60358, output_checker60343_60361, owner, input_checker60342_60360, null);
+        break;
+      }
+    }();
+    if (cljs.core.truth_(validate__7247__auto__)) {
+      var temp__4092__auto___60365 = output_checker60343_60361.call(null, o__7250__auto__);
+      if (cljs.core.truth_(temp__4092__auto___60365)) {
+        var error__7249__auto___60366 = temp__4092__auto___60365;
+        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Output of %s does not match schema: %s", new cljs.core.Symbol(null, "default", "default", -95727622, null), cljs.core.pr_str.call(null, error__7249__auto___60366)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___60366, new cljs.core.Keyword(null, "schema", "schema", 4400883987), output_schema60340_60358, new cljs.core.Keyword(null, "value", "value", 
+        1125876963), o__7250__auto__], null));
+      } else {
+      }
+    } else {
+    }
+    return o__7250__auto__;
+  };
+}(ufv___60357, output_schema60340_60358, input_schema60341_60359, input_checker60342_60360, output_checker60343_60361);
+schema.utils.declare_class_schema_BANG_.call(null, schema.utils.fn_schema_bearer.call(null, dream.default$.default$), schema.core.make_fn_schema.call(null, output_schema60340_60358, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema60341_60359], null)));
+dream.default$.__GT_default = function() {
+  var __GT_default = null;
+  var __GT_default__1 = function(cursor__9015__auto__) {
+    return om.core.build.call(null, dream.default$.default$, cursor__9015__auto__);
+  };
+  var __GT_default__2 = function(cursor__9015__auto__, m60339) {
+    return om.core.build.call(null, dream.default$.default$, cursor__9015__auto__, m60339);
+  };
+  __GT_default = function(cursor__9015__auto__, m60339) {
+    switch(arguments.length) {
+      case 1:
+        return __GT_default__1.call(this, cursor__9015__auto__);
+      case 2:
+        return __GT_default__2.call(this, cursor__9015__auto__, m60339);
+    }
+    throw new Error("Invalid arity: " + arguments.length);
+  };
+  __GT_default.cljs$core$IFn$_invoke$arity$1 = __GT_default__1;
+  __GT_default.cljs$core$IFn$_invoke$arity$2 = __GT_default__2;
+  return __GT_default;
+}();
+goog.provide("dream.routes");
+goog.require("cljs.core");
+goog.require("cljs.core.async");
+goog.require("om_tools.core");
+goog.require("dream.ani");
+goog.require("cljs.core.async");
+goog.require("goog.events");
+goog.require("goog.debug");
+goog.require("dream.default$");
+goog.require("om_tools.dom");
+goog.require("om.core");
+goog.require("dream.ani");
+goog.require("om.core");
+goog.require("dream.default$");
 goog.require("goog.history.Html5History");
 goog.require("om_tools.dom");
 goog.require("goog.history.EventType");
@@ -67786,24 +68134,24 @@ if (typeof setTimeout !== "undefined") {
     return time;
   };
 }
-dream.routes.update_title_BANG_ = function update_title_BANG_(p__14720) {
-  var map__14723 = p__14720;
-  var map__14723__$1 = cljs.core.seq_QMARK_.call(null, map__14723) ? cljs.core.apply.call(null, cljs.core.hash_map, map__14723) : map__14723;
-  var new_state = cljs.core.get.call(null, map__14723__$1, new cljs.core.Keyword(null, "new-state", "new-state", 3624385942));
-  var map__14724 = new_state;
-  var map__14724__$1 = cljs.core.seq_QMARK_.call(null, map__14724) ? cljs.core.apply.call(null, cljs.core.hash_map, map__14724) : map__14724;
-  var route = cljs.core.get.call(null, map__14724__$1, new cljs.core.Keyword(null, "route", "route", 1122608571));
+dream.routes.update_title_BANG_ = function update_title_BANG_(p__46772) {
+  var map__46775 = p__46772;
+  var map__46775__$1 = cljs.core.seq_QMARK_.call(null, map__46775) ? cljs.core.apply.call(null, cljs.core.hash_map, map__46775) : map__46775;
+  var new_state = cljs.core.get.call(null, map__46775__$1, new cljs.core.Keyword(null, "new-state", "new-state", 3624385942));
+  var map__46776 = new_state;
+  var map__46776__$1 = cljs.core.seq_QMARK_.call(null, map__46776) ? cljs.core.apply.call(null, cljs.core.hash_map, map__46776) : map__46776;
+  var route = cljs.core.get.call(null, map__46776__$1, new cljs.core.Keyword(null, "route", "route", 1122608571));
   return document.title = route.call(null, new cljs.core.Keyword(null, "view", "view", 1017523735));
 };
-dream.routes.update_history_BANG_ = function update_history_BANG_(owner, p__14725) {
-  var map__14728 = p__14725;
-  var map__14728__$1 = cljs.core.seq_QMARK_.call(null, map__14728) ? cljs.core.apply.call(null, cljs.core.hash_map, map__14728) : map__14728;
-  var old_state = cljs.core.get.call(null, map__14728__$1, new cljs.core.Keyword(null, "old-state", "old-state", 1449001181));
-  var new_state = cljs.core.get.call(null, map__14728__$1, new cljs.core.Keyword(null, "new-state", "new-state", 3624385942));
+dream.routes.update_history_BANG_ = function update_history_BANG_(owner, p__46777) {
+  var map__46780 = p__46777;
+  var map__46780__$1 = cljs.core.seq_QMARK_.call(null, map__46780) ? cljs.core.apply.call(null, cljs.core.hash_map, map__46780) : map__46780;
+  var old_state = cljs.core.get.call(null, map__46780__$1, new cljs.core.Keyword(null, "old-state", "old-state", 1449001181));
+  var new_state = cljs.core.get.call(null, map__46780__$1, new cljs.core.Keyword(null, "new-state", "new-state", 3624385942));
   var history = om.core.get_state.call(null, owner, new cljs.core.Keyword(null, "history", "history", 1940838406));
-  var map__14729 = new_state;
-  var map__14729__$1 = cljs.core.seq_QMARK_.call(null, map__14729) ? cljs.core.apply.call(null, cljs.core.hash_map, map__14729) : map__14729;
-  var route = cljs.core.get.call(null, map__14729__$1, new cljs.core.Keyword(null, "route", "route", 1122608571));
+  var map__46781 = new_state;
+  var map__46781__$1 = cljs.core.seq_QMARK_.call(null, map__46781) ? cljs.core.apply.call(null, cljs.core.hash_map, map__46781) : map__46781;
+  var route = cljs.core.get.call(null, map__46781__$1, new cljs.core.Keyword(null, "route", "route", 1122608571));
   if (!cljs.core._EQ_.call(null, old_state, new_state)) {
     if (cljs.core.truth_(route.call(null, new cljs.core.Keyword(null, "view", "view", 1017523735)))) {
       return history.setToken(route.call(null, new cljs.core.Keyword(null, "view", "view", 1017523735)));
@@ -67821,11 +68169,11 @@ dream.routes.stop_router_BANG_ = function stop_router_BANG_(owner) {
 };
 dream.routes.start_history_BANG_ = function start_history_BANG_(data, owner) {
   var history = function() {
-    var G__14731 = new goog.history.Html5History;
-    G__14731.setUseFragment(false);
-    G__14731.setPathPrefix("");
-    G__14731.setEnabled(true);
-    return G__14731;
+    var G__46783 = new goog.history.Html5History;
+    G__46783.setUseFragment(false);
+    G__46783.setPathPrefix("");
+    G__46783.setEnabled(true);
+    return G__46783;
   }();
   var nav_tokens_chan = om.core.get_shared.call(null, owner, new cljs.core.Keyword(null, "nav-tokens", "nav-tokens", 1550793974));
   goog.events.listen(history, goog.history.EventType.NAVIGATE, function(history, nav_tokens_chan) {
@@ -67847,54 +68195,54 @@ dream.routes.start_tx_loop_BANG_ = function start_tx_loop_BANG_(owner) {
     return function() {
       var f__10471__auto__ = function() {
         var switch__10455__auto__ = function(c__10470__auto__, transactions_pub_chan, txs) {
-          return function(state_14770) {
-            var state_val_14771 = state_14770[1];
-            if (state_val_14771 === 5) {
-              var inst_14765 = state_14770[2];
-              var inst_14760 = inst_14765;
-              var state_14770__$1 = function() {
-                var statearr_14772 = state_14770;
-                statearr_14772[7] = inst_14760;
-                return statearr_14772;
+          return function(state_46822) {
+            var state_val_46823 = state_46822[1];
+            if (state_val_46823 === 5) {
+              var inst_46817 = state_46822[2];
+              var inst_46812 = inst_46817;
+              var state_46822__$1 = function() {
+                var statearr_46824 = state_46822;
+                statearr_46824[7] = inst_46812;
+                return statearr_46824;
               }();
-              var statearr_14773_14784 = state_14770__$1;
-              statearr_14773_14784[2] = null;
-              statearr_14773_14784[1] = 3;
+              var statearr_46825_46836 = state_46822__$1;
+              statearr_46825_46836[2] = null;
+              statearr_46825_46836[1] = 3;
               return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
             } else {
-              if (state_val_14771 === 4) {
-                var inst_14768 = state_14770[2];
-                var state_14770__$1 = state_14770;
-                return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_14770__$1, inst_14768);
+              if (state_val_46823 === 4) {
+                var inst_46820 = state_46822[2];
+                var state_46822__$1 = state_46822;
+                return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_46822__$1, inst_46820);
               } else {
-                if (state_val_14771 === 3) {
-                  var inst_14760 = state_14770[7];
-                  var inst_14762 = dream.routes.update_title_BANG_.call(null, inst_14760);
-                  var inst_14763 = dream.routes.update_history_BANG_.call(null, owner, inst_14760);
-                  var state_14770__$1 = function() {
-                    var statearr_14774 = state_14770;
-                    statearr_14774[8] = inst_14762;
-                    statearr_14774[9] = inst_14763;
-                    return statearr_14774;
+                if (state_val_46823 === 3) {
+                  var inst_46812 = state_46822[7];
+                  var inst_46814 = dream.routes.update_title_BANG_.call(null, inst_46812);
+                  var inst_46815 = dream.routes.update_history_BANG_.call(null, owner, inst_46812);
+                  var state_46822__$1 = function() {
+                    var statearr_46826 = state_46822;
+                    statearr_46826[8] = inst_46815;
+                    statearr_46826[9] = inst_46814;
+                    return statearr_46826;
                   }();
-                  return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_14770__$1, 5, txs);
+                  return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_46822__$1, 5, txs);
                 } else {
-                  if (state_val_14771 === 2) {
-                    var inst_14759 = state_14770[2];
-                    var inst_14760 = inst_14759;
-                    var state_14770__$1 = function() {
-                      var statearr_14775 = state_14770;
-                      statearr_14775[7] = inst_14760;
-                      return statearr_14775;
+                  if (state_val_46823 === 2) {
+                    var inst_46811 = state_46822[2];
+                    var inst_46812 = inst_46811;
+                    var state_46822__$1 = function() {
+                      var statearr_46827 = state_46822;
+                      statearr_46827[7] = inst_46812;
+                      return statearr_46827;
                     }();
-                    var statearr_14776_14785 = state_14770__$1;
-                    statearr_14776_14785[2] = null;
-                    statearr_14776_14785[1] = 3;
+                    var statearr_46828_46837 = state_46822__$1;
+                    statearr_46828_46837[2] = null;
+                    statearr_46828_46837[1] = 3;
                     return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                   } else {
-                    if (state_val_14771 === 1) {
-                      var state_14770__$1 = state_14770;
-                      return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_14770__$1, 2, txs);
+                    if (state_val_46823 === 1) {
+                      var state_46822__$1 = state_46822;
+                      return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_46822__$1, 2, txs);
                     } else {
                       return null;
                     }
@@ -67908,17 +68256,17 @@ dream.routes.start_tx_loop_BANG_ = function start_tx_loop_BANG_(owner) {
           return function() {
             var state_machine__10456__auto__ = null;
             var state_machine__10456__auto____0 = function() {
-              var statearr_14780 = [null, null, null, null, null, null, null, null, null, null];
-              statearr_14780[0] = state_machine__10456__auto__;
-              statearr_14780[1] = 1;
-              return statearr_14780;
+              var statearr_46832 = [null, null, null, null, null, null, null, null, null, null];
+              statearr_46832[0] = state_machine__10456__auto__;
+              statearr_46832[1] = 1;
+              return statearr_46832;
             };
-            var state_machine__10456__auto____1 = function(state_14770) {
+            var state_machine__10456__auto____1 = function(state_46822) {
               while (true) {
                 var ret_value__10457__auto__ = function() {
                   try {
                     while (true) {
-                      var result__10458__auto__ = switch__10455__auto__.call(null, state_14770);
+                      var result__10458__auto__ = switch__10455__auto__.call(null, state_46822);
                       if (cljs.core.keyword_identical_QMARK_.call(null, result__10458__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
                         continue;
                       } else {
@@ -67926,16 +68274,16 @@ dream.routes.start_tx_loop_BANG_ = function start_tx_loop_BANG_(owner) {
                       }
                       break;
                     }
-                  } catch (e14781) {
-                    if (e14781 instanceof Object) {
-                      var ex__10459__auto__ = e14781;
-                      var statearr_14782_14786 = state_14770;
-                      statearr_14782_14786[5] = ex__10459__auto__;
-                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_14770);
+                  } catch (e46833) {
+                    if (e46833 instanceof Object) {
+                      var ex__10459__auto__ = e46833;
+                      var statearr_46834_46838 = state_46822;
+                      statearr_46834_46838[5] = ex__10459__auto__;
+                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_46822);
                       return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                     } else {
                       if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-                        throw e14781;
+                        throw e46833;
                       } else {
                         return null;
                       }
@@ -67943,8 +68291,8 @@ dream.routes.start_tx_loop_BANG_ = function start_tx_loop_BANG_(owner) {
                   }
                 }();
                 if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__10457__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
-                  var G__14787 = state_14770;
-                  state_14770 = G__14787;
+                  var G__46839 = state_46822;
+                  state_46822 = G__46839;
                   continue;
                 } else {
                   return ret_value__10457__auto__;
@@ -67952,12 +68300,12 @@ dream.routes.start_tx_loop_BANG_ = function start_tx_loop_BANG_(owner) {
                 break;
               }
             };
-            state_machine__10456__auto__ = function(state_14770) {
+            state_machine__10456__auto__ = function(state_46822) {
               switch(arguments.length) {
                 case 0:
                   return state_machine__10456__auto____0.call(this);
                 case 1:
-                  return state_machine__10456__auto____1.call(this, state_14770);
+                  return state_machine__10456__auto____1.call(this, state_46822);
               }
               throw new Error("Invalid arity: " + arguments.length);
             };
@@ -67968,94 +68316,94 @@ dream.routes.start_tx_loop_BANG_ = function start_tx_loop_BANG_(owner) {
         }(switch__10455__auto__, c__10470__auto__, transactions_pub_chan, txs);
       }();
       var state__10472__auto__ = function() {
-        var statearr_14783 = f__10471__auto__.call(null);
-        statearr_14783[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__10470__auto__;
-        return statearr_14783;
+        var statearr_46835 = f__10471__auto__.call(null);
+        statearr_46835[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__10470__auto__;
+        return statearr_46835;
       }();
       return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__10472__auto__);
     };
   }(c__10470__auto__, transactions_pub_chan, txs));
   return c__10470__auto__;
 };
-var ufv___14815 = schema.utils.use_fn_validation;
-var output_schema14790_14816 = schema.core.Any;
-var input_schema14791_14817 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "data", "data", -1637455517, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "owner", "owner", -1534366612, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "arg2", "arg2", -1637529003, null))], null);
-var input_checker14792_14818 = schema.core.checker.call(null, input_schema14791_14817);
-var output_checker14793_14819 = schema.core.checker.call(null, output_schema14790_14816);
-dream.routes.clear_route = function(ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819) {
-  return function clear_route(G__14794, G__14795, G__14796) {
-    var validate__7247__auto__ = ufv___14815.get_cell();
+var ufv___46867 = schema.utils.use_fn_validation;
+var output_schema46842_46868 = schema.core.Any;
+var input_schema46843_46869 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "data", "data", -1637455517, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "owner", "owner", -1534366612, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "arg2", "arg2", -1637529003, null))], null);
+var input_checker46844_46870 = schema.core.checker.call(null, input_schema46843_46869);
+var output_checker46845_46871 = schema.core.checker.call(null, output_schema46842_46868);
+dream.routes.clear_route = function(ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871) {
+  return function clear_route(G__46846, G__46847, G__46848) {
+    var validate__7247__auto__ = ufv___46867.get_cell();
     if (cljs.core.truth_(validate__7247__auto__)) {
-      var args__7248__auto___14820 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__14794, G__14795, G__14796], null);
-      var temp__4092__auto___14821 = input_checker14792_14818.call(null, args__7248__auto___14820);
-      if (cljs.core.truth_(temp__4092__auto___14821)) {
-        var error__7249__auto___14822 = temp__4092__auto___14821;
-        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Input to %s does not match schema: %s", new cljs.core.Symbol(null, "clear-route", "clear-route", -20887422, null), cljs.core.pr_str.call(null, error__7249__auto___14822)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___14822, new cljs.core.Keyword(null, "schema", "schema", 4400883987), input_schema14791_14817, new cljs.core.Keyword(null, "value", 
-        "value", 1125876963), args__7248__auto___14820], null));
+      var args__7248__auto___46872 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__46846, G__46847, G__46848], null);
+      var temp__4092__auto___46873 = input_checker46844_46870.call(null, args__7248__auto___46872);
+      if (cljs.core.truth_(temp__4092__auto___46873)) {
+        var error__7249__auto___46874 = temp__4092__auto___46873;
+        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Input to %s does not match schema: %s", new cljs.core.Symbol(null, "clear-route", "clear-route", -20887422, null), cljs.core.pr_str.call(null, error__7249__auto___46874)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___46874, new cljs.core.Keyword(null, "schema", "schema", 4400883987), input_schema46843_46869, new cljs.core.Keyword(null, "value", 
+        "value", 1125876963), args__7248__auto___46872], null));
       } else {
       }
     } else {
     }
     var o__7250__auto__ = function() {
-      var data = G__14794;
-      var owner = G__14795;
-      var G__14807 = G__14796;
-      var map__14808 = G__14807;
-      var map__14808__$1 = cljs.core.seq_QMARK_.call(null, map__14808) ? cljs.core.apply.call(null, cljs.core.hash_map, map__14808) : map__14808;
-      var parent = cljs.core.get.call(null, map__14808__$1, new cljs.core.Keyword(null, "parent", "parent", 4313447452));
+      var data = G__46846;
+      var owner = G__46847;
+      var G__46859 = G__46848;
+      var map__46860 = G__46859;
+      var map__46860__$1 = cljs.core.seq_QMARK_.call(null, map__46860) ? cljs.core.apply.call(null, cljs.core.hash_map, map__46860) : map__46860;
+      var parent = cljs.core.get.call(null, map__46860__$1, new cljs.core.Keyword(null, "parent", "parent", 4313447452));
       var data__$1 = data;
       var owner__$1 = owner;
-      var G__14807__$1 = G__14807;
+      var G__46859__$1 = G__46859;
       while (true) {
         var data__$2 = data__$1;
         var owner__$2 = owner__$1;
-        var map__14809 = G__14807__$1;
-        var map__14809__$1 = cljs.core.seq_QMARK_.call(null, map__14809) ? cljs.core.apply.call(null, cljs.core.hash_map, map__14809) : map__14809;
-        var parent__$1 = cljs.core.get.call(null, map__14809__$1, new cljs.core.Keyword(null, "parent", "parent", 4313447452));
-        if (typeof dream.routes.t14810 !== "undefined") {
+        var map__46861 = G__46859__$1;
+        var map__46861__$1 = cljs.core.seq_QMARK_.call(null, map__46861) ? cljs.core.apply.call(null, cljs.core.hash_map, map__46861) : map__46861;
+        var parent__$1 = cljs.core.get.call(null, map__46861__$1, new cljs.core.Keyword(null, "parent", "parent", 4313447452));
+        if (typeof dream.routes.t46862 !== "undefined") {
         } else {
-          dream.routes.t14810 = function(clear_route, input_checker14792, ufv__, parent, data, validate__7247__auto__, output_checker14793, G__14796, G__14795, input_schema14791, G__14794, G__14807, owner, output_schema14790, map__14808, map__14809, meta14811) {
+          dream.routes.t46862 = function(clear_route, map__46860, map__46861, input_schema46843, G__46846, output_schema46842, G__46848, ufv__, G__46847, parent, data, validate__7247__auto__, output_checker46845, G__46859, owner, input_checker46844, meta46863) {
             this.clear_route = clear_route;
-            this.input_checker14792 = input_checker14792;
+            this.map__46860 = map__46860;
+            this.map__46861 = map__46861;
+            this.input_schema46843 = input_schema46843;
+            this.G__46846 = G__46846;
+            this.output_schema46842 = output_schema46842;
+            this.G__46848 = G__46848;
             this.ufv__ = ufv__;
+            this.G__46847 = G__46847;
             this.parent = parent;
             this.data = data;
             this.validate__7247__auto__ = validate__7247__auto__;
-            this.output_checker14793 = output_checker14793;
-            this.G__14796 = G__14796;
-            this.G__14795 = G__14795;
-            this.input_schema14791 = input_schema14791;
-            this.G__14794 = G__14794;
-            this.G__14807 = G__14807;
+            this.output_checker46845 = output_checker46845;
+            this.G__46859 = G__46859;
             this.owner = owner;
-            this.output_schema14790 = output_schema14790;
-            this.map__14808 = map__14808;
-            this.map__14809 = map__14809;
-            this.meta14811 = meta14811;
+            this.input_checker46844 = input_checker46844;
+            this.meta46863 = meta46863;
             this.cljs$lang$protocol_mask$partition1$ = 0;
             this.cljs$lang$protocol_mask$partition0$ = 393216;
           };
-          dream.routes.t14810.cljs$lang$type = true;
-          dream.routes.t14810.cljs$lang$ctorStr = "dream.routes/t14810";
-          dream.routes.t14810.cljs$lang$ctorPrWriter = function(data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819) {
+          dream.routes.t46862.cljs$lang$type = true;
+          dream.routes.t46862.cljs$lang$ctorStr = "dream.routes/t46862";
+          dream.routes.t46862.cljs$lang$ctorPrWriter = function(data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871) {
             return function(this__4108__auto__, writer__4109__auto__, opt__4110__auto__) {
-              return cljs.core._write.call(null, writer__4109__auto__, "dream.routes/t14810");
+              return cljs.core._write.call(null, writer__4109__auto__, "dream.routes/t46862");
             };
-          }(data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819);
-          dream.routes.t14810.prototype.om$core$IRenderState$ = true;
-          dream.routes.t14810.prototype.om$core$IRenderState$render_state$arity$2 = function(data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819) {
-            return function(_, p__14813) {
+          }(data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871);
+          dream.routes.t46862.prototype.om$core$IRenderState$ = true;
+          dream.routes.t46862.prototype.om$core$IRenderState$render_state$arity$2 = function(data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871) {
+            return function(_, p__46865) {
               var self__ = this;
-              var map__14814 = p__14813;
-              var map__14814__$1 = cljs.core.seq_QMARK_.call(null, map__14814) ? cljs.core.apply.call(null, cljs.core.hash_map, map__14814) : map__14814;
-              var show = cljs.core.get.call(null, map__14814__$1, new cljs.core.Keyword(null, "show", "show", 1017433711));
+              var map__46866 = p__46865;
+              var map__46866__$1 = cljs.core.seq_QMARK_.call(null, map__46866) ? cljs.core.apply.call(null, cljs.core.hash_map, map__46866) : map__46866;
+              var show = cljs.core.get.call(null, map__46866__$1, new cljs.core.Keyword(null, "show", "show", 1017433711));
               var ___$1 = this;
               var trou = om.core.get_shared.call(null, self__.owner, new cljs.core.Keyword(null, "transroute", "transroute", 3592887315));
-              var onclick = function(trou, ___$1, map__14814, map__14814__$1, show, data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819) {
+              var onclick = function(trou, ___$1, map__46866, map__46866__$1, show, data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871) {
                 return function(e) {
                   return cljs.core.async.put_BANG_.call(null, trou, new cljs.core.Keyword(null, "clear", "clear", 1108650431));
                 };
-              }(trou, ___$1, map__14814, map__14814__$1, show, data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819);
+              }(trou, ___$1, map__46866, map__46866__$1, show, data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871);
               return function() {
                 var or__3541__auto__ = self__.parent;
                 if (cljs.core.truth_(or__3541__auto__)) {
@@ -68063,15 +68411,15 @@ dream.routes.clear_route = function(ufv___14815, output_schema14790_14816, input
                 } else {
                   return cljs.core.identity;
                 }
-              }().call(null, React.DOM.span({"onClick":function(trou, onclick, ___$1, map__14814, map__14814__$1, show, data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819) {
-                return function(p1__14788_SHARP_) {
-                  return onclick.call(null, p1__14788_SHARP_);
+              }().call(null, React.DOM.span({"onClick":function(trou, onclick, ___$1, map__46866, map__46866__$1, show, data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871) {
+                return function(p1__46840_SHARP_) {
+                  return onclick.call(null, p1__46840_SHARP_);
                 };
-              }(trou, onclick, ___$1, map__14814, map__14814__$1, show, data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819), "style":{"font-size":"20vh"}, "className":cljs.core.truth_(show) ? "trans fa fa-caret-up" : "trans fa fa-caret-up hide"}));
+              }(trou, onclick, ___$1, map__46866, map__46866__$1, show, data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871), "style":{"font-size":"20vh"}, "className":cljs.core.truth_(show) ? "trans fa fa-caret-up" : "trans fa fa-caret-up hide"}));
             };
-          }(data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819);
-          dream.routes.t14810.prototype.om$core$IWillUpdate$ = true;
-          dream.routes.t14810.prototype.om$core$IWillUpdate$will_update$arity$3 = function(data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819) {
+          }(data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871);
+          dream.routes.t46862.prototype.om$core$IWillUpdate$ = true;
+          dream.routes.t46862.prototype.om$core$IWillUpdate$will_update$arity$3 = function(data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871) {
             return function(_, nprops, nstate) {
               var self__ = this;
               var ___$1 = this;
@@ -68088,44 +68436,44 @@ dream.routes.clear_route = function(ufv___14815, output_schema14790_14816, input
                 return null;
               }
             };
-          }(data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819);
-          dream.routes.t14810.prototype.om$core$IInitState$ = true;
-          dream.routes.t14810.prototype.om$core$IInitState$init_state$arity$1 = function(data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819) {
+          }(data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871);
+          dream.routes.t46862.prototype.om$core$IInitState$ = true;
+          dream.routes.t46862.prototype.om$core$IInitState$init_state$arity$1 = function(data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871) {
             return function(_) {
               var self__ = this;
               var ___$1 = this;
               return new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "show", "show", 1017433711), false], null);
             };
-          }(data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819);
-          dream.routes.t14810.prototype.cljs$core$IMeta$_meta$arity$1 = function(data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819) {
-            return function(_14812) {
+          }(data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871);
+          dream.routes.t46862.prototype.cljs$core$IMeta$_meta$arity$1 = function(data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871) {
+            return function(_46864) {
               var self__ = this;
-              var _14812__$1 = this;
-              return self__.meta14811;
+              var _46864__$1 = this;
+              return self__.meta46863;
             };
-          }(data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819);
-          dream.routes.t14810.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819) {
-            return function(_14812, meta14811__$1) {
+          }(data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871);
+          dream.routes.t46862.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871) {
+            return function(_46864, meta46863__$1) {
               var self__ = this;
-              var _14812__$1 = this;
-              return new dream.routes.t14810(self__.clear_route, self__.input_checker14792, self__.ufv__, self__.parent, self__.data, self__.validate__7247__auto__, self__.output_checker14793, self__.G__14796, self__.G__14795, self__.input_schema14791, self__.G__14794, self__.G__14807, self__.owner, self__.output_schema14790, self__.map__14808, self__.map__14809, meta14811__$1);
+              var _46864__$1 = this;
+              return new dream.routes.t46862(self__.clear_route, self__.map__46860, self__.map__46861, self__.input_schema46843, self__.G__46846, self__.output_schema46842, self__.G__46848, self__.ufv__, self__.G__46847, self__.parent, self__.data, self__.validate__7247__auto__, self__.output_checker46845, self__.G__46859, self__.owner, self__.input_checker46844, meta46863__$1);
             };
-          }(data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819);
-          dream.routes.__GT_t14810 = function(data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819) {
-            return function __GT_t14810(clear_route__$1, input_checker14792__$1, ufv____$1, parent__$2, data__$3, validate__7247__auto____$1, output_checker14793__$1, G__14796__$1, G__14795__$1, input_schema14791__$1, G__14794__$1, G__14807__$2, owner__$3, output_schema14790__$1, map__14808__$2, map__14809__$2, meta14811) {
-              return new dream.routes.t14810(clear_route__$1, input_checker14792__$1, ufv____$1, parent__$2, data__$3, validate__7247__auto____$1, output_checker14793__$1, G__14796__$1, G__14795__$1, input_schema14791__$1, G__14794__$1, G__14807__$2, owner__$3, output_schema14790__$1, map__14808__$2, map__14809__$2, meta14811);
+          }(data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871);
+          dream.routes.__GT_t46862 = function(data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871) {
+            return function __GT_t46862(clear_route__$1, map__46860__$2, map__46861__$2, input_schema46843__$1, G__46846__$1, output_schema46842__$1, G__46848__$1, ufv____$1, G__46847__$1, parent__$2, data__$3, validate__7247__auto____$1, output_checker46845__$1, G__46859__$2, owner__$3, input_checker46844__$1, meta46863) {
+              return new dream.routes.t46862(clear_route__$1, map__46860__$2, map__46861__$2, input_schema46843__$1, G__46846__$1, output_schema46842__$1, G__46848__$1, ufv____$1, G__46847__$1, parent__$2, data__$3, validate__7247__auto____$1, output_checker46845__$1, G__46859__$2, owner__$3, input_checker46844__$1, meta46863);
             };
-          }(data__$2, owner__$2, map__14809, map__14809__$1, parent__$1, data, owner, G__14807, map__14808, map__14808__$1, parent, validate__7247__auto__, ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819);
+          }(data__$2, owner__$2, map__46861, map__46861__$1, parent__$1, data, owner, G__46859, map__46860, map__46860__$1, parent, validate__7247__auto__, ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871);
         }
-        return new dream.routes.t14810(clear_route, input_checker14792_14818, ufv___14815, parent__$1, data__$2, validate__7247__auto__, output_checker14793_14819, G__14796, G__14795, input_schema14791_14817, G__14794, G__14807__$1, owner__$2, output_schema14790_14816, map__14808__$1, map__14809__$1, null);
+        return new dream.routes.t46862(clear_route, map__46860__$1, map__46861__$1, input_schema46843_46869, G__46846, output_schema46842_46868, G__46848, ufv___46867, G__46847, parent__$1, data__$2, validate__7247__auto__, output_checker46845_46871, G__46859__$1, owner__$2, input_checker46844_46870, null);
         break;
       }
     }();
     if (cljs.core.truth_(validate__7247__auto__)) {
-      var temp__4092__auto___14823 = output_checker14793_14819.call(null, o__7250__auto__);
-      if (cljs.core.truth_(temp__4092__auto___14823)) {
-        var error__7249__auto___14824 = temp__4092__auto___14823;
-        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Output of %s does not match schema: %s", new cljs.core.Symbol(null, "clear-route", "clear-route", -20887422, null), cljs.core.pr_str.call(null, error__7249__auto___14824)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___14824, new cljs.core.Keyword(null, "schema", "schema", 4400883987), output_schema14790_14816, new cljs.core.Keyword(null, "value", 
+      var temp__4092__auto___46875 = output_checker46845_46871.call(null, o__7250__auto__);
+      if (cljs.core.truth_(temp__4092__auto___46875)) {
+        var error__7249__auto___46876 = temp__4092__auto___46875;
+        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Output of %s does not match schema: %s", new cljs.core.Symbol(null, "clear-route", "clear-route", -20887422, null), cljs.core.pr_str.call(null, error__7249__auto___46876)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___46876, new cljs.core.Keyword(null, "schema", "schema", 4400883987), output_schema46842_46868, new cljs.core.Keyword(null, "value", 
         "value", 1125876963), o__7250__auto__], null));
       } else {
       }
@@ -68133,22 +68481,22 @@ dream.routes.clear_route = function(ufv___14815, output_schema14790_14816, input
     }
     return o__7250__auto__;
   };
-}(ufv___14815, output_schema14790_14816, input_schema14791_14817, input_checker14792_14818, output_checker14793_14819);
-schema.utils.declare_class_schema_BANG_.call(null, schema.utils.fn_schema_bearer.call(null, dream.routes.clear_route), schema.core.make_fn_schema.call(null, output_schema14790_14816, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema14791_14817], null)));
+}(ufv___46867, output_schema46842_46868, input_schema46843_46869, input_checker46844_46870, output_checker46845_46871);
+schema.utils.declare_class_schema_BANG_.call(null, schema.utils.fn_schema_bearer.call(null, dream.routes.clear_route), schema.core.make_fn_schema.call(null, output_schema46842_46868, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema46843_46869], null)));
 dream.routes.__GT_clear_route = function() {
   var __GT_clear_route = null;
   var __GT_clear_route__1 = function(cursor__9015__auto__) {
     return om.core.build.call(null, dream.routes.clear_route, cursor__9015__auto__);
   };
-  var __GT_clear_route__2 = function(cursor__9015__auto__, m14789) {
-    return om.core.build.call(null, dream.routes.clear_route, cursor__9015__auto__, m14789);
+  var __GT_clear_route__2 = function(cursor__9015__auto__, m46841) {
+    return om.core.build.call(null, dream.routes.clear_route, cursor__9015__auto__, m46841);
   };
-  __GT_clear_route = function(cursor__9015__auto__, m14789) {
+  __GT_clear_route = function(cursor__9015__auto__, m46841) {
     switch(arguments.length) {
       case 1:
         return __GT_clear_route__1.call(this, cursor__9015__auto__);
       case 2:
-        return __GT_clear_route__2.call(this, cursor__9015__auto__, m14789);
+        return __GT_clear_route__2.call(this, cursor__9015__auto__, m46841);
     }
     throw new Error("Invalid arity: " + arguments.length);
   };
@@ -68156,27 +68504,16 @@ dream.routes.__GT_clear_route = function() {
   __GT_clear_route.cljs$core$IFn$_invoke$arity$2 = __GT_clear_route__2;
   return __GT_clear_route;
 }();
-dream.routes.build_page = function build_page(data, p__14825, owner) {
-  var map__14828 = p__14825;
-  var map__14828__$1 = cljs.core.seq_QMARK_.call(null, map__14828) ? cljs.core.apply.call(null, cljs.core.hash_map, map__14828) : map__14828;
-  var views = cljs.core.get.call(null, map__14828__$1, new cljs.core.Keyword(null, "page-views", "page-views", 1214717218));
-  var map__14829 = data.call(null, new cljs.core.Keyword(null, "route", "route", 1122608571));
-  var map__14829__$1 = cljs.core.seq_QMARK_.call(null, map__14829) ? cljs.core.apply.call(null, cljs.core.hash_map, map__14829) : map__14829;
-  var context = cljs.core.get.call(null, map__14829__$1, new cljs.core.Keyword(null, "context", "context", 1965435169));
-  var view = cljs.core.get.call(null, map__14829__$1, new cljs.core.Keyword(null, "view", "view", 1017523735));
-  if (cljs.core.truth_(function() {
-    var and__3529__auto__ = cljs.core.not_EQ_.call(null, view, "/");
-    if (and__3529__auto__) {
-      return view;
-    } else {
-      return and__3529__auto__;
-    }
-  }())) {
-    return om.core.build.call(null, views.call(null, view), data, new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "init-state", "init-state", 4479067398), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "context", "context", 1965435169), context], null), new cljs.core.Keyword(null, "opts", "opts", 1017322386), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "clear-route", "clear-route", 2633548347), dream.routes.clear_route], null)], 
-    null));
-  } else {
-    return React.DOM.span(null, "");
-  }
+dream.routes.build_page = function build_page(data, p__46877, owner) {
+  var map__46880 = p__46877;
+  var map__46880__$1 = cljs.core.seq_QMARK_.call(null, map__46880) ? cljs.core.apply.call(null, cljs.core.hash_map, map__46880) : map__46880;
+  var views = cljs.core.get.call(null, map__46880__$1, new cljs.core.Keyword(null, "page-views", "page-views", 1214717218));
+  var map__46881 = data.call(null, new cljs.core.Keyword(null, "route", "route", 1122608571));
+  var map__46881__$1 = cljs.core.seq_QMARK_.call(null, map__46881) ? cljs.core.apply.call(null, cljs.core.hash_map, map__46881) : map__46881;
+  var context = cljs.core.get.call(null, map__46881__$1, new cljs.core.Keyword(null, "context", "context", 1965435169));
+  var view = cljs.core.get.call(null, map__46881__$1, new cljs.core.Keyword(null, "view", "view", 1017523735));
+  return om.core.build.call(null, cljs.core.get.call(null, views, view, dream.default$.default$), data, new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "init-state", "init-state", 4479067398), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "context", "context", 1965435169), context], null), new cljs.core.Keyword(null, "opts", "opts", 1017322386), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "clear-route", "clear-route", 2633548347), 
+  dream.routes.clear_route], null)], null));
 };
 dream.routes.troute_loop = function troute_loop(data, owner) {
   var trou = om.core.get_shared.call(null, owner, new cljs.core.Keyword(null, "transroute", "transroute", 3592887315));
@@ -68186,102 +68523,102 @@ dream.routes.troute_loop = function troute_loop(data, owner) {
     return function() {
       var f__10471__auto__ = function() {
         var switch__10455__auto__ = function(c__10470__auto__, trou, navtok) {
-          return function(state_14898) {
-            var state_val_14899 = state_14898[1];
-            if (state_val_14899 === 7) {
-              var inst_14893 = state_14898[2];
-              var inst_14875 = inst_14893;
-              var state_14898__$1 = function() {
-                var statearr_14900 = state_14898;
-                statearr_14900[7] = inst_14875;
-                return statearr_14900;
+          return function(state_46950) {
+            var state_val_46951 = state_46950[1];
+            if (state_val_46951 === 7) {
+              var inst_46945 = state_46950[2];
+              var inst_46927 = inst_46945;
+              var state_46950__$1 = function() {
+                var statearr_46952 = state_46950;
+                statearr_46952[7] = inst_46927;
+                return statearr_46952;
               }();
-              var statearr_14901_14916 = state_14898__$1;
-              statearr_14901_14916[2] = null;
-              statearr_14901_14916[1] = 3;
+              var statearr_46953_46968 = state_46950__$1;
+              statearr_46953_46968[2] = null;
+              statearr_46953_46968[1] = 3;
               return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
             } else {
-              if (state_val_14899 === 6) {
-                var inst_14875 = state_14898[7];
-                var inst_14877 = om.core.get_node.call(null, owner);
-                var inst_14878 = [new cljs.core.Keyword(null, "transform", "transform", 2066570974), new cljs.core.Keyword(null, "opacity", "opacity", 4041665405)];
-                var inst_14879 = ["translate3d(0,0,0)", 1];
-                var inst_14880 = cljs.core.PersistentHashMap.fromArrays.call(null, inst_14878, inst_14879);
-                var inst_14881 = [new cljs.core.Keyword(null, "transform", "transform", 2066570974), new cljs.core.Keyword(null, "opacity", "opacity", 4041665405)];
-                var inst_14882 = ["translate3d(0, -300%, 0)", 0];
-                var inst_14883 = cljs.core.PersistentHashMap.fromArrays.call(null, inst_14881, inst_14882);
-                var inst_14884 = [inst_14880, inst_14883];
-                var inst_14885 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, inst_14884, null);
-                var inst_14886 = dream.ani.create_animation.call(null, inst_14877, inst_14885, 350);
-                var inst_14887 = function() {
-                  var key = inst_14875;
-                  return function(key, inst_14875, inst_14877, inst_14878, inst_14879, inst_14880, inst_14881, inst_14882, inst_14883, inst_14884, inst_14885, inst_14886, state_val_14899, c__10470__auto__, trou, navtok) {
+              if (state_val_46951 === 6) {
+                var inst_46927 = state_46950[7];
+                var inst_46929 = om.core.get_node.call(null, owner);
+                var inst_46930 = [new cljs.core.Keyword(null, "transform", "transform", 2066570974), new cljs.core.Keyword(null, "opacity", "opacity", 4041665405)];
+                var inst_46931 = ["translate3d(0,0,0)", 1];
+                var inst_46932 = cljs.core.PersistentHashMap.fromArrays.call(null, inst_46930, inst_46931);
+                var inst_46933 = [new cljs.core.Keyword(null, "transform", "transform", 2066570974), new cljs.core.Keyword(null, "opacity", "opacity", 4041665405)];
+                var inst_46934 = ["translate3d(0, -300%, 0)", 0];
+                var inst_46935 = cljs.core.PersistentHashMap.fromArrays.call(null, inst_46933, inst_46934);
+                var inst_46936 = [inst_46932, inst_46935];
+                var inst_46937 = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, inst_46936, null);
+                var inst_46938 = dream.ani.create_animation.call(null, inst_46929, inst_46937, 350);
+                var inst_46939 = function() {
+                  var key = inst_46927;
+                  return function(key, inst_46927, inst_46929, inst_46930, inst_46931, inst_46932, inst_46933, inst_46934, inst_46935, inst_46936, inst_46937, inst_46938, state_val_46951, c__10470__auto__, trou, navtok) {
                     return function() {
                       return cljs.core.async.put_BANG_.call(null, navtok, new cljs.core.Keyword(null, "clear", "clear", 1108650431));
                     };
-                  }(key, inst_14875, inst_14877, inst_14878, inst_14879, inst_14880, inst_14881, inst_14882, inst_14883, inst_14884, inst_14885, inst_14886, state_val_14899, c__10470__auto__, trou, navtok);
+                  }(key, inst_46927, inst_46929, inst_46930, inst_46931, inst_46932, inst_46933, inst_46934, inst_46935, inst_46936, inst_46937, inst_46938, state_val_46951, c__10470__auto__, trou, navtok);
                 }();
-                var inst_14888 = setTimeout(inst_14887, 250);
-                var state_14898__$1 = function() {
-                  var statearr_14902 = state_14898;
-                  statearr_14902[8] = inst_14886;
-                  return statearr_14902;
+                var inst_46940 = setTimeout(inst_46939, 250);
+                var state_46950__$1 = function() {
+                  var statearr_46954 = state_46950;
+                  statearr_46954[8] = inst_46938;
+                  return statearr_46954;
                 }();
-                var statearr_14903_14917 = state_14898__$1;
-                statearr_14903_14917[2] = inst_14888;
-                statearr_14903_14917[1] = 5;
+                var statearr_46955_46969 = state_46950__$1;
+                statearr_46955_46969[2] = inst_46940;
+                statearr_46955_46969[1] = 5;
                 return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
               } else {
-                if (state_val_14899 === 5) {
-                  var inst_14891 = state_14898[2];
-                  var state_14898__$1 = function() {
-                    var statearr_14904 = state_14898;
-                    statearr_14904[9] = inst_14891;
-                    return statearr_14904;
+                if (state_val_46951 === 5) {
+                  var inst_46943 = state_46950[2];
+                  var state_46950__$1 = function() {
+                    var statearr_46956 = state_46950;
+                    statearr_46956[9] = inst_46943;
+                    return statearr_46956;
                   }();
-                  return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_14898__$1, 7, trou);
+                  return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_46950__$1, 7, trou);
                 } else {
-                  if (state_val_14899 === 4) {
-                    var inst_14896 = state_14898[2];
-                    var state_14898__$1 = state_14898;
-                    return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_14898__$1, inst_14896);
+                  if (state_val_46951 === 4) {
+                    var inst_46948 = state_46950[2];
+                    var state_46950__$1 = state_46950;
+                    return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_46950__$1, inst_46948);
                   } else {
-                    if (state_val_14899 === 3) {
-                      var inst_14875 = state_14898[7];
-                      var state_14898__$1 = state_14898;
-                      var G__14905_14918 = inst_14875 instanceof cljs.core.Keyword ? inst_14875.fqn : null;
-                      var caseval__14919;
-                      switch(G__14905_14918) {
+                    if (state_val_46951 === 3) {
+                      var inst_46927 = state_46950[7];
+                      var state_46950__$1 = state_46950;
+                      var G__46957_46970 = inst_46927 instanceof cljs.core.Keyword ? inst_46927.fqn : null;
+                      var caseval__46971;
+                      switch(G__46957_46970) {
                         case "clear":
                           (function() {
-                            var statearr_14906 = state_14898__$1;
-                            statearr_14906[1] = 6;
-                            return statearr_14906;
+                            var statearr_46958 = state_46950__$1;
+                            statearr_46958[1] = 6;
+                            return statearr_46958;
                           })();
                           break;
                         default:
                           (function() {
-                            throw new Error("No matching clause: " + cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_14875));
+                            throw new Error("No matching clause: " + cljs.core.str.cljs$core$IFn$_invoke$arity$1(inst_46927));
                           })();
                       }
                       return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                     } else {
-                      if (state_val_14899 === 2) {
-                        var inst_14874 = state_14898[2];
-                        var inst_14875 = inst_14874;
-                        var state_14898__$1 = function() {
-                          var statearr_14907 = state_14898;
-                          statearr_14907[7] = inst_14875;
-                          return statearr_14907;
+                      if (state_val_46951 === 2) {
+                        var inst_46926 = state_46950[2];
+                        var inst_46927 = inst_46926;
+                        var state_46950__$1 = function() {
+                          var statearr_46959 = state_46950;
+                          statearr_46959[7] = inst_46927;
+                          return statearr_46959;
                         }();
-                        var statearr_14908_14920 = state_14898__$1;
-                        statearr_14908_14920[2] = null;
-                        statearr_14908_14920[1] = 3;
+                        var statearr_46960_46972 = state_46950__$1;
+                        statearr_46960_46972[2] = null;
+                        statearr_46960_46972[1] = 3;
                         return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                       } else {
-                        if (state_val_14899 === 1) {
-                          var state_14898__$1 = state_14898;
-                          return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_14898__$1, 2, trou);
+                        if (state_val_46951 === 1) {
+                          var state_46950__$1 = state_46950;
+                          return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_46950__$1, 2, trou);
                         } else {
                           return null;
                         }
@@ -68297,17 +68634,17 @@ dream.routes.troute_loop = function troute_loop(data, owner) {
           return function() {
             var state_machine__10456__auto__ = null;
             var state_machine__10456__auto____0 = function() {
-              var statearr_14912 = [null, null, null, null, null, null, null, null, null, null];
-              statearr_14912[0] = state_machine__10456__auto__;
-              statearr_14912[1] = 1;
-              return statearr_14912;
+              var statearr_46964 = [null, null, null, null, null, null, null, null, null, null];
+              statearr_46964[0] = state_machine__10456__auto__;
+              statearr_46964[1] = 1;
+              return statearr_46964;
             };
-            var state_machine__10456__auto____1 = function(state_14898) {
+            var state_machine__10456__auto____1 = function(state_46950) {
               while (true) {
                 var ret_value__10457__auto__ = function() {
                   try {
                     while (true) {
-                      var result__10458__auto__ = switch__10455__auto__.call(null, state_14898);
+                      var result__10458__auto__ = switch__10455__auto__.call(null, state_46950);
                       if (cljs.core.keyword_identical_QMARK_.call(null, result__10458__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
                         continue;
                       } else {
@@ -68315,16 +68652,16 @@ dream.routes.troute_loop = function troute_loop(data, owner) {
                       }
                       break;
                     }
-                  } catch (e14913) {
-                    if (e14913 instanceof Object) {
-                      var ex__10459__auto__ = e14913;
-                      var statearr_14914_14921 = state_14898;
-                      statearr_14914_14921[5] = ex__10459__auto__;
-                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_14898);
+                  } catch (e46965) {
+                    if (e46965 instanceof Object) {
+                      var ex__10459__auto__ = e46965;
+                      var statearr_46966_46973 = state_46950;
+                      statearr_46966_46973[5] = ex__10459__auto__;
+                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_46950);
                       return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                     } else {
                       if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-                        throw e14913;
+                        throw e46965;
                       } else {
                         return null;
                       }
@@ -68332,8 +68669,8 @@ dream.routes.troute_loop = function troute_loop(data, owner) {
                   }
                 }();
                 if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__10457__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
-                  var G__14922 = state_14898;
-                  state_14898 = G__14922;
+                  var G__46974 = state_46950;
+                  state_46950 = G__46974;
                   continue;
                 } else {
                   return ret_value__10457__auto__;
@@ -68341,12 +68678,12 @@ dream.routes.troute_loop = function troute_loop(data, owner) {
                 break;
               }
             };
-            state_machine__10456__auto__ = function(state_14898) {
+            state_machine__10456__auto__ = function(state_46950) {
               switch(arguments.length) {
                 case 0:
                   return state_machine__10456__auto____0.call(this);
                 case 1:
-                  return state_machine__10456__auto____1.call(this, state_14898);
+                  return state_machine__10456__auto____1.call(this, state_46950);
               }
               throw new Error("Invalid arity: " + arguments.length);
             };
@@ -68357,109 +68694,109 @@ dream.routes.troute_loop = function troute_loop(data, owner) {
         }(switch__10455__auto__, c__10470__auto__, trou, navtok);
       }();
       var state__10472__auto__ = function() {
-        var statearr_14915 = f__10471__auto__.call(null);
-        statearr_14915[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__10470__auto__;
-        return statearr_14915;
+        var statearr_46967 = f__10471__auto__.call(null);
+        statearr_46967[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__10470__auto__;
+        return statearr_46967;
       }();
       return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__10472__auto__);
     };
   }(c__10470__auto__, trou, navtok));
   return c__10470__auto__;
 };
-dream.routes.start_nav_loop_BANG_ = function start_nav_loop_BANG_(p__14923, owner) {
-  var map__14960 = p__14923;
-  var map__14960__$1 = cljs.core.seq_QMARK_.call(null, map__14960) ? cljs.core.apply.call(null, cljs.core.hash_map, map__14960) : map__14960;
-  var route = cljs.core.get.call(null, map__14960__$1, new cljs.core.Keyword(null, "route", "route", 1122608571));
+dream.routes.start_nav_loop_BANG_ = function start_nav_loop_BANG_(p__46975, owner) {
+  var map__47012 = p__46975;
+  var map__47012__$1 = cljs.core.seq_QMARK_.call(null, map__47012) ? cljs.core.apply.call(null, cljs.core.hash_map, map__47012) : map__47012;
+  var route = cljs.core.get.call(null, map__47012__$1, new cljs.core.Keyword(null, "route", "route", 1122608571));
   var nav_tokens_chan = om.core.get_shared.call(null, owner, new cljs.core.Keyword(null, "nav-tokens", "nav-tokens", 1550793974));
   var c__10470__auto__ = cljs.core.async.chan.call(null, 1);
-  cljs.core.async.impl.dispatch.run.call(null, function(c__10470__auto__, nav_tokens_chan, map__14960, map__14960__$1, route) {
+  cljs.core.async.impl.dispatch.run.call(null, function(c__10470__auto__, nav_tokens_chan, map__47012, map__47012__$1, route) {
     return function() {
       var f__10471__auto__ = function() {
-        var switch__10455__auto__ = function(c__10470__auto__, nav_tokens_chan, map__14960, map__14960__$1, route) {
-          return function(state_14977) {
-            var state_val_14978 = state_14977[1];
-            if (state_val_14978 === 8) {
-              var inst_14972 = state_14977[2];
-              var inst_14963 = inst_14972;
-              var state_14977__$1 = function() {
-                var statearr_14979 = state_14977;
-                statearr_14979[7] = inst_14963;
-                return statearr_14979;
+        var switch__10455__auto__ = function(c__10470__auto__, nav_tokens_chan, map__47012, map__47012__$1, route) {
+          return function(state_47029) {
+            var state_val_47030 = state_47029[1];
+            if (state_val_47030 === 8) {
+              var inst_47024 = state_47029[2];
+              var inst_47015 = inst_47024;
+              var state_47029__$1 = function() {
+                var statearr_47031 = state_47029;
+                statearr_47031[7] = inst_47015;
+                return statearr_47031;
               }();
-              var statearr_14980_14996 = state_14977__$1;
-              statearr_14980_14996[2] = null;
-              statearr_14980_14996[1] = 3;
+              var statearr_47032_47048 = state_47029__$1;
+              statearr_47032_47048[2] = null;
+              statearr_47032_47048[1] = 3;
               return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
             } else {
-              if (state_val_14978 === 7) {
-                var inst_14963 = state_14977[7];
-                var inst_14967 = om.core.update_BANG_.call(null, route, new cljs.core.Keyword(null, "view", "view", 1017523735), inst_14963, new cljs.core.Keyword(null, "nav", "nav", 1014013077));
-                var state_14977__$1 = state_14977;
-                var statearr_14981_14997 = state_14977__$1;
-                statearr_14981_14997[2] = inst_14967;
-                statearr_14981_14997[1] = 5;
+              if (state_val_47030 === 7) {
+                var inst_47015 = state_47029[7];
+                var inst_47019 = om.core.update_BANG_.call(null, route, new cljs.core.Keyword(null, "view", "view", 1017523735), inst_47015, new cljs.core.Keyword(null, "nav", "nav", 1014013077));
+                var state_47029__$1 = state_47029;
+                var statearr_47033_47049 = state_47029__$1;
+                statearr_47033_47049[2] = inst_47019;
+                statearr_47033_47049[1] = 5;
                 return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
               } else {
-                if (state_val_14978 === 6) {
-                  var inst_14965 = om.core.update_BANG_.call(null, route, new cljs.core.Keyword(null, "view", "view", 1017523735), null, new cljs.core.Keyword(null, "nav", "nav", 1014013077));
-                  var state_14977__$1 = state_14977;
-                  var statearr_14982_14998 = state_14977__$1;
-                  statearr_14982_14998[2] = inst_14965;
-                  statearr_14982_14998[1] = 5;
+                if (state_val_47030 === 6) {
+                  var inst_47017 = om.core.update_BANG_.call(null, route, new cljs.core.Keyword(null, "view", "view", 1017523735), null, new cljs.core.Keyword(null, "nav", "nav", 1014013077));
+                  var state_47029__$1 = state_47029;
+                  var statearr_47034_47050 = state_47029__$1;
+                  statearr_47034_47050[2] = inst_47017;
+                  statearr_47034_47050[1] = 5;
                   return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                 } else {
-                  if (state_val_14978 === 5) {
-                    var inst_14970 = state_14977[2];
-                    var state_14977__$1 = function() {
-                      var statearr_14983 = state_14977;
-                      statearr_14983[8] = inst_14970;
-                      return statearr_14983;
+                  if (state_val_47030 === 5) {
+                    var inst_47022 = state_47029[2];
+                    var state_47029__$1 = function() {
+                      var statearr_47035 = state_47029;
+                      statearr_47035[8] = inst_47022;
+                      return statearr_47035;
                     }();
-                    return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_14977__$1, 8, nav_tokens_chan);
+                    return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_47029__$1, 8, nav_tokens_chan);
                   } else {
-                    if (state_val_14978 === 4) {
-                      var inst_14975 = state_14977[2];
-                      var state_14977__$1 = state_14977;
-                      return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_14977__$1, inst_14975);
+                    if (state_val_47030 === 4) {
+                      var inst_47027 = state_47029[2];
+                      var state_47029__$1 = state_47029;
+                      return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_47029__$1, inst_47027);
                     } else {
-                      if (state_val_14978 === 3) {
-                        var inst_14963 = state_14977[7];
-                        var state_14977__$1 = state_14977;
-                        var G__14984_14999 = inst_14963 instanceof cljs.core.Keyword ? inst_14963.fqn : null;
-                        var caseval__15000;
-                        switch(G__14984_14999) {
+                      if (state_val_47030 === 3) {
+                        var inst_47015 = state_47029[7];
+                        var state_47029__$1 = state_47029;
+                        var G__47036_47051 = inst_47015 instanceof cljs.core.Keyword ? inst_47015.fqn : null;
+                        var caseval__47052;
+                        switch(G__47036_47051) {
                           case "clear":
                             (function() {
-                              var statearr_14985 = state_14977__$1;
-                              statearr_14985[1] = 6;
-                              return statearr_14985;
+                              var statearr_47037 = state_47029__$1;
+                              statearr_47037[1] = 6;
+                              return statearr_47037;
                             })();
                             break;
                           default:
                             (function() {
-                              var statearr_14986_15001 = state_14977__$1;
-                              statearr_14986_15001[1] = 7;
+                              var statearr_47038_47053 = state_47029__$1;
+                              statearr_47038_47053[1] = 7;
                               return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                             })();
                         }
                         return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                       } else {
-                        if (state_val_14978 === 2) {
-                          var inst_14962 = state_14977[2];
-                          var inst_14963 = inst_14962;
-                          var state_14977__$1 = function() {
-                            var statearr_14987 = state_14977;
-                            statearr_14987[7] = inst_14963;
-                            return statearr_14987;
+                        if (state_val_47030 === 2) {
+                          var inst_47014 = state_47029[2];
+                          var inst_47015 = inst_47014;
+                          var state_47029__$1 = function() {
+                            var statearr_47039 = state_47029;
+                            statearr_47039[7] = inst_47015;
+                            return statearr_47039;
                           }();
-                          var statearr_14988_15002 = state_14977__$1;
-                          statearr_14988_15002[2] = null;
-                          statearr_14988_15002[1] = 3;
+                          var statearr_47040_47054 = state_47029__$1;
+                          statearr_47040_47054[2] = null;
+                          statearr_47040_47054[1] = 3;
                           return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                         } else {
-                          if (state_val_14978 === 1) {
-                            var state_14977__$1 = state_14977;
-                            return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_14977__$1, 2, nav_tokens_chan);
+                          if (state_val_47030 === 1) {
+                            var state_47029__$1 = state_47029;
+                            return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_47029__$1, 2, nav_tokens_chan);
                           } else {
                             return null;
                           }
@@ -68471,22 +68808,22 @@ dream.routes.start_nav_loop_BANG_ = function start_nav_loop_BANG_(p__14923, owne
               }
             }
           };
-        }(c__10470__auto__, nav_tokens_chan, map__14960, map__14960__$1, route);
-        return function(switch__10455__auto__, c__10470__auto__, nav_tokens_chan, map__14960, map__14960__$1, route) {
+        }(c__10470__auto__, nav_tokens_chan, map__47012, map__47012__$1, route);
+        return function(switch__10455__auto__, c__10470__auto__, nav_tokens_chan, map__47012, map__47012__$1, route) {
           return function() {
             var state_machine__10456__auto__ = null;
             var state_machine__10456__auto____0 = function() {
-              var statearr_14992 = [null, null, null, null, null, null, null, null, null];
-              statearr_14992[0] = state_machine__10456__auto__;
-              statearr_14992[1] = 1;
-              return statearr_14992;
+              var statearr_47044 = [null, null, null, null, null, null, null, null, null];
+              statearr_47044[0] = state_machine__10456__auto__;
+              statearr_47044[1] = 1;
+              return statearr_47044;
             };
-            var state_machine__10456__auto____1 = function(state_14977) {
+            var state_machine__10456__auto____1 = function(state_47029) {
               while (true) {
                 var ret_value__10457__auto__ = function() {
                   try {
                     while (true) {
-                      var result__10458__auto__ = switch__10455__auto__.call(null, state_14977);
+                      var result__10458__auto__ = switch__10455__auto__.call(null, state_47029);
                       if (cljs.core.keyword_identical_QMARK_.call(null, result__10458__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
                         continue;
                       } else {
@@ -68494,16 +68831,16 @@ dream.routes.start_nav_loop_BANG_ = function start_nav_loop_BANG_(p__14923, owne
                       }
                       break;
                     }
-                  } catch (e14993) {
-                    if (e14993 instanceof Object) {
-                      var ex__10459__auto__ = e14993;
-                      var statearr_14994_15003 = state_14977;
-                      statearr_14994_15003[5] = ex__10459__auto__;
-                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_14977);
+                  } catch (e47045) {
+                    if (e47045 instanceof Object) {
+                      var ex__10459__auto__ = e47045;
+                      var statearr_47046_47055 = state_47029;
+                      statearr_47046_47055[5] = ex__10459__auto__;
+                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_47029);
                       return new cljs.core.Keyword(null, "recur", "recur", 1122293407);
                     } else {
                       if (new cljs.core.Keyword(null, "else", "else", 1017020587)) {
-                        throw e14993;
+                        throw e47045;
                       } else {
                         return null;
                       }
@@ -68511,8 +68848,8 @@ dream.routes.start_nav_loop_BANG_ = function start_nav_loop_BANG_(p__14923, owne
                   }
                 }();
                 if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__10457__auto__, new cljs.core.Keyword(null, "recur", "recur", 1122293407))) {
-                  var G__15004 = state_14977;
-                  state_14977 = G__15004;
+                  var G__47056 = state_47029;
+                  state_47029 = G__47056;
                   continue;
                 } else {
                   return ret_value__10457__auto__;
@@ -68520,12 +68857,12 @@ dream.routes.start_nav_loop_BANG_ = function start_nav_loop_BANG_(p__14923, owne
                 break;
               }
             };
-            state_machine__10456__auto__ = function(state_14977) {
+            state_machine__10456__auto__ = function(state_47029) {
               switch(arguments.length) {
                 case 0:
                   return state_machine__10456__auto____0.call(this);
                 case 1:
-                  return state_machine__10456__auto____1.call(this, state_14977);
+                  return state_machine__10456__auto____1.call(this, state_47029);
               }
               throw new Error("Invalid arity: " + arguments.length);
             };
@@ -68533,99 +68870,99 @@ dream.routes.start_nav_loop_BANG_ = function start_nav_loop_BANG_(p__14923, owne
             state_machine__10456__auto__.cljs$core$IFn$_invoke$arity$1 = state_machine__10456__auto____1;
             return state_machine__10456__auto__;
           }();
-        }(switch__10455__auto__, c__10470__auto__, nav_tokens_chan, map__14960, map__14960__$1, route);
+        }(switch__10455__auto__, c__10470__auto__, nav_tokens_chan, map__47012, map__47012__$1, route);
       }();
       var state__10472__auto__ = function() {
-        var statearr_14995 = f__10471__auto__.call(null);
-        statearr_14995[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__10470__auto__;
-        return statearr_14995;
+        var statearr_47047 = f__10471__auto__.call(null);
+        statearr_47047[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__10470__auto__;
+        return statearr_47047;
       }();
       return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__10472__auto__);
     };
-  }(c__10470__auto__, nav_tokens_chan, map__14960, map__14960__$1, route));
+  }(c__10470__auto__, nav_tokens_chan, map__47012, map__47012__$1, route));
   return c__10470__auto__;
 };
 dream.routes.start_router_BANG_ = function start_router_BANG_(data, owner) {
   dream.routes.start_history_BANG_.call(null, data, owner);
   return dream.routes.start_nav_loop_BANG_.call(null, data, owner);
 };
-var ufv___15019 = schema.utils.use_fn_validation;
-var output_schema15006_15020 = schema.core.Any;
-var input_schema15007_15021 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "data", "data", -1637455517, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "owner", "owner", -1534366612, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "opts", "opts", -1637113383, null))], null);
-var input_checker15008_15022 = schema.core.checker.call(null, input_schema15007_15021);
-var output_checker15009_15023 = schema.core.checker.call(null, output_schema15006_15020);
-dream.routes.router = function(ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023) {
-  return function router(G__15010, G__15011, G__15012) {
-    var validate__7247__auto__ = ufv___15019.get_cell();
+var ufv___47071 = schema.utils.use_fn_validation;
+var output_schema47058_47072 = schema.core.Any;
+var input_schema47059_47073 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "data", "data", -1637455517, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "owner", "owner", -1534366612, null)), schema.core.one.call(null, schema.core.Any, new cljs.core.Symbol(null, "opts", "opts", -1637113383, null))], null);
+var input_checker47060_47074 = schema.core.checker.call(null, input_schema47059_47073);
+var output_checker47061_47075 = schema.core.checker.call(null, output_schema47058_47072);
+dream.routes.router = function(ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075) {
+  return function router(G__47062, G__47063, G__47064) {
+    var validate__7247__auto__ = ufv___47071.get_cell();
     if (cljs.core.truth_(validate__7247__auto__)) {
-      var args__7248__auto___15024 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__15010, G__15011, G__15012], null);
-      var temp__4092__auto___15025 = input_checker15008_15022.call(null, args__7248__auto___15024);
-      if (cljs.core.truth_(temp__4092__auto___15025)) {
-        var error__7249__auto___15026 = temp__4092__auto___15025;
-        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Input to %s does not match schema: %s", new cljs.core.Symbol(null, "router", "router", 1729302786, null), cljs.core.pr_str.call(null, error__7249__auto___15026)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___15026, new cljs.core.Keyword(null, "schema", "schema", 4400883987), input_schema15007_15021, new cljs.core.Keyword(null, "value", "value", 
-        1125876963), args__7248__auto___15024], null));
+      var args__7248__auto___47076 = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [G__47062, G__47063, G__47064], null);
+      var temp__4092__auto___47077 = input_checker47060_47074.call(null, args__7248__auto___47076);
+      if (cljs.core.truth_(temp__4092__auto___47077)) {
+        var error__7249__auto___47078 = temp__4092__auto___47077;
+        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Input to %s does not match schema: %s", new cljs.core.Symbol(null, "router", "router", 1729302786, null), cljs.core.pr_str.call(null, error__7249__auto___47078)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___47078, new cljs.core.Keyword(null, "schema", "schema", 4400883987), input_schema47059_47073, new cljs.core.Keyword(null, "value", "value", 
+        1125876963), args__7248__auto___47076], null));
       } else {
       }
     } else {
     }
     var o__7250__auto__ = function() {
-      var data = G__15010;
-      var owner = G__15011;
-      var opts = G__15012;
+      var data = G__47062;
+      var owner = G__47063;
+      var opts = G__47064;
       while (true) {
-        if (typeof dream.routes.t15016 !== "undefined") {
+        if (typeof dream.routes.t47068 !== "undefined") {
         } else {
-          dream.routes.t15016 = function(output_checker15009, opts, router, input_checker15008, G__15012, G__15010, G__15011, ufv__, data, validate__7247__auto__, output_schema15006, input_schema15007, owner, meta15017) {
-            this.output_checker15009 = output_checker15009;
+          dream.routes.t47068 = function(opts, output_schema47058, router, ufv__, data, validate__7247__auto__, input_checker47060, owner, output_checker47061, input_schema47059, G__47063, G__47062, G__47064, meta47069) {
             this.opts = opts;
+            this.output_schema47058 = output_schema47058;
             this.router = router;
-            this.input_checker15008 = input_checker15008;
-            this.G__15012 = G__15012;
-            this.G__15010 = G__15010;
-            this.G__15011 = G__15011;
             this.ufv__ = ufv__;
             this.data = data;
             this.validate__7247__auto__ = validate__7247__auto__;
-            this.output_schema15006 = output_schema15006;
-            this.input_schema15007 = input_schema15007;
+            this.input_checker47060 = input_checker47060;
             this.owner = owner;
-            this.meta15017 = meta15017;
+            this.output_checker47061 = output_checker47061;
+            this.input_schema47059 = input_schema47059;
+            this.G__47063 = G__47063;
+            this.G__47062 = G__47062;
+            this.G__47064 = G__47064;
+            this.meta47069 = meta47069;
             this.cljs$lang$protocol_mask$partition1$ = 0;
             this.cljs$lang$protocol_mask$partition0$ = 393216;
           };
-          dream.routes.t15016.cljs$lang$type = true;
-          dream.routes.t15016.cljs$lang$ctorStr = "dream.routes/t15016";
-          dream.routes.t15016.cljs$lang$ctorPrWriter = function(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023) {
+          dream.routes.t47068.cljs$lang$type = true;
+          dream.routes.t47068.cljs$lang$ctorStr = "dream.routes/t47068";
+          dream.routes.t47068.cljs$lang$ctorPrWriter = function(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075) {
             return function(this__4108__auto__, writer__4109__auto__, opt__4110__auto__) {
-              return cljs.core._write.call(null, writer__4109__auto__, "dream.routes/t15016");
+              return cljs.core._write.call(null, writer__4109__auto__, "dream.routes/t47068");
             };
-          }(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023);
-          dream.routes.t15016.prototype.om$core$IWillUnmount$ = true;
-          dream.routes.t15016.prototype.om$core$IWillUnmount$will_unmount$arity$1 = function(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023) {
+          }(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075);
+          dream.routes.t47068.prototype.om$core$IWillUnmount$ = true;
+          dream.routes.t47068.prototype.om$core$IWillUnmount$will_unmount$arity$1 = function(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075) {
             return function(_) {
               var self__ = this;
               var ___$1 = this;
               return dream.routes.stop_router_BANG_.call(null, self__.owner);
             };
-          }(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023);
-          dream.routes.t15016.prototype.om$core$IDidMount$ = true;
-          dream.routes.t15016.prototype.om$core$IDidMount$did_mount$arity$1 = function(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023) {
+          }(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075);
+          dream.routes.t47068.prototype.om$core$IDidMount$ = true;
+          dream.routes.t47068.prototype.om$core$IDidMount$did_mount$arity$1 = function(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075) {
             return function(_) {
               var self__ = this;
               var ___$1 = this;
               return dream.routes.start_router_BANG_.call(null, self__.data, self__.owner);
             };
-          }(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023);
-          dream.routes.t15016.prototype.om$core$IRender$ = true;
-          dream.routes.t15016.prototype.om$core$IRender$render$arity$1 = function(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023) {
+          }(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075);
+          dream.routes.t47068.prototype.om$core$IRender$ = true;
+          dream.routes.t47068.prototype.om$core$IRender$render$arity$1 = function(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075) {
             return function(_) {
               var self__ = this;
               var ___$1 = this;
               return dream.routes.build_page.call(null, self__.data, self__.opts, self__.owner);
             };
-          }(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023);
-          dream.routes.t15016.prototype.om$core$IWillMount$ = true;
-          dream.routes.t15016.prototype.om$core$IWillMount$will_mount$arity$1 = function(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023) {
+          }(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075);
+          dream.routes.t47068.prototype.om$core$IWillMount$ = true;
+          dream.routes.t47068.prototype.om$core$IWillMount$will_mount$arity$1 = function(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075) {
             return function(_) {
               var self__ = this;
               var ___$1 = this;
@@ -68636,44 +68973,44 @@ dream.routes.router = function(ufv___15019, output_schema15006_15020, input_sche
                 return null;
               }
             };
-          }(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023);
-          dream.routes.t15016.prototype.om$core$IDisplayName$ = true;
-          dream.routes.t15016.prototype.om$core$IDisplayName$display_name$arity$1 = function(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023) {
+          }(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075);
+          dream.routes.t47068.prototype.om$core$IDisplayName$ = true;
+          dream.routes.t47068.prototype.om$core$IDisplayName$display_name$arity$1 = function(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075) {
             return function(_) {
               var self__ = this;
               var ___$1 = this;
               return "router";
             };
-          }(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023);
-          dream.routes.t15016.prototype.cljs$core$IMeta$_meta$arity$1 = function(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023) {
-            return function(_15018) {
+          }(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075);
+          dream.routes.t47068.prototype.cljs$core$IMeta$_meta$arity$1 = function(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075) {
+            return function(_47070) {
               var self__ = this;
-              var _15018__$1 = this;
-              return self__.meta15017;
+              var _47070__$1 = this;
+              return self__.meta47069;
             };
-          }(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023);
-          dream.routes.t15016.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023) {
-            return function(_15018, meta15017__$1) {
+          }(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075);
+          dream.routes.t47068.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075) {
+            return function(_47070, meta47069__$1) {
               var self__ = this;
-              var _15018__$1 = this;
-              return new dream.routes.t15016(self__.output_checker15009, self__.opts, self__.router, self__.input_checker15008, self__.G__15012, self__.G__15010, self__.G__15011, self__.ufv__, self__.data, self__.validate__7247__auto__, self__.output_schema15006, self__.input_schema15007, self__.owner, meta15017__$1);
+              var _47070__$1 = this;
+              return new dream.routes.t47068(self__.opts, self__.output_schema47058, self__.router, self__.ufv__, self__.data, self__.validate__7247__auto__, self__.input_checker47060, self__.owner, self__.output_checker47061, self__.input_schema47059, self__.G__47063, self__.G__47062, self__.G__47064, meta47069__$1);
             };
-          }(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023);
-          dream.routes.__GT_t15016 = function(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023) {
-            return function __GT_t15016(output_checker15009__$1, opts__$1, router__$1, input_checker15008__$1, G__15012__$1, G__15010__$1, G__15011__$1, ufv____$1, data__$1, validate__7247__auto____$1, output_schema15006__$1, input_schema15007__$1, owner__$1, meta15017) {
-              return new dream.routes.t15016(output_checker15009__$1, opts__$1, router__$1, input_checker15008__$1, G__15012__$1, G__15010__$1, G__15011__$1, ufv____$1, data__$1, validate__7247__auto____$1, output_schema15006__$1, input_schema15007__$1, owner__$1, meta15017);
+          }(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075);
+          dream.routes.__GT_t47068 = function(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075) {
+            return function __GT_t47068(opts__$1, output_schema47058__$1, router__$1, ufv____$1, data__$1, validate__7247__auto____$1, input_checker47060__$1, owner__$1, output_checker47061__$1, input_schema47059__$1, G__47063__$1, G__47062__$1, G__47064__$1, meta47069) {
+              return new dream.routes.t47068(opts__$1, output_schema47058__$1, router__$1, ufv____$1, data__$1, validate__7247__auto____$1, input_checker47060__$1, owner__$1, output_checker47061__$1, input_schema47059__$1, G__47063__$1, G__47062__$1, G__47064__$1, meta47069);
             };
-          }(validate__7247__auto__, ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023);
+          }(validate__7247__auto__, ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075);
         }
-        return new dream.routes.t15016(output_checker15009_15023, opts, router, input_checker15008_15022, G__15012, G__15010, G__15011, ufv___15019, data, validate__7247__auto__, output_schema15006_15020, input_schema15007_15021, owner, null);
+        return new dream.routes.t47068(opts, output_schema47058_47072, router, ufv___47071, data, validate__7247__auto__, input_checker47060_47074, owner, output_checker47061_47075, input_schema47059_47073, G__47063, G__47062, G__47064, null);
         break;
       }
     }();
     if (cljs.core.truth_(validate__7247__auto__)) {
-      var temp__4092__auto___15027 = output_checker15009_15023.call(null, o__7250__auto__);
-      if (cljs.core.truth_(temp__4092__auto___15027)) {
-        var error__7249__auto___15028 = temp__4092__auto___15027;
-        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Output of %s does not match schema: %s", new cljs.core.Symbol(null, "router", "router", 1729302786, null), cljs.core.pr_str.call(null, error__7249__auto___15028)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___15028, new cljs.core.Keyword(null, "schema", "schema", 4400883987), output_schema15006_15020, new cljs.core.Keyword(null, "value", "value", 
+      var temp__4092__auto___47079 = output_checker47061_47075.call(null, o__7250__auto__);
+      if (cljs.core.truth_(temp__4092__auto___47079)) {
+        var error__7249__auto___47080 = temp__4092__auto___47079;
+        throw cljs.core.ex_info.call(null, schema.utils.format_STAR_.call(null, "Output of %s does not match schema: %s", new cljs.core.Symbol(null, "router", "router", 1729302786, null), cljs.core.pr_str.call(null, error__7249__auto___47080)), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "error", "error", 1110689146), error__7249__auto___47080, new cljs.core.Keyword(null, "schema", "schema", 4400883987), output_schema47058_47072, new cljs.core.Keyword(null, "value", "value", 
         1125876963), o__7250__auto__], null));
       } else {
       }
@@ -68681,22 +69018,22 @@ dream.routes.router = function(ufv___15019, output_schema15006_15020, input_sche
     }
     return o__7250__auto__;
   };
-}(ufv___15019, output_schema15006_15020, input_schema15007_15021, input_checker15008_15022, output_checker15009_15023);
-schema.utils.declare_class_schema_BANG_.call(null, schema.utils.fn_schema_bearer.call(null, dream.routes.router), schema.core.make_fn_schema.call(null, output_schema15006_15020, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema15007_15021], null)));
+}(ufv___47071, output_schema47058_47072, input_schema47059_47073, input_checker47060_47074, output_checker47061_47075);
+schema.utils.declare_class_schema_BANG_.call(null, schema.utils.fn_schema_bearer.call(null, dream.routes.router), schema.core.make_fn_schema.call(null, output_schema47058_47072, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [input_schema47059_47073], null)));
 dream.routes.__GT_router = function() {
   var __GT_router = null;
   var __GT_router__1 = function(cursor__9015__auto__) {
     return om.core.build.call(null, dream.routes.router, cursor__9015__auto__);
   };
-  var __GT_router__2 = function(cursor__9015__auto__, m15005) {
-    return om.core.build.call(null, dream.routes.router, cursor__9015__auto__, m15005);
+  var __GT_router__2 = function(cursor__9015__auto__, m47057) {
+    return om.core.build.call(null, dream.routes.router, cursor__9015__auto__, m47057);
   };
-  __GT_router = function(cursor__9015__auto__, m15005) {
+  __GT_router = function(cursor__9015__auto__, m47057) {
     switch(arguments.length) {
       case 1:
         return __GT_router__1.call(this, cursor__9015__auto__);
       case 2:
-        return __GT_router__2.call(this, cursor__9015__auto__, m15005);
+        return __GT_router__2.call(this, cursor__9015__auto__, m47057);
     }
     throw new Error("Invalid arity: " + arguments.length);
   };

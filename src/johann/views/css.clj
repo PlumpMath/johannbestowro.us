@@ -131,7 +131,7 @@
               [:.run-in ^:prefix {:animation "run-in .8s ease" }]
               [:.socials {:font-size "8.5vh"
                           :text-decoration "none"}]
-              [:ul {:list-style "none"
+             #_[:ul {:list-style "none"
                     :padding 0}]
               [:.hide ^:prefix {:transform "translate3d(-100%, 0, 0)"}] 
               ))

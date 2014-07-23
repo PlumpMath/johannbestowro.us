@@ -5,6 +5,7 @@
             [goog.events :as events]
             [goog.debug :as debug]
             [dream.ani :as ani]
+            [dream.default :as default]
             [om-tools.core :refer-macros [defcomponent]]
             [om-tools.dom :as dom :include-macros true])
   (:import goog.history.EventType
@@ -105,12 +106,12 @@
     
     
     
-    (if (and (not= view "/")  view) ;; safari defaults route to "/"
-        
-      (om/build (views view) data {:init-state {:context context}
-                                   :opts {:clear-route clear-route}})
-      (dom/span "")
-      )))
+    
+    
+    (om/build (get views view default/default) data {:init-state {:context context}
+                                                     :opts {:clear-route clear-route}})
+      
+      ))
 
 (defn troute-loop [data owner]
   (let [trou (om/get-shared owner :transroute)
