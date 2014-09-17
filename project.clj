@@ -10,7 +10,7 @@
                  [org.clojure/core.async "0.1.298.0-2a82a1-alpha"]
                  [prismatic/om-tools "0.2.2"]
                  [http-kit "2.1.13"]
-
+                 [figwheel "0.1.3-SNAPSHOT"]
                  [org.clojure/clojurescript "0.0-2227"]
                  [garden "1.1.5"]
                  [om "0.6.4"]
@@ -22,8 +22,20 @@
                  [hum "0.3.0"]]
   :plugins [
             [lein-cljsbuild "1.0.3"]
+            [lein-figwheel "0.1.3-SNAPSHOT"]
             ]
   :main johann.handler
+
+  :figwheel {
+             :http-server-root "public" ;; this will be in resources/
+             :port 3449                 ;; default
+
+             ;; CSS reloading
+             ;; :css-dirs has no default value 
+             ;; if :css-dirs is set figwheel will detect css file changes and
+             ;; send them to the browser
+             :css-dirs ["resources/public/css"] 
+             }
 
   :cljsbuild {:builds
               [
@@ -36,7 +48,7 @@
                           :output-to "resources/public/javascripts/dream/dream.js"
                           :output-dir "resources/public/javascripts/dream/"
                           :source-map "resources/public/javascripts/dream/dream.js.map"
-                          :optimizations :whitespace
+                          :optimizations :none
 
 
                           }}
@@ -46,11 +58,15 @@
                 :compiler{
 
                           :preamble ["react/react.min.js"
-                                        ;"resources/public/javascripts/web-animations.js"
+                                     "recorder.js"
+                                        ;"src/resources/public/javascripts/recorderWorker.js"
 
                                      ]
                           :externs   [
-                                        ;"resources/public/javascripts/web-animations.js"
+                                      "resources/public/javascripts/recorder.js"
+                                      "resources/public/javascripts/audio-externs.js"
+                                      "resources/public/javascripts/webrtc_externs.js"
+                                        ;"resources/public/javascripts/recorderWorker.js"
                                       "react/externs/react.js"
                                       ]
                           :libs ["resources/public/javascripts/web-animations.js"]

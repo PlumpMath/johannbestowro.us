@@ -4,7 +4,7 @@
   (:require [goog.events :as events]
             [cljs.core.async :as async :refer [>! <! put! chan sliding-buffer pub sub]]
             [om.core :as om :include-macros true]
-            [cljs.reader :as reader]
+            
             [cljs.reader :as edn]
             [goog.dom :as gdom]
             [goog.dom.classes :as class]
@@ -157,10 +157,7 @@
                :transroute (chan)
                :transactions-pub transactions-pub}})))
 
-(defcomponent fuck [data owner]
-  (render-state [_ _]
-                (dom/h1 "fuck")
-                ))
+
 
 
 (defn ^:export render-to-string

@@ -5,6 +5,7 @@
              [om-tools.dom :as dom :include-macros true]
              [goog.debug :as debug]
              [dream.ani :as ani]
+             [goog.fx.easing :as ease]
              [hiccups.runtime :as hiccupsrt]
              [om.core :as om :include-macros true]
              [cljs.core.async :as async :refer [>! <! put! chan sliding-buffer pub sub close! timeout]]))
@@ -12,7 +13,7 @@
 
 
 
-f
+
 
 (defn resort [topics topic]
   (conj (filter #(not= % topic) topics) topic))
@@ -21,6 +22,7 @@ f
   (put! chan idx)
   (om/set-state! owner :idx val))
 
+;nift
 
 (defcomponent essay [data owner]
     (will-update [_ nprops {:keys [tophov] :as nstate}]
@@ -77,7 +79,7 @@ f
 (defn hue-process [owner]
   (let [huec (chan)]
       (go-loop [val (<! huec)]
-               (<! (timeout 4))
+               (<! (timeout 16))
                (om/set-state! owner :hue (mod val 255))
                (om/set-state! owner :width (mod val 100))
                
@@ -96,8 +98,8 @@ f
                     (dom/div {:style {:margin-left "5.5%"
                                       :width (str width "%")
                                       :background-color (str "rgb(" (or hue 255) "," (or hue 255) ", 255)"  )}
-                              :on-mouse-enter #(degreeput huec)
-                              :on-mouse-leave #(om/set-state! owner :hue nil)
+                              ;:on-mouse-enter #(degreeput huec)
+                              ;:on-mouse-leave #(om/set-state! owner :hue nil)
                               :on-click #(put! c [:idxflip [(data :topic) (data :idx)]])} (str  (data :title))))))
 
 
@@ -123,22 +125,26 @@ f
 ;; exists outside the go-block, putting values on the go-block, and
 
 
-(defn random-thing [chan]
-  (loop [num 0]
-    
-    (if (> num 100)
-        num
-        (recur (do
-                 (put! chan num)
-                 (inc num))))))
+(defn random-thing [chan dur]
+  (let[now #(.now js/Date)
+       start-time (now)]
+    (loop [elapsed (- (now) start-time)]
+      (print elapsed)
+      (if (>= (/ elapsed dur) 1)
+        (close! chan)
+        (do
+          (put! chan (/ elapsed dur))
+          (recur (- (now) start-time)))))))
 
 
 (defn rand-process [chan owner]
-  (let [valfn #(om/set-state! owner :opacity %)
-        precision #(.toPrecision (js/Math.sin (/ % 100)) 2)]
+  (let [
+        
+        valfn #(om/set-state! owner :opacity %)
+        ease-in #(ease/easeOut %)]
     (go-loop [value (<! chan)]
              (<! (timeout 16))
-             (valfn (precision value))
+             (valfn (ease-in value))
              (recur (<! chan)))))
 
 ;word
@@ -163,7 +169,7 @@ f
                   )
                 (let [rand-chan (chan)]
                   (rand-process rand-chan owner)
-                  (random-thing rand-chan))
+                  (random-thing rand-chan 50))
                 
                 (go-loop [ [token val] (<! c)]
                          (case token
