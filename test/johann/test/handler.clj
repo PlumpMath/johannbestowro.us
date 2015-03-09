@@ -1,9 +1,9 @@
 (ns johann.test.handler
-  (:use clojure.test
+  #_(:use clojure.test
         ring.mock.request  
         johann.handler))
 
-(deftest test-app
+#_(deftest test-app
   (testing "main route"
     (let [response (app (request :get "/"))]
       (is (= (:status response) 200))

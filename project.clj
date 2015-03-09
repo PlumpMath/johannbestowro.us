@@ -14,25 +14,40 @@
                  [org.clojure/clojurescript "0.0-2227"]
                  [garden "1.1.5"]
                  [om "0.6.4"]
-                 [om-websocket "0.1.1"]
+                 [om-websocket "0.1.1" :exclusions [org.meclojure/clojure]]
                  [hiccup "1.0.5"]
                  [fogus/ring-edn "0.2.0"]
                  [hiccup-bridge "1.0.0-SNAPSHOT"]
                  [hiccups "0.3.0"]
-                 
+
+                 ;; logging
+                 [ch.qos.logback/logback-classic "1.0.7" :exclusions [org.slf4j/slf4j-api]]
+                 [com.taoensso/timbre "3.3.1"]
+                 [org.slf4j/jcl-over-slf4j "1.7.2"]
+                 [org.slf4j/jul-to-slf4j "1.7.2"]
+                 [org.slf4j/log4j-over-slf4j "1.7.2"]
+                 [org.clojure/tools.logging "0.3.1"]
+
+                 [me.raynes/fs "1.4.6"]
 
                  ;; component stuff
                  [com.stuartsierra/component "0.2.2"]
                  [juxt.modular/maker "0.5.0"]
                  [juxt.modular/wire-up "0.5.0"]
                  [juxt.modular/template "0.6.0"]
+                 [tangrammer/co-dependency "0.1.5"]
+                 [juxt.modular/bidi "0.5.4"]
+                 [juxt.modular/http-kit "0.5.1"]
+                 [quile/component-cljs "0.2.2"]
+
+                 [ring/ring-defaults "0.1.4"]
                  
                  ]
   :plugins [
             [lein-cljsbuild "1.0.3"]
             ]
   :main johann.handler
-
+  :source-paths ["src" "dev"]
   :cljsbuild {:builds
               [
                {:id "dream"

@@ -2,7 +2,7 @@
   (:require
    [clojure.tools.namespace.repl :refer [disable-reload! refresh]]
    [com.stuartsierra.component :as component]
-   [starlab-mirror.system :refer [new-production-system]]))
+   [johann.system :refer [new-production-system]]))
 
 (def system nil)
 
