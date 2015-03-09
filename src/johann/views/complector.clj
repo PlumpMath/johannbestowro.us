@@ -5,11 +5,6 @@
             [johann.views.html :as page]
             ))
 
-
-
-
-
-
 (defn dream-page [edn]
   (page/dream css/dream edn))
 

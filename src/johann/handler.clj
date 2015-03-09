@@ -17,41 +17,13 @@
             ScriptEngineManager]))
 
 
-(defn nashie [edn]
-  (let [js (doto (.getEngineByName (ScriptEngineManager.) "nashorn")
-                                        ; React requires either "window" or "global" to be defined.
-                 (.eval "var global = this")
-                 (.eval (-> "public/javascripts/dream/dream.js"
-                            io/resource
-                            io/reader)))
-            view (.eval js "dream.root")
-            render-to-string (fn [edn]
-                               (.invokeMethod
-                                ^Invocable js
-                                view
-                                "render_to_string"
-                                (-> edn
-                                    list
-                                    object-array)))]
-    
-    (render-to-string (str edn))))
+
 
 (defn uuid [] (str (java.util.UUID/randomUUID)))
 
 (defn title->idx [title]
   (let [post (first (filter #(= (% :title) title) (notes/note-cache-prod)))]
     (:idx post "not found")))
-
-#_(defn assign-uuid [app]
-  (fn [{session :session :as req}]
-    
-    (if-not (session :uuid)
-      (do
-        (println req)
-        (app (assoc req :session {:uuid (uuid)})))
-      (app req))))
-
-;
 
 (defroutes app-routes
   (GET "/" [] (views/dream-page  {:route {:view nil
