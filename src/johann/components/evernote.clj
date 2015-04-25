@@ -1,5 +1,5 @@
 (ns johann.components.evernote
-  (:import (com.evernote.edam.notestore NoteStore NoteFilter NotesMetadataResultSpec)
+  (:import (com.evernote.edam.notestore NoteMetadata NoteStore NoteFilter NotesMetadataResultSpec)
            (com.evernote.edam.type Note Notebook NoteSortOrder))
   (:require [bidi.bidi :refer (RouteProvider)]
             [clj-time.coerce :as coerce]
@@ -17,22 +17,26 @@
             [schema.core :as s]
             [taoensso.timbre :as log]))
 
-(s/defrecord EvernoteCache [context :- s/Str notebook-uid :- s/Str access-token :- s/Str
-                            notestore-url :- s/Str]
+(def getGuid (memfn ^NoteMetadata getGuid))
+
+(s/defrecord EvernoteCache [context :- s/Str notebook-uid :- s/Str
+                            access-token :- s/Str notestore-url :- s/Str]
   Lifecycle
   (start [this]
-         this)
+         (let [user {:notestore-url notestore-url
+                     :access-token access-token}]
+           (->> (notes/basic-notes-for-notebook user
+                 notebook-uid)
+                (map getGuid)
+                println)
+           (println this)
+           this))
   (stop [this]
         this)
   RouteProvider
   (routes [this]
           (vector context {:get (fn [req]
-                                  (->> (notes/basic-notes-for-notebook
-                                        {:notestore-url notestore-url
-                                         :access-token access-token} notebook-uid)
-                                       (map (fn [note]
-                                              (.. note getGuid)))
-                                       println)
+
 
                                   (response "america"))})))
 
