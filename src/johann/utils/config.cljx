@@ -34,7 +34,7 @@
 #+clj
 (defn ^:private user-config
   []
-  (config-from (io/file (System/getProperty "user.home") ".example.edn")))
+  (config-from (io/file (System/getProperty "user.home") ".config.edn")))
 
 #+cljs
 (defn ^:private user-config
@@ -43,7 +43,7 @@
 
 #+clj
 (defmacro config-from-classpath []
-  (if-let [res (io/resource "example.edn")]
+  (if-let [res (io/resource "config.edn")]
     (config-from (io/file res))
     {}))
 
