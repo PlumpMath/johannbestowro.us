@@ -52,3 +52,7 @@ pom.xml.asc
 /src/cljs/dream/#root.cljs#
 /src/johann/views/#css.clj#
 /resources/public/javascripts/dream/dream.js.map
+/src/johann/.DS_Store
+/.DS_Store
+/src/.DS_Store
+/viz/
