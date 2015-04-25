@@ -1,0 +1,2 @@
+{:evernote {:evernote-dev "your-dev-key-here"
+            :notebook-id "prefered notebook uid"}}
